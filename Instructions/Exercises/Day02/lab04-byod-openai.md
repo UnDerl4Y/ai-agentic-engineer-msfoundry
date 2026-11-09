@@ -26,41 +26,13 @@ This exercise takes approximately **30** minutes.
 - A web browser
 - Basic familiarity with running commands in a terminal (you don't need to know Python already; the code is provided)
 
-> A Foundry project with a language model already deployed has been set up for you. If you completed the previous exercise, you may already have the **endpoint** and **deployment name** saved.
->
-> **Important:** Copy both values into a local text file (for example, Notepad) and keep them somewhere safe, as you'll use them repeatedly throughout these labs.
->
-> **Security note:** Treat your endpoint and deployment details as sensitive information. Never share them publicly, or paste them into online websites, AI assistants, forums, or chats. If you ever need to share screenshots or logs, mask or redact your endpoint, URLs, API keys, and any other sensitive information first.
-
-# Find your project endpoint and deployment name
-
-1. If you already saved your **endpoint** and **deployment name** from a previous exercise, skip ahead to **Explore prompt engineering techniques**. Otherwise, follow the steps below.
-1. In a web browser, open the [Microsoft Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in with your Azure credentials. Close any tips or quick-start panes that appear the first time you sign in.
-1. On the home page, select your project. (If you have more than one, pick the one your trainer or lab environment set up for this exercise.)
-
-    ![Screenshot of the Foundary Portal showing your project details.](../../media/home-page.png)
-
-    Selecting your project takes you straight to its home page.
-
-    ![Screenshot of the Foundry project home page, showing the API key, Project endpoint, and Azure OpenAI endpoint fields.](../../media/project-home-page-1.png)
-
-1. Copy the API key from there and save it somewhere temporarily, such as Notepad **(for safety, do not share or commit the key)**. Paste the key into the `.env` file when executing the lab, and use the pre-filled Azure OpenAI endpoint **(please recheck the endpoint before running the lab)**.
-
 # Explore prompt engineering techniques
 
 In this section, you'll use the deployed model playground in Microsoft Foundry to see how instructions and examples change the model's response.
 
-1. If you are not already on the project home page, open the [Microsoft Foundry portal](https://ai.azure.com), select your training project, and open **Home**.
+1. Return to the [Microsoft Foundry portal](https://ai.azure.com), select your training project, and open **Home Page**.
 
-1. In the **Use a model** card, select **View deployments**.
-
-    ![Screenshot of the Foundry project home page with View deployments selected.](../../media/1.png)
-
-1. In **Models** > **Deployments**, select the deployed chat model provided for the lab.
-
-1. In the model details pane, select **Open in playground**.
-
-    ![Screenshot of the Models deployments page with a deployed model selected and the Open in playground button available.](../../media/22.png)
+1. Under the **Model selection** select **Test in playground**.
 
 1. The model playground opens. Verify that the selected deployment is shown at the top of the left pane.
 
@@ -68,8 +40,6 @@ In this section, you'll use the deployed model playground in Microsoft Foundry t
 
     - **Instructions**: Where you define the model's behavior and response format.
     - **Chat**: Where you send prompts and review responses.
-
-    ![Screenshot of the new Foundry model playground with Instructions and Chat panes.](../../media/3.png)
 
 1. In **Instructions**, verify that the following default instruction is present:
 
