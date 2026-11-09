@@ -10,10 +10,6 @@ lab:
 
 # Create a Credit Risk Assessment Application with Retrieval-Augmented Generation (RAG)
 
-Before starting this exercise, install Azure CLI if it is not already installed.
-
-Install Azure CLI using the [Azure CLI installation guide](https://aka.ms/installazurecliwindows) and complete the installation.
-
 In this exercise, you'll use the Microsoft Foundry portal and the Responses API to build a **Credit Risk Assessment application**.
 
 You will:
@@ -150,13 +146,24 @@ The `file_search` tool retrieves relevant information from the vector store so t
 
 ## Get the application files from GitHub
 
+## 1. Clean Up Previous Downloads
+
+Before downloading the latest repository version, remove the previous downloaded files and extracted folders to avoid using an outdated copy.
+
+1. Open your **Downloads** folder.
+2. Delete the previously downloaded `AgenticAIEngineer-main.zip` file.
+3. Delete the previously extracted `AgenticAIEngineer-main` folder and any duplicate extracted folders, such as `AgenticAIEngineer-main (1)`.
+4. Make sure the old copies have been removed before proceeding.
+
+> **Note:** The repository has been updated. Using an older ZIP file or extracted folder may result in outdated files or incorrect paths when following the commands in this lab.
+
+## 2. Download and Extract the Latest Repository
+
 The application files for the Credit Risk RAG application are provided in the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer).
 
 1. Open the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer) in a browser.
 
 2. Select **Code** and then select **Download ZIP**.
-
-   > **Tip:** Before downloading, make sure there are no existing copies of the repository, ZIP files, or extracted folders in your **Downloads** or **Desktop** folders. We will use PowerShell commands in the next steps to avoid Windows long-path issues, and duplicate copies in these locations can cause path conflicts.
 
 3. Once the ZIP file has downloaded, open the **Downloads** folder.
 
