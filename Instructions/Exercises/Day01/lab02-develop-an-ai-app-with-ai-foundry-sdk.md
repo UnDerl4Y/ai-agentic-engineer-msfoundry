@@ -207,41 +207,51 @@ You'll write a small Python app that connects to your Foundry project and holds 
 
 The application uses your Azure identity to connect to Microsoft Foundry.
 
-1. Come back to the terminal.
+1. Return to the VS Code terminal.
 
-2. Run the following command:
-
-   ```powershell
-   az login
-   ```
-
-3. A browser window will open. Sign in using the credentials provided for the training environment.
-
-4. If prompted to select a subscription, enter the subscription number (for example, `1`) and press **Enter**.
-
-5. Verify the active Azure account and subscription:
+2. Check whether you are already signed in:
 
    ```powershell
    az account show
    ```
 
-6. Make sure the correct subscription is selected before continuing.
+3. If your Azure account and subscription details are displayed, you are already signed in. You can skip the remaining sign-in steps and proceed directly to [**Run the App**](#run-the-app), the next step.
+
+4. If no active account is available, run:
+
+   ```powershell
+   az login
+   ```
+
+   A browser window will open. Sign in using the credentials provided for the training environment.
+
+5. If prompted to select a subscription, enter the subscription number (for example, `1`) and press **Enter**.
+
+6. Verify your active account and subscription again:
+
+   ```powershell
+   az account show
+   ```
+
+Make sure the correct training account and subscription are selected before continuing.
 
 ## Run the App
 
-    ```bash
-    python chat-app.py
-    ```
+1. In the VS Code terminal, run the following command to start the application:
 
-    ![Screenshot of the terminal running chat-app.py, showing the app started and waiting for input.](../../media/response-00.png)
+```bash
+python chat-app.py
+```
 
-1. When prompted, type a question, such as "What is the fastest animal on Earth?", and read the model's reply.
+![Screenshot of the terminal showing the `chat-app.py` application running and waiting for input.](../../media/response-00.png)
 
-2. Ask a follow-up, like "Where can I see one?" or "Are they endangered?" The model should answer using the earlier question as context, since your app is saving the conversation history.
+2. When prompted, type a question, such as "What is the fastest animal on Earth?", and read the model's reply.
+
+3. Ask a follow-up, like "Where can I see one?" or "Are they endangered?" The model should answer using the earlier question as context, since your app is saving the conversation history.
 
     ![Screenshot of the responses](../../media/response-01.png)
 
-3. Type "quit" to exit the program.
+4. Type "quit" to exit the program.
 
     > If the app stops with a rate-limit error, wait a few seconds and try again. If there isn't enough quota left on the deployment, the model may not respond at all; check with your trainer if this happens.
 
