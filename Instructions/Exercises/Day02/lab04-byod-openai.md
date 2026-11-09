@@ -274,7 +274,7 @@ Return only the outcome.
 1. Open a web browser and go to the [GitHub](https://github.com/Kiran-255666/AgenticAIEngineer).
 1. On the repo page, select the green **`<> Code`** button, then select **Download ZIP**.
 
-    ![Screenshot of the Code button.](../../media/code.png)
+    ![Screenshot of the Code button.](../../media/code_v1.png)
 1. Once the download finishes, locate the ZIP file and extract it to a folder on your computer. **Ensure that there are no other ZIP files or extracted folders with the same name in the Downloads folder.**
 
 1. **Copy the `lab03-byod-openai` folder to the Desktop:**
@@ -282,7 +282,7 @@ Return only the outcome.
    **Use PowerShell to run the following commands to copy the folder to the Desktop and open it in VS Code. The path below is an example; verify your actual path before running the commands.**
 
    ```powershell
-   Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day02\lab03-byod-openai" "$env:USERPROFILE\Desktop\lab03-byod-openai" -Recurse
+   Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day02\lab04-byod-openai" "$env:USERPROFILE\Desktop\lab03-byod-openai" -Recurse
    ```
 
    ```powershell
