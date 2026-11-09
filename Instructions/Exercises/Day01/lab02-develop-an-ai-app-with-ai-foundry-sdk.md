@@ -44,15 +44,25 @@ Before starting this exercise, ensure you have:
 
 You'll write a small Python app that connects to your Foundry project and holds a conversation with the deployed model. A **client application** here just means code that runs on your machine and talks to the model over the internet.
 
+### Clean Up Previous Downloads
+
+1. Open your **Downloads** folder.
+2. Delete previously downloaded ZIP file and extracted folders.
+
+> [!NOTE]
+> The repository has been updated. Keeping older copies may result in folders such as `AgenticAIEngineer-main (1)`, which can cause the commands used in this lab to fail or reference the wrong location.
+
 ### Prepare the application configuration
 
 1. Open a web browser and go to the [GitHub](https://github.com/Kiran-255666/AgenticAIEngineer).
-1. On the repo page, select the green **`<> Code`** button, then select **Download ZIP**.
+
+2. On the repo page, select the green **`<> Code`** button, then select **Download ZIP**.
 
     ![Screenshot of the Code button.](../../media/code.png)
-1. Once the download finishes, locate the ZIP file and extract it to a folder on your computer. **Ensure that there are no other ZIP files or extracted folders with the same name in the Downloads folder.**
 
-1. **Copy the `chat-app` folder to the Desktop:**
+3. Once the download finishes, locate the ZIP file and extract it to a folder on your computer. 
+
+4. **Copy the `chat-app` folder to the Desktop:**
 
    **Use PowerShell to run the following commands to copy the folder to the Desktop and open it in VS Code. The path below is an example; verify your actual path before running the commands.**
 
@@ -64,7 +74,7 @@ You'll write a small Python app that connects to your Foundry project and holds 
    code "$env:USERPROFILE\Desktop\chat-app"
    ```
 
-2. **Install the required packages:**
+5. **Install the required packages:**
 
    Create and activate a Python virtual environment, then install the required dependencies:
 
