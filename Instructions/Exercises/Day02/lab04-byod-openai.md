@@ -247,7 +247,7 @@ Return only the outcome.
     ![Screenshot of the Code button.](../../media/code_v1.png)
 1. Once the download finishes, locate the ZIP file and extract it to a folder on your computer. **Ensure that there are no other ZIP files or extracted folders with the same name in the Downloads folder.**
 
-1. **Copy the `lab03-byod-openai` folder to the Desktop:**
+1. **Copy the `lab04-byod-openai` folder to the Desktop:**
 
    **Use PowerShell to run the following commands to copy the folder to the Desktop and open it in VS Code. The path below is an example; verify your actual path before running the commands.**
 
