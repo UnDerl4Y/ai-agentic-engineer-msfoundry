@@ -392,6 +392,53 @@ GST Certificate company name:
 
 The Registration Certificate is present but unreadable, so the company name cannot be verified and the case is sent for manual review.
 
+## Prompt Engineering Techniques Used in This Lab
+
+This lab demonstrated how different prompt engineering techniques can be combined to improve the consistency, reliability, and accuracy of AI-generated responses.
+
+| Technique | How It Was Used | Purpose |
+|------------|------------|------------|
+| **System Prompting** | `You are a document validation assistant.` | Defines the model's role, behaviour, and expected responsibilities. |
+| **Instruction Prompting** | `Check the following... Return only one of these outcomes...` | Provides clear, task-specific instructions that the model should follow. |
+| **Structured Output Prompting** | `Return only the outcome.` | Restricts the response to a predefined format for greater consistency. |
+| **Few-Shot Prompting** | PASS and FAIL validation examples. | Demonstrates the expected behaviour through examples before presenting a new scenario. |
+| **Role-Based Prompting** | `You are a document validation assistant helping validate company documents...` | Provides business context and narrows the model's focus to a specific domain. |
+| **Contextual Grounding** | Company names, registration certificates, and GST certificates. | Supplies the information required for the model to perform the validation task. |
+| **Task Decomposition** | `1. Check certificate 2. Check GST 3. Compare names 4. Return outcome` | Breaks a complex task into smaller logical steps, making the process easier for the model to follow. |
+
+### What You Learned
+
+In this lab, you explored how prompt design directly influences model behaviour. By combining instructions, examples, contextual information, output constraints, and role definitions, you can guide a model to produce more consistent, reliable, and predictable results for business scenarios.
+
+## Additional Prompting Techniques
+
+The following prompting techniques are commonly used when designing generative AI applications:
+
+| Technique | Description | Example |
+|------------|------------|------------|
+| **Zero-Shot Prompting** | Performs a task using instructions only, without providing examples. | `Summarize this document in three bullet points.` |
+| **One-Shot Prompting** | Provides a single example before asking the model to perform a task. | Show one classification example before asking the model to classify a new item. |
+| **Few-Shot Prompting** | Provides multiple examples before requesting a response. | PASS and FAIL validation examples. |
+| **Chain-of-Thought Prompting** | Encourages the model to reason through a problem step by step. | `Think through the problem step by step before answering.` |
+| **Role-Based Prompting** | Assigns a specific role or area of expertise to the model. | `You are a financial analyst.` |
+| **Persona Prompting** | Defines a communication style, personality, or audience. | `Explain this as a friendly teacher.` |
+| **Contextual Grounding** | Supplies supporting information that the model should use when responding. | Policies, manuals, product catalogues, or company data. |
+| **Structured Output Prompting** | Requires responses in a predefined format. | JSON, XML, Markdown tables, or CSV output. |
+| **Template-Based Prompting** | Uses reusable prompt templates with placeholders for dynamic content. | `Summarize {document} for {audience}.` |
+| **Multi-Turn Prompting** | Maintains context across multiple interactions in a conversation. | Follow-up questions that rely on previous messages. |
+| **Retrieval-Augmented Generation (RAG)** | Uses external knowledge sources to ground responses in trusted information. | Searching company policies before answering an employee question. |
+| **Prompt Chaining** | Breaks a large task into multiple prompt-driven steps. | Extract data > Validate data > Generate report. |
+| **Self-Consistency Prompting** | Evaluates multiple reasoning paths to identify the most reliable answer. | Solving a problem multiple ways before responding. |
+| **ReAct (Reason + Act)** | Combines reasoning with tool or knowledge-source usage. | An AI agent that searches the web or queries a database before responding. |
+| **Tree of Thoughts (ToT)** | Explores multiple solution paths before selecting the best answer. | Comparing several approaches to solving a business problem. |
+
+> [!NOTE]
+> This lab primarily demonstrated **System Prompting**, **Instruction Prompting**, **Structured Output Prompting**, **Few-Shot Prompting**, **Role-Based Prompting**, **Contextual Grounding**, and **Task Decomposition**. In practice, multiple prompting techniques are often combined to improve response quality, consistency, and reliability.
+
 ## Summary
 
-You created a Python virtual environment, configured the `.env` file with your Azure OpenAI credentials, and ran an application that validates client documents against the provided information. You tested different document states and reviewed how the application handles matching information, mismatches, and cases that require manual review.
+In this lab, you explored how prompt design influences the behaviour and output of an Azure OpenAI model. Using Azure AI Foundry, you experimented with different prompt engineering techniques to improve the consistency and reliability of document validation responses.
+
+You then configured and ran a Python application that uses Azure OpenAI to validate company documents. Through a series of validation scenarios, you observed how prompt engineering techniques can be applied to real-world business workflows to produce more reliable, consistent, and predictable outcomes.
+
+By the end of this lab, you had hands-on experience with several core prompt engineering techniques and gained a better understanding of how prompt design can influence the quality and format of AI-generated responses.
