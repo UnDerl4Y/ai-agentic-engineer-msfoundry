@@ -9,13 +9,14 @@ lab:
 ---
 
 # Utilize prompt engineering in your app
-**Note: We have already updated the mentioned files with the code mentioned in the instructions, but we would highly suggest going through it before executing it**
 
-How you write a prompt has a direct effect on how an Azure OpenAI model responds. The model can tailor and format its output if you ask clearly, but the same request phrased two different ways can produce very different results.
+**Note:** The files used in this lab have already been updated with the required code. However, we recommend reviewing them before running the application.
 
-In this exercise, you'll play the role of a developer on a wildlife marketing team. You're testing how generative AI can improve advertising emails and sort articles for your team. The prompt techniques you'll practice apply just as well to other use cases beyond this one.
+How you write a prompt directly affects how an Azure OpenAI model responds. Clear instructions can guide the model's behaviour and output format, while different prompt structures can produce different responses to the same request.
 
-This exercise takes approximately **30** minutes.
+In this exercise, you'll act as a developer building a document validation application. You'll explore how prompt engineering techniques influence model responses and then run a Python application that validates company documents.
+
+This exercise takes approximately **30 minutes**.
 
 ## Prerequisites
 
@@ -24,22 +25,25 @@ This exercise takes approximately **30** minutes.
 - **Azure CLI** installed. [Install Azure CLI](https://aka.ms/installazurecliwindows)
 - [Visual Studio Code](https://code.visualstudio.com/) installed on your local machine
 - A web browser
-- Basic familiarity with running commands in a terminal (you don't need to know Python already; the code is provided)
+- Basic familiarity with running commands in a terminal
 
-# Explore prompt engineering techniques
+# Explore Prompt Engineering Techniques
 
-In this section, you'll use the deployed model playground in Microsoft Foundry to see how instructions and examples change the model's response.
+In this section, you will use the deployed model playground in Microsoft Foundry to explore how instructions, prompt structure, examples, and role definitions affect model responses.
 
-1. Return to the [Microsoft Foundry portal](https://ai.azure.com), select your training project, and open **Home Page**.
+## 1. Open the Model Playground
 
-1. Under the **Model selection** select **Test in playground**.
+1. Open the [Microsoft Foundry portal](https://ai.azure.com).
+2. Select your training project and open **Home Page**.
+3. Under **Model selection**, select **Test in playground**.
+4. Verify that the selected deployment appears at the top of the left pane.
 
-1. The model playground opens. Verify that the selected deployment is shown at the top of the left pane.
+The playground has two main areas:
 
-    The playground has two main areas:
+- **Instructions:** Define the model's behaviour and response format.
+- **Chat:** Submit prompts and review model responses.
 
-    - **Instructions**: Where you define the model's behavior and response format.
-    - **Chat**: Where you send prompts and review responses.
+## 2. Test the Default Instructions
 
 1. In **Instructions**, verify that the following default instruction is present:
 
@@ -47,29 +51,29 @@ In this section, you'll use the deployed model playground in Microsoft Foundry t
    You are an AI assistant that helps people find information.
    ```
 
-2. If the instruction is not present, enter it manually.
-
-3. In the **Chat** message box, submit the following prompt:
+2. If the instruction is missing, enter it manually.
+3. In the **Chat** pane, submit the following prompt:
 
    ```text
    Validate these company documents.
 
    Client Company Name:
-
    Contoso Technologies Pvt Ltd
 
    Company Registration Certificate:
-
    Company Name: Contoso Technologies Pvt Ltd
 
    GST Certificate:
-
    Company Name: Contoso Technologies Pvt Ltd
    ```
 
-4. Review the response. With the default instruction, the model will usually explain or summarize the provided information instead of returning a specific document-validation outcome.
+4. Review the response.
 
-5. In **Instructions**, replace the default instruction with the following:
+   The model may explain or summarize the information instead of returning a specific validation outcome.
+
+## 3. Apply Specific Instructions
+
+1. In **Instructions**, replace the default instruction with:
 
    ```text
    You are a document validation assistant.
@@ -87,7 +91,41 @@ In this section, you'll use the deployed model playground in Microsoft Foundry t
    MANUAL_REVIEW
    ```
 
-6. In the **Chat** pane, submit the following prompt. This prompt includes examples directly in the message because the new playground does not provide separate User and Assistant example fields.
+2. In the **Chat** pane, submit:
+
+   ```text
+   Validate these company documents.
+
+   Client Company Name:
+   Contoso Technologies Pvt Ltd
+
+   Company Registration Certificate:
+   Company Name: Contoso Technologies Pvt Ltd
+
+   GST Certificate:
+   Company Name: Contoso Technologies Pvt Ltd
+
+   Return only the outcome.
+   ```
+
+3. Review the response.
+
+   The model should return a single validation outcome, such as:
+
+   ```text
+   PASS
+   ```
+
+This experiment demonstrates how specific instructions and a defined output format guide the model towards the required response.
+
+## 4. Use Examples in Prompts (Few-Shot Prompting)
+
+Few-shot prompting provides examples of expected inputs and outputs. These examples help the model understand the required response pattern.
+
+The playground does not provide separate User and Assistant example fields. Therefore, you will include the examples directly in the chat prompt.
+
+1. Keep the document validation instructions in the **Instructions** pane.
+2. In the **Chat** pane, submit:
 
    ```text
    Validate each submission using exactly one outcome:
@@ -99,209 +137,192 @@ In this section, you'll use the deployed model playground in Microsoft Foundry t
    Example 1:
 
    Client Company Name:
-
    Contoso Technologies Pvt Ltd
 
    Company Registration Certificate:
-
    Company Name: Contoso Technologies Pvt Ltd
 
    GST Certificate:
-
    Company Name: Contoso Technologies Pvt Ltd
 
    Outcome:
-
    PASS
 
    Example 2:
 
    Client Company Name:
-
    Contoso Technologies Pvt Ltd
 
    Company Registration Certificate:
-
    Company Name: Contoso Technology Pvt Ltd
 
    GST Certificate:
-
    Company Name: Contoso Technologies Pvt Ltd
 
    Outcome:
-
    FAIL
 
    Now validate this submission:
 
    Client Company Name:
-
    Contoso Technologies Pvt Ltd
 
    Company Registration Certificate:
-
    Company Name: Contoso Technologies Pvt Ltd
 
    GST Certificate:
-
    Company Name: Contoso Technologies Pvt Ltd
 
    Return only the outcome.
    ```
 
-7. Verify that the model returns a single validation outcome. Depending on the prompt and model version, the exact response may vary, but it should be similar to:
+3. Review the response.
+
+   The expected response is:
 
    ```text
    PASS
    ```
 
-8. This demonstrates that clear instructions, a defined output format, and examples help produce more consistent document-validation responses.
+This experiment demonstrates how examples help the model follow a consistent input and output pattern.
 
-9. In **Instructions**, replace the validation instruction with the following default instruction:
+## 5. Test Role-Based Instructions
+
+The model's assigned role can influence how it interprets a task and generates a response. In this experiment, you will use the same prompt with two different role definitions.
+
+1. In **Instructions**, enter the following:
 
    ```text
    You are an AI assistant that helps people find information.
    ```
 
-10. In the **Chat** pane, submit the following prompt:
+2. In the **Chat** pane, submit:
 
-    ```text
-    # 1. Check whether a Company Registration Certificate is present
+   ```text
+   Validate these company documents.
 
-    # 2. Check whether a GST Certificate is present
+   Client Company Name:
+   Contoso Technologies Pvt Ltd
 
-    # 3. Compare the company names
+   Company Registration Certificate:
+   Company Name: Contoso Technologies Pvt Ltd
 
-    # 4. Return a validation result
-    ```
+   GST Certificate:
+   Company Name: Contoso Technologies Pvt Ltd
 
-11. Review the response. The model may treat the prompt as a plain-language request instead of consistently following the required validation process.
+   Check whether both certificates are present and whether their company names match the client company name.
+   ```
 
-12. In **Instructions**, replace the instruction with:
+3. Review the response.
+4. In **Instructions**, replace the previous instruction with:
 
-    ```text
-    You are a document validation assistant helping validate company documents for a fictional credit-risk assessment.
-    ```
+   ```text
+   You are a document validation assistant helping validate company documents for a fictional credit-risk assessment.
+   ```
 
-13. Send the following document-validation prompt again:
+5. Submit the **same prompt** again.
+6. Review and compare both responses.
 
-```text
-Validate each submission using exactly one outcome:
+Observe how changing the model's role provides a different context for interpreting the same request.
 
-PASS
-FAIL
-MANUAL_REVIEW
+## 6. Restore the Default Instructions
 
-Example 1:
+1. In **Instructions**, restore the original instruction:
 
-Client Company Name:
-Contoso Technologies Pvt Ltd
+   ```text
+   You are an AI assistant that helps people find information.
+   ```
 
-Company Registration Certificate:
-Company Name: Contoso Technologies Pvt Ltd
+# Prepare the application
 
-GST Certificate:
-Company Name: Contoso Technologies Pvt Ltd
+## 1. Clean Up Previous Downloads
 
-Outcome:
-PASS
+Before downloading the latest repository version, remove the previous downloaded files and extracted folders to avoid using an outdated copy.
 
-Example 2:
+1. Open your **Downloads** folder.
+2. Delete the previously downloaded `AgenticAIEngineer-main.zip` file.
+3. Delete the previously extracted `AgenticAIEngineer-main` folder and any duplicate extracted folders, such as `AgenticAIEngineer-main (1)`.
+4. Make sure the old copies have been removed before proceeding.
 
-Client Company Name:
-Contoso Technologies Pvt Ltd
+> **Note:** The repository has been updated. Using an older ZIP file or extracted folder may result in outdated files or incorrect paths when following the commands in this lab.
 
-Company Registration Certificate:
-Company Name: Contoso Technology Pvt Ltd
+## 2. Download and Extract the Latest Repository
 
-GST Certificate:
-Company Name: Contoso Technologies Pvt Ltd
+1. Open the [AgenticAIEngineer GitHub repository](https://github.com/Kiran-255666/AgenticAIEngineer).
+2. Select the green **<> Code** button.
+3. Select **Download ZIP**.
 
-Outcome:
-FAIL
+   ![Screenshot of the Code button.](../../media/code_v1.png)
 
-Now validate this submission:
+4. Wait for the download to finish.
+5. Open your **Downloads** folder.
+6. Right-click the downloaded ZIP file and select **Extract All**.
+7. Extract the ZIP file into the **Downloads** folder.
 
-Client Company Name:
-Contoso Technologies Pvt Ltd
+   After extraction, you should have a folder named `AgenticAIEngineer-main` in Downloads.
 
-Company Registration Certificate:
-Company Name: Contoso Technologies Pvt Ltd
+## 3. Copy the Lab Folder to the Desktop
 
-GST Certificate:
-Company Name: Contoso Technologies Pvt Ltd
+1. Open PowerShell.
+2. Run the following command to copy the lab folder to your Desktop.
 
-Return only the outcome.
+   ```powershell
+   Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\labfiles\Day02\lab04-byod-openai" "$env:USERPROFILE\Desktop\lab04-byod-openai" -Recurse
+   ```
+
+   **Note:** The path above assumes the extracted repository contains `labfiles\Day02\lab04-byod-openai`. If the folder structure is different, verify the extracted location in Downloads and update the source path accordingly.
+
+3. Open the copied folder in Visual Studio Code:
+
+   ```powershell
+   code "$env:USERPROFILE\Desktop\lab04-byod-openai"
+   ```
+
+## 4. Install the Required Packages
+
+In the VS Code terminal, create and activate a Python virtual environment, then install the required dependencies:
+
+```powershell
+python -m venv labenv
+.\labenv\Scripts\Activate.ps1
+pip install -r requirements.txt
 ```
 
-19. Review the response. The model should now provide a more focused response based on the document-presence and company-name checks.
+> **Note:** If `python -m venv labenv` returns an error in the virtual machine, use the Windows Python Launcher instead:
 
-20. When you finish testing, you can leave the playground open or return to the project home page to continue with the application section.
+```powershell
+py -m venv labenv
+.\labenv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
 
-### Prepare the application configuration (If you already have the latest ZIP file downloaded, skip to **Step 4**)
+# Configure Your Application
 
+1. In Visual Studio Code, open the `.env` file in the lab folder. If it does not exist, create a file named `.env` in the same folder as `prompt_engineering.py`.
+2. Add the following configuration:
 
-1. Open a web browser and go to the [GitHub](https://github.com/Kiran-255666/AgenticAIEngineer).
-1. On the repo page, select the green **`<> Code`** button, then select **Download ZIP**.
-
-    ![Screenshot of the Code button.](../../media/code_v1.png)
-1. Once the download finishes, locate the ZIP file and extract it to a folder on your computer. **Ensure that there are no other ZIP files or extracted folders with the same name in the Downloads folder.**
-
-1. **Copy the `lab04-byod-openai` folder to the Desktop:**
-
-   **Use PowerShell to run the following commands to copy the folder to the Desktop and open it in VS Code. The path below is an example; verify your actual path before running the commands.**
-
-   ```powershell
-   Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day02\lab04-byod-openai" "$env:USERPROFILE\Desktop\lab03-byod-openai" -Recurse
+   ```env
+   AZURE_OPENAI_ENDPOINT=https://hakunamatata1234.openai.azure.com/openai/v1
+   AZURE_OPENAI_API_KEY=your_azure_openai_api_key
+   AZURE_OPENAI_DEPLOYMENT=your_azure_openai_deployment
    ```
 
-   ```powershell
-   code "$env:USERPROFILE\Desktop\lab03-byod-openai"
-   ```
+3. Replace the placeholders with the actual values from your Azure OpenAI resource:
+   - `AZURE_OPENAI_API_KEY`: Your Azure OpenAI API key.
+   - `AZURE_OPENAI_DEPLOYMENT`: The exact deployment name of your model.
 
-2. **Install the required packages:**
+   **Important:** Keep your Azure OpenAI API key private. Never share it or commit the `.env` file to a public repository.
 
-   Create and activate a Python virtual environment, then install the required dependencies:
+4. Open `prompt_engineering.py` and review the code.
 
-   ```powershell
-   python -m venv labenv
-   .\labenv\Scripts\Activate.ps1
-   pip install -r requirements.txt
-   ```
+   The application is already configured to read the Azure OpenAI settings from the `.env` file. You do not need to enter the endpoint, API key, or deployment directly in the Python code.
 
-   > **Note:** If `python -m venv labenv` returns an error in the Virtual Machine, use the Windows Python Launcher instead:
-   >
-   > ```powershell
-   > py -m venv labenv
-   > .\labenv\Scripts\Activate.ps1
-   > pip install -r requirements.txt
-   > ```
+5. Review `system.txt` and `grounding.txt`. These files are provided and contain the system instructions and grounding information used by the application.
+6. Save your changes using **Ctrl + S**.
 
-## Configure your application
+# Run the Application
 
-1. In Visual Studio Code, open the `.env` file. Now place the API Key:
-
-    ```env
-    AZURE_OPENAI_ENDPOINT=https://hakunamatata1.openai.azure.com/openai/v1/
-    AZURE_OPENAI_API_KEY=your_azure_openai_api_key
-    AZURE_OPENAI_DEPLOYMENT=your_azure_openai_deployment
-    ```
-
-1. Replace each placeholder with the actual Azure OpenAI value you copied or saved earlier.
-
-    > **Important**: Keep your Azure OpenAI API key private. Never share it or commit the `.env` file to a public repository.
-
-1. Open `prompt_engineering.py` and review the code.
-
-    The application is already configured to read the Azure OpenAI settings from the `.env` file, so you don't need to enter the endpoint, API key, or deployment directly in the Python code.
-
-1. Review `system.txt` and `grounding.txt`. These files are already provided and contain the system instructions and grounding information used by the application.
-1. Check `prompt_engineering.py` for any indentation issues before running it. Python uses indentation to define blocks of code, so an incorrectly indented line can cause an error when you execute the script.
-1. Save your changes by `ctrl+s` .
-
-## Run the application
-
-Run the script:
+Run the following command in the VS Code terminal:
 
 ```powershell
 python prompt_engineering.py
@@ -309,18 +330,18 @@ python prompt_engineering.py
 
 Select **option 1** when prompted. The application will ask for the client name and the state of each document.
 
-Use these shortcuts:
+Use the following shortcuts when entering document states:
 
-| Shortcut | Meaning                |
-| -------- | ---------------------- |
-| PR       | Present and readable   |
-| PU       | Present but unreadable |
-| PA       | Present but unclear    |
-| MI       | Missing                |
+| Shortcut | Meaning |
+| --- | --- |
+| PR | Present and readable |
+| PU | Present but unreadable |
+| PA | Present but unclear |
+| MI | Missing |
 
-## Example Scenarios
+# Example Scenarios
 
-### Scenario 1: Matching company names
+## Scenario 1: Matching Company Names
 
 Enter the following values when prompted:
 
@@ -339,13 +360,13 @@ GST Certificate (PR/PU/PA/MI):
 
 GST Certificate company name:
 > CONTOSO TECHNOLOGIES PVT LTD
-````
+```
 
-**Result:** `PASS`
+**Expected result:** `PASS`
 
 The names match after safe normalisation, which ignores differences such as letter case.
 
-### Scenario 2: Company name mismatch
+## Scenario 2: Company Name Mismatch
 
 Enter the following values when prompted:
 
@@ -366,11 +387,11 @@ GST Certificate company name:
 > Contoso Technologies Pvt Ltd
 ```
 
-**Result:** `FAIL, COMPANY_NAME_MISMATCH`
+**Expected result:** `FAIL, COMPANY_NAME_MISMATCH`
 
 "Technology" and "Technologies" are different words, so the names do not match after safe normalisation.
 
-### Scenario 3: Unreadable document
+## Scenario 3: Unreadable Document
 
 Enter the following values when prompted:
 
@@ -388,38 +409,38 @@ GST Certificate company name:
 > Contoso Technologies Pvt Ltd
 ```
 
-**Result:** `MANUAL_REVIEW, UNREADABLE_REGISTRATION_CERTIFICATE`
+**Expected result:** `MANUAL_REVIEW, UNREADABLE_REGISTRATION_CERTIFICATE`
 
-The Registration Certificate is present but unreadable, so the company name cannot be verified and the case is sent for manual review.
+The Registration Certificate is present but unreadable. Therefore, the company name cannot be verified, and the case is sent for manual review.
 
-## Prompt Engineering Techniques Used in This Lab
+# Prompt Engineering Techniques Used in This Lab
 
 This lab demonstrated how different prompt engineering techniques can be combined to improve the consistency, reliability, and accuracy of AI-generated responses.
 
 | Technique | How It Was Used | Purpose |
-|------------|------------|------------|
+| --- | --- | --- |
 | **System Prompting** | `You are a document validation assistant.` | Defines the model's role, behaviour, and expected responsibilities. |
-| **Instruction Prompting** | `Check the following... Return only one of these outcomes...` | Provides clear, task-specific instructions that the model should follow. |
+| **Instruction Prompting** | `Check the following... Return only one of these outcomes...` | Provides clear, task-specific instructions. |
 | **Structured Output Prompting** | `Return only the outcome.` | Restricts the response to a predefined format for greater consistency. |
 | **Few-Shot Prompting** | PASS and FAIL validation examples. | Demonstrates the expected behaviour through examples before presenting a new scenario. |
 | **Role-Based Prompting** | `You are a document validation assistant helping validate company documents...` | Provides business context and narrows the model's focus to a specific domain. |
 | **Contextual Grounding** | Company names, registration certificates, and GST certificates. | Supplies the information required for the model to perform the validation task. |
-| **Task Decomposition** | `1. Check certificate 2. Check GST 3. Compare names 4. Return outcome` | Breaks a complex task into smaller logical steps, making the process easier for the model to follow. |
+| **Task Decomposition** | Checking certificate presence, comparing names, and returning an outcome. | Breaks a task into smaller logical steps, making it easier for the model to follow. |
 
-### What You Learned
+## What You Learned
 
 In this lab, you explored how prompt design directly influences model behaviour. By combining instructions, examples, contextual information, output constraints, and role definitions, you can guide a model to produce more consistent, reliable, and predictable results for business scenarios.
 
-## Additional Prompting Techniques
+# Additional Prompting Techniques
 
 The following prompting techniques are commonly used when designing generative AI applications:
 
 | Technique | Description | Example |
-|------------|------------|------------|
+| --- | --- | --- |
 | **Zero-Shot Prompting** | Performs a task using instructions only, without providing examples. | `Summarize this document in three bullet points.` |
 | **One-Shot Prompting** | Provides a single example before asking the model to perform a task. | Show one classification example before asking the model to classify a new item. |
 | **Few-Shot Prompting** | Provides multiple examples before requesting a response. | PASS and FAIL validation examples. |
-| **Chain-of-Thought Prompting** | Encourages the model to reason through a problem step by step. | `Think through the problem step by step before answering.` |
+| **Chain-of-Thought Prompting** | Encourages the model to work through a problem in a structured way. | `Work through the validation criteria and provide a concise explanation of the result.` |
 | **Role-Based Prompting** | Assigns a specific role or area of expertise to the model. | `You are a financial analyst.` |
 | **Persona Prompting** | Defines a communication style, personality, or audience. | `Explain this as a friendly teacher.` |
 | **Contextual Grounding** | Supplies supporting information that the model should use when responding. | Policies, manuals, product catalogues, or company data. |
@@ -428,17 +449,16 @@ The following prompting techniques are commonly used when designing generative A
 | **Multi-Turn Prompting** | Maintains context across multiple interactions in a conversation. | Follow-up questions that rely on previous messages. |
 | **Retrieval-Augmented Generation (RAG)** | Uses external knowledge sources to ground responses in trusted information. | Searching company policies before answering an employee question. |
 | **Prompt Chaining** | Breaks a large task into multiple prompt-driven steps. | Extract data > Validate data > Generate report. |
-| **Self-Consistency Prompting** | Evaluates multiple reasoning paths to identify the most reliable answer. | Solving a problem multiple ways before responding. |
+| **Self-Consistency Prompting** | Samples multiple reasoning paths and compares their results to identify a more reliable answer. | Solving a problem through multiple sampled approaches and selecting the most consistent result. |
 | **ReAct (Reason + Act)** | Combines reasoning with tool or knowledge-source usage. | An AI agent that searches the web or queries a database before responding. |
-| **Tree of Thoughts (ToT)** | Explores multiple solution paths before selecting the best answer. | Comparing several approaches to solving a business problem. |
+| **Tree of Thoughts (ToT)** | Explores multiple possible solution paths before selecting an approach. | Comparing several approaches to solving a business problem. |
 
-> [!NOTE]
-> This lab primarily demonstrated **System Prompting**, **Instruction Prompting**, **Structured Output Prompting**, **Few-Shot Prompting**, **Role-Based Prompting**, **Contextual Grounding**, and **Task Decomposition**. In practice, multiple prompting techniques are often combined to improve response quality, consistency, and reliability.
+> **Note:** This lab primarily demonstrated **System Prompting**, **Instruction Prompting**, **Structured Output Prompting**, **Few-Shot Prompting**, **Role-Based Prompting**, **Contextual Grounding**, and **Task Decomposition**. In practice, multiple prompting techniques are often combined to improve response quality, consistency, and reliability.
 
-## Summary
+# Summary
 
-In this lab, you explored how prompt design influences the behaviour and output of an Azure OpenAI model. Using Azure AI Foundry, you experimented with different prompt engineering techniques to improve the consistency and reliability of document validation responses.
+In this lab, you explored how prompt design influences the behaviour and output of an Azure OpenAI model. Using Microsoft Foundry, you experimented with different prompt engineering techniques to improve the consistency and reliability of document validation responses.
 
-You then configured and ran a Python application that uses Azure OpenAI to validate company documents. Through a series of validation scenarios, you observed how prompt engineering techniques can be applied to real-world business workflows to produce more reliable, consistent, and predictable outcomes.
+You then configured and ran a Python application that uses Azure OpenAI to validate company documents. Through a series of validation scenarios, you observed how prompt engineering techniques can be applied to business workflows to produce more reliable, consistent, and predictable outcomes.
 
-By the end of this lab, you had hands-on experience with several core prompt engineering techniques and gained a better understanding of how prompt design can influence the quality and format of AI-generated responses.
+By the end of this lab, you had hands-on experience with several core prompt engineering techniques and gained a better understanding of how prompt design influences the quality and format of AI-generated responses.
