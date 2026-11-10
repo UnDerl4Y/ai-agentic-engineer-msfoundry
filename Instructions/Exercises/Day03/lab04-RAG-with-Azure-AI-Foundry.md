@@ -47,7 +47,7 @@ This gives you a baseline for understanding how the model answers questions **be
 
    ![Screenshot](../../media/d1.png)
 
-3. In the **Instructions** field, replace the following prompt*:
+3. In the **Instructions** field, replace the following prompt:
 
    ```text
    You are a Credit Risk Assessment Assistant.
@@ -69,25 +69,27 @@ This gives you a baseline for understanding how the model answers questions **be
    * `credit_risk_scorecard.txt`
    * `credit_policy_guidelines.txt`
 
-   Upload the files **one at a time** to the Playground.
+8. Upload the files **one at a time** to the Playground by clicking **Upload files**. 
 
-   > **Important:** Upload one file at a time and wait until it shows **Success** before uploading the next one. If a file fails, use the side scroll bar to find the **Delete** button, remove the failed file, and upload it again. Wait until **all three files show Success**. Once all three are successful, select **Attach** to continue.
+9. When the **Attach files** dialog appears, Azure AI Foundry creates a new **vector index** for the uploaded documents. The **Vector index name** field is automatically populated with a unique name, but you may provide your own descriptive name if preferred.
 
-8. Ask the same question again:
+10. Upload one file at a time and wait until it shows **Success** before uploading the next one. If a file fails, use the side scroll bar to find the **Delete** button, remove the failed file, and upload it again. Wait until **all three files show Success**. Once all three are successful, select **Attach** to continue.
+
+11. Ask the same question again:
 
     ```text
     Which industries are classified as High Risk?
     ```
 
-9. Compare the new response with the previous response. The model should now retrieve relevant information from the uploaded documents and provide a more grounded response.
+12. Compare the new response with the previous response. The model should now retrieve relevant information from the uploaded documents and provide a more grounded response.
 
-10. Try another question:
+13. Try another question:
 
     ```text
     What credit limit is recommended for a Low Risk customer?
     ```
 
-11. Review the response and observe how the model uses information from the uploaded credit risk knowledge base.
+14. Review the response and observe how the model uses information from the uploaded credit risk knowledge base.
 
 This demonstrates the difference between the model responding **without organization-specific context** and responding with information retrieved from the **credit risk knowledge base**.
 
