@@ -24,8 +24,6 @@ You will:
 
 This exercise takes approximately **45 minutes**.
 
-> **Note:** Some of the technologies used in this exercise are in preview or in active development. You may experience unexpected behavior, warnings, or errors.
-
 ## Prerequisites
 
 Before starting this exercise, ensure you have:
@@ -35,43 +33,37 @@ Before starting this exercise, ensure you have:
 - [Python 3.12 or above](https://www.python.org/downloads/) installed
 - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed
 
-> **Note:** The lab has been tested with Python 3.12.
-
 ## Experiment with the model in the playground
 
 Before building the **Credit Risk Assessment** application, explore the model in the Chat Playground and then connect it to the credit risk knowledge base.
 
 This gives you a baseline for understanding how the model answers questions **before it has access to the organization's credit risk knowledge base**.
 
-1. Open the [Microsoft Foundry portal](https://ai.azure.com/).
+1. Return to the [Microsoft Foundry portal](https://ai.azure.com/).
 
-2. Ensure that you are in the **hakunamatata1** project.
-
-3. On the **Home** page, scroll to the **Model selection** section.
-
-4. Locate the deployed model card and select **Test in playground**.
+2. In the Home page, under **Model selection**, locate and click **Test in playground**.
 
    > **Note:** Selecting **Test in playground** opens the **Chat Playground**, where you can interact with the deployed model and review its responses.
 
    ![Screenshot](../../media/d1.png)
 
-5. In the **Instructions** field, enter the following prompt and select **Apply Changes**:
+3. In the **Instructions** field, replace the following prompt*:
 
    ```text
    You are a Credit Risk Assessment Assistant.
     ````
 
-6. In the chat pane, enter:
+4. In the chat pane, enter:
 
    ```text
    Which industries are classified as High Risk?
    ```
 
-7. Review the response. The response may be generic because the model does not yet have access to the organization's credit risk knowledge base.
+5. Review the response. The response may be generic because the model does not yet have access to the organization's credit risk knowledge base.
 
-8. Under the **Tools** section, select **Add** and choose **Upload files**.
+6. Under the **Tools** section, select **Add** and choose **Upload files**.
 
-9. Open the [Download textfiles.zip](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FKiran-255666%2FAgenticAIEngineer%2Ftree%2Fmain%2Ftextfiles) link, extract the ZIP file, and upload the three `.txt` files from the extracted folder.
+7. Open the [Download textfiles.zip](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FKiran-255666%2FAgenticAIEngineer%2Ftree%2Fmain%2Ftextfiles) link, extract the ZIP file, and upload the three `.txt` files from the extracted folder.
 
    * `Industry_Risk_Matrix.txt`
    * `credit_risk_scorecard.txt`
@@ -81,21 +73,21 @@ This gives you a baseline for understanding how the model answers questions **be
 
    > **Important:** Upload one file at a time and wait until it shows **Success** before uploading the next one. If a file fails, use the side scroll bar to find the **Delete** button, remove the failed file, and upload it again. Wait until **all three files show Success**. Once all three are successful, select **Attach** to continue.
 
-10. Ask the same question again:
+8. Ask the same question again:
 
     ```text
     Which industries are classified as High Risk?
     ```
 
-11. Compare the new response with the previous response. The model should now retrieve relevant information from the uploaded documents and provide a more grounded response.
+9. Compare the new response with the previous response. The model should now retrieve relevant information from the uploaded documents and provide a more grounded response.
 
-12. Try another question:
+10. Try another question:
 
     ```text
     What credit limit is recommended for a Low Risk customer?
     ```
 
-13. Review the response and observe how the model uses information from the uploaded credit risk knowledge base.
+11. Review the response and observe how the model uses information from the uploaded credit risk knowledge base.
 
 This demonstrates the difference between the model responding **without organization-specific context** and responding with information retrieved from the **credit risk knowledge base**.
 
@@ -190,7 +182,7 @@ The application files for the Credit Risk RAG application are provided in the [t
 Your application should now be located at a short path similar to:
 
 ```text
-C:\Users\agenticuser\Desktop\lab03-RAG
+C:\Users\agenticuser\Desktop\lab04-RAG
 ```
 
 This keeps the working folder path short and helps avoid Windows long-path issues.
@@ -363,7 +355,7 @@ Before running the application, verify that Azure CLI is authenticated.
    az account show
    ```
 
-2. If your Azure account details are displayed, you are already signed in.
+2. If your Azure account details are displayed, you are already signed in. **Skip the remaining sign-in steps and proceed to [Run the application](#run-the-application).**
 
 3. If you receive an authentication error, run:
 
@@ -374,15 +366,15 @@ Before running the application, verify that Azure CLI is authenticated.
 
 4. Sign in using your Azure credentials.
 
-5. If you're prompted to select a subscription or tenant, select the appropriate option.
+5. If prompted to select a subscription or tenant, select the appropriate option.
 
-6. Verify the account again:
+6. Verify your account again:
 
    ```powershell
    az account show
    ```
 
-> **Note:** If you face authentication or access-related errors while running the application, try `az logout` followed by `az login`, then sign in again with your Azure credentials.
+> **Note:** If you encounter authentication or access-related errors while running the application, try `az logout` followed by `az login`, then sign in again with your Azure credentials.
 
 ## Run the application
 
