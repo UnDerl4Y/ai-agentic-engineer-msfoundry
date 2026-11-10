@@ -51,7 +51,7 @@ This gives you a baseline for understanding how the model answers questions **be
 
    ```text
    You are a Credit Risk Assessment Assistant.
-    ````
+   ```
 
 4. In the chat pane, enter:
 
@@ -65,11 +65,11 @@ This gives you a baseline for understanding how the model answers questions **be
 
 7. Open the [Download textfiles.zip](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FKiran-255666%2FAgenticAIEngineer%2Ftree%2Fmain%2Ftextfiles) link, extract the ZIP file, and upload the three `.txt` files from the extracted folder.
 
-   * `Industry_Risk_Matrix.txt`
-   * `credit_risk_scorecard.txt`
-   * `credit_policy_guidelines.txt`
+   - `Industry_Risk_Matrix.txt`
+   - `credit_risk_scorecard.txt`
+   - `credit_policy_guidelines.txt`
 
-8. Upload the files **one at a time** to the Playground by clicking **Upload files**. 
+8. Upload the files **one at a time** to the Playground by clicking **Upload files**.
 
 9. When the **Attach files** dialog appears, Azure AI Foundry creates a new **vector index** for the uploaded documents. The **Vector index name** field is automatically populated with a unique name, but you may provide your own descriptive name if preferred.
 
@@ -132,15 +132,15 @@ flowchart LR
 
 The three documents used by the application are:
 
-* **Credit Policy Guidelines**
-* **Credit Risk Scorecard**
-* **Industry Risk Matrix**
+- **Credit Policy Guidelines**
+- **Credit Risk Scorecard**
+- **Industry Risk Matrix**
 
 The `file_search` tool retrieves relevant information from the vector store so that the model can generate a response grounded in the uploaded documents.
 
 ## Get the application files from GitHub
 
-## 1. Clean Up Previous Downloads
+### 1. Clean Up Previous Downloads
 
 Before downloading the latest repository version, remove the previous downloaded files and extracted folders to avoid using an outdated copy.
 
@@ -151,7 +151,7 @@ Before downloading the latest repository version, remove the previous downloaded
 
 > **Note:** The repository has been updated. Using an older ZIP file or extracted folder may result in outdated files or incorrect paths when following the commands in this lab.
 
-## 2. Download and Extract the Latest Repository
+### 2. Download and Extract the Latest Repository
 
 The application files for the Credit Risk RAG application are provided in the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer).
 
@@ -167,7 +167,7 @@ The application files for the Credit Risk RAG application are provided in the [t
 
 5. After extracting the repository, open **PowerShell**.
 
-6. Copy the Credit Risk RAG lab to the Desktop using the shorter folder name `lab03-RAG`:
+6. Copy the Credit Risk RAG lab to the Desktop using the shorter folder name `lab04-RAG`:
 
    ```powershell
    Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day03\lab04-RAG-with-Azure-AI-Foundry" "$env:USERPROFILE\Desktop\lab04-RAG" -Recurse
@@ -247,15 +247,15 @@ These documents provide the information that the application retrieves when answ
 
 The knowledge base covers topics such as:
 
-* Industry risk classifications
-* Industry risk scores
-* Credit risk scoring
-* Credit limits
-* Payment terms
-* Credit policy guidelines
-* Required documentation
-* Compliance requirements
-* Approval and override rules
+- Industry risk classifications
+- Industry risk scores
+- Credit risk scoring
+- Credit limits
+- Payment terms
+- Credit policy guidelines
+- Required documentation
+- Compliance requirements
+- Approval and override rules
 
 ## Review the application code
 
@@ -283,11 +283,11 @@ The vector store and document upload logic are already included in `rag.py`.
 
 Review this section to understand how the application:
 
-* Creates the `credit-risk-knowledge-base` vector store.
-* Finds PDF files in the `knowledge_base` folder.
-* Uploads the documents to the vector store.
-* Waits for the upload to complete.
-* Reports the number of successfully uploaded documents.
+- Creates the `credit-risk-knowledge-base` vector store.
+- Finds PDF files in the `knowledge_base` folder.
+- Uploads the documents to the vector store.
+- Waits for the upload to complete.
+- Reports the number of successfully uploaded documents.
 
 ```python
 print("Creating credit risk knowledge base and uploading documents...")
@@ -536,8 +536,8 @@ Compare the two responses.
 
 This demonstrates the difference between:
 
-* **Model-only responses**
-* **Knowledge-base-grounded RAG responses**
+- **Model-only responses**
+- **Knowledge-base-grounded RAG responses**
 
 The RAG application can retrieve information from the organization's credit risk documents before generating its answer.
 
@@ -555,14 +555,14 @@ The application will exit.
 
 In this exercise, you:
 
-* Explored a deployed model in the Microsoft Foundry Chat Playground.
-* Created a credit risk knowledge base.
-* Uploaded three credit risk PDF documents.
-* Created a vector store.
-* Used the OpenAI Responses API.
-* Connected the vector store to the `file_search` tool.
-* Retrieved relevant information from the knowledge base.
-* Generated grounded credit risk responses.
-* Compared model-only responses with RAG responses.
+- Explored a deployed model in the Microsoft Foundry Chat Playground.
+- Created a credit risk knowledge base.
+- Uploaded three credit risk PDF documents.
+- Created a vector store.
+- Used the OpenAI Responses API.
+- Connected the vector store to the `file_search` tool.
+- Retrieved relevant information from the knowledge base.
+- Generated grounded credit risk responses.
+- Compared model-only responses with RAG responses.
 
 You have now built a basic **Credit Risk Assessment RAG application** using Microsoft Foundry, Azure OpenAI, the OpenAI SDK, vector stores, and `file_search`.
