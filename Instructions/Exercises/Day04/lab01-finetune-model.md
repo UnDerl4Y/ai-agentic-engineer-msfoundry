@@ -76,15 +76,11 @@ Microsoft Foundry projects organize the models, resources, data, and other asset
 
 ## Start a fine-tuning job (Optional)
 
-> **Tip:** This section explains how to create and start a fine-tuning job. It is important for understanding the fine-tuning workflow. However, completing the job is optional.
->
-> The job can take approximately **60–90 minutes** to complete, depending on available cloud capacity.
->
-> If you want to practice the fine-tuning process, follow the steps and start the job. If you want to save time, you can skip job execution after reviewing the steps. Continue directly to **Test `gpt-5.4-mini` in the playground**.
->
-> A prepared fine-tuned model is already available in the project. You can use it later in the **Test the fine-tuned model** section.
+Creating and deploying your own fine-tuned model can take approximately **60–90 minutes**, depending on available cloud capacity.
 
-If you want to experience the complete fine-tuning workflow, follow these steps:
+- **Want to understand the workflow?** Go through the steps below to see how a fine-tuning job is configured. You can skip submitting the job and proceed directly to **[Test `gpt-5.4-mini` in the playground](#test-gpt-5.4-mini-in-the-playground)** to use the prepared fine-tuned model as creating your own model is a optional thing.
+.
+- **Want to create your own model?** Follow all the steps and submit the fine-tuning job. Once submitted, you can continue with the remaining lab activities while the model is being created. Stop at **[Test the fine-tuned model](#test-the-fine-tuned-model)** and return to this section once your fine-tuning job and deployment are complete. The process may take approximately **60–90 minutes**.
 
 1. In the Foundry portal, select **Fine-tune** in the left navigation.
 
