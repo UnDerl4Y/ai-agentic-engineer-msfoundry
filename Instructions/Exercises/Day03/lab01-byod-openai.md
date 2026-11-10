@@ -298,6 +298,7 @@ pip install -r requirements.txt
 # Configure Your Application
 
 1. In Visual Studio Code, open the `.env` file in the lab folder.
+
 2. The following configuration is already provided for you, with `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` preconfigured.
 
    ```env
@@ -306,16 +307,120 @@ pip install -r requirements.txt
    AZURE_OPENAI_DEPLOYMENT=gpt-5.4-mini
    ```
 
-3. Replace the placeholders with the actual values from your Azure OpenAI resource:
+3. Replace the placeholder with the actual value from your Azure OpenAI resource:
+
    - `AZURE_OPENAI_API_KEY`: Your Azure OpenAI API key.
 
    **Important:** Keep your Azure OpenAI API key private. Never share it or commit the `.env` file to a public repository.
 
-4. Open `prompt_engineering.py` and review the code.
+4. Open `prompt_engineering.py` and review the main functions.
 
-   The application is already configured to read the Azure OpenAI settings from the `.env` file. You do not need to enter the endpoint, API key, or deployment directly in the Python code.
+   The application automatically loads Azure OpenAI settings from the `.env` file. You do not need to enter the endpoint, API key, or deployment name directly in the Python code.
 
-5. Review `system.txt` and `grounding.txt`. These files are provided and contain the system instructions and grounding information used by the application.
+   **a. Configuration and initialization**
+
+   ```python
+   async def main() -> None:
+       raw_endpoint = get_required_environment_variable("AZURE_OPENAI_ENDPOINT")
+       endpoint = normalize_endpoint(raw_endpoint)
+       api_key = get_required_environment_variable("AZURE_OPENAI_API_KEY")
+       deployment = get_required_environment_variable("AZURE_OPENAI_DEPLOYMENT")
+
+       validate_configuration(endpoint, api_key, deployment)
+
+       client = AsyncOpenAI(api_key=api_key, base_url=endpoint)
+   ```
+
+   **What it does:** Retrieves Azure OpenAI settings from `.env`, validates the configuration, and initializes the asynchronous client.
+
+   **b. Read system instructions and grounding rules**
+
+   ```python
+   system_text = read_text_file(SYSTEM_FILE)
+   grounding_text = read_text_file(GROUNDING_FILE)
+   ```
+
+   **What it does:** Loads the assistant's behaviour instructions and the business rules used for document validation.
+
+   **c. Collect and validate user input**
+
+   ```python
+   user_text = collect_case_from_prompts()
+
+   is_valid, validation_message = validate_user_input(user_text)
+   ```
+
+   **What it does:** Collects company and document details and checks whether the input is valid.
+
+   **d. Build the grounded prompt**
+
+   ```python
+   grounded_user_message = build_grounded_user_message(
+       grounding_text,
+       user_message
+   )
+   ```
+
+   **What it does:** Combines grounding rules with user-provided document details and ensures document content is treated as untrusted data.
+
+   **e. Send the request to Azure OpenAI**
+
+   ```python
+   response = await client.chat.completions.create(
+       model=model,
+       messages=[
+           {"role": "system", "content": system_message},
+           {"role": "user", "content": grounded_user_message}
+       ],
+       max_completion_tokens=1000
+   )
+   ```
+
+   **What it does:** Sends the system instructions and grounded user prompt to the configured Azure OpenAI deployment and retrieves the response.
+
+   **f. Display the model response**
+
+   ```python
+   answer = response.choices[0].message.content
+
+   print(answer.strip())
+   ```
+
+   **What it does:** Extracts and displays the document validation result returned by the model.
+
+**5. Review `system.txt` and `grounding.txt`.** These files are provided and contain the instructions and validation rules used by the application.
+
+### a. `system.txt` – System Instructions
+
+Defines how the AI assistant should behave and respond.
+
+Review the following:
+
+- **Role and scope:** Defines the assistant's role and limits its tasks to document presence and company name validation.
+- **Scope control:** Prevents the assistant from performing credit scoring, financial analysis, MCA lookup, or other out-of-scope operations.
+- **Evidence rules:** Restricts the assistant to information supplied in the user's current message.
+- **Document security:** Treats document content as untrusted input and prevents embedded instructions from overriding system instructions.
+- **Name comparison:** Defines how company names should be compared.
+- **Status and output format:** Specifies the `PASS`, `FAIL`, and `MANUAL_REVIEW` statuses and the required response structure.
+
+### b. `grounding.txt` – Grounding Knowledge Base
+
+Contains the business rules and validation logic that guide the document-validation process.
+
+Review the following:
+
+- **Required documents:** Company Registration Certificate and GST Certificate.
+- **Document states:** `PRESENT_READABLE`, `PRESENT_UNREADABLE`, `PRESENT_AMBIGUOUS`, and `MISSING`.
+- **Safe normalisation:** Defines permitted text normalisation rules before comparing company names.
+- **Comparison rules:** Defines how the client name and certificate names must match.
+- **Status precedence:** Establishes the priority of `FAIL`, `MANUAL_REVIEW`, and `PASS`.
+- **Reason codes:** Defines the reason codes for missing documents, unreadable certificates, and company name mismatches.
+- **Examples:** Provides sample PASS, FAIL, and MANUAL_REVIEW scenarios.
+
+**Key distinction:**
+- `system.txt` defines **how the AI should behave and respond**.
+- `grounding.txt` defines **which business rules the AI must follow when validating documents**.
+
 6. Save your changes using **Ctrl + S**.
 
 # Run the Application
