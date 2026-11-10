@@ -267,15 +267,15 @@ Before downloading the latest repository version, remove the previous downloaded
 2. Run the following command to copy the lab folder to your Desktop.
 
    ```powershell
-   Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\labfiles\Day02\lab04-byod-openai" "$env:USERPROFILE\Desktop\lab04-byod-openai" -Recurse
+   Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\labfiles\Day03\lab01-byod-openai" "$env:USERPROFILE\Desktop\lab01-byod-openai" -Recurse
    ```
 
-   **Note:** The path above assumes the extracted repository contains `labfiles\Day02\lab04-byod-openai`. If the folder structure is different, verify the extracted location in Downloads and update the source path accordingly.
+   **Note:** The path above assumes the extracted repository contains `labfiles\Day03\lab01-byod-openai`. If the folder structure is different, verify the extracted location in Downloads and update the source path accordingly.
 
 3. Open the copied folder in Visual Studio Code:
 
    ```powershell
-   code "$env:USERPROFILE\Desktop\lab04-byod-openai"
+   code "$env:USERPROFILE\Desktop\lab01-byod-openai"
    ```
 
 ## 4. Install the Required Packages
