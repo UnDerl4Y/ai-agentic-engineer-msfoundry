@@ -51,8 +51,7 @@ The playground has two main areas:
    You are an AI assistant that helps people find information.
    ```
 
-2. If the instruction is missing, enter it manually.
-3. In the **Chat** pane, submit the following prompt:
+2. In the **Chat** pane, submit the following prompt:
 
    ```text
    Validate these company documents.
@@ -67,9 +66,9 @@ The playground has two main areas:
    Company Name: Contoso Technologies Pvt Ltd
    ```
 
-4. Review the response.
+3. Review the response.
 
-   The model may explain or summarize the information instead of returning a specific validation outcome.
+   The model should explain or summarize the information instead of returning a specific validation outcome.
 
 ## 3. Apply Specific Instructions
 
@@ -298,18 +297,17 @@ pip install -r requirements.txt
 
 # Configure Your Application
 
-1. In Visual Studio Code, open the `.env` file in the lab folder. If it does not exist, create a file named `.env` in the same folder as `prompt_engineering.py`.
-2. Add the following configuration:
+1. In Visual Studio Code, open the `.env` file in the lab folder.
+2. The following configuration is already provided for you, with `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` preconfigured.
 
    ```env
    AZURE_OPENAI_ENDPOINT=https://hakunamatata1234.openai.azure.com/openai/v1
    AZURE_OPENAI_API_KEY=your_azure_openai_api_key
-   AZURE_OPENAI_DEPLOYMENT=your_azure_openai_deployment
+   AZURE_OPENAI_DEPLOYMENT=gpt-5.4-mini
    ```
 
 3. Replace the placeholders with the actual values from your Azure OpenAI resource:
    - `AZURE_OPENAI_API_KEY`: Your Azure OpenAI API key.
-   - `AZURE_OPENAI_DEPLOYMENT`: The exact deployment name of your model.
 
    **Important:** Keep your Azure OpenAI API key private. Never share it or commit the `.env` file to a public repository.
 
