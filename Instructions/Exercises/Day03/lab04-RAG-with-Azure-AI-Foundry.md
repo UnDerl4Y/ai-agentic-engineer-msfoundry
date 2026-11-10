@@ -181,17 +181,15 @@ The application files for the Credit Risk RAG application are provided in the [t
    code "$env:USERPROFILE\Desktop\lab04-RAG"
    ```
 
-Your application should now be located at a short path similar to:
+8. Your application should now be located at a short path to the following, helping avoid Windows long-path issues:
 
 ```text
 C:\Users\agenticuser\Desktop\lab04-RAG
 ```
 
-This keeps the working folder path short and helps avoid Windows long-path issues.
-
 ## Create the virtual environment
 
-Open the integrated terminal in Visual Studio Code and run:
+1. Open the integrated terminal in Visual Studio Code and run:
 
 ```powershell
 python -m venv labenv
@@ -199,30 +197,14 @@ python -m venv labenv
 .\labenv\Scripts\Activate.ps1
 ```
 
-> **Note:** If `python -m venv labenv` returns an error in the Virtual Machine, use the Windows Python Launcher instead:
-
-```powershell
-py -m venv labenv
-
-.\labenv\Scripts\Activate.ps1
-```
-
-After activation, your terminal should show `(labenv)` before the path.
+2. After activation, your terminal should show `(labenv)` before the path.
 
 ## Install the required packages
 
-Run:
+1. Run:
 
 ```powershell
 pip install -r requirements.txt
-```
-
-The required packages are:
-
-```text
-python-dotenv
-azure-identity
-openai
 ```
 
 ## Configure the environment variables
