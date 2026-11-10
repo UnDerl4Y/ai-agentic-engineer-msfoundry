@@ -61,7 +61,7 @@ This gives you a baseline for understanding how the model answers questions **be
 
 5. Review the response. The response may be generic because the model does not yet have access to the organization's credit risk knowledge base.
 
-6. Under the **Tools** section, select **Add** and choose **Upload files**.
+6. Under the **Tools** section, click **Upload files**.
 
 7. Open the [Download textfiles.zip](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FKiran-255666%2FAgenticAIEngineer%2Ftree%2Fmain%2Ftextfiles) link, extract the ZIP file, and upload the three `.txt` files from the extracted folder.
 
