@@ -3,10 +3,21 @@ lab:
   title: Fine-tune a language model
   description: Learn how to use your own training data to fine-tune a model and customize its behavior.
   level: 300
-  duration: 90
+  duration: 100
   islab: true
   status: 'released'
 ---
+
+## Prerequisites
+
+Before you start, ensure that you have:
+
+- An active [Azure subscription](https://azure.microsoft.com/free/).
+- A web browser.
+- A Microsoft Foundry project prepared by your trainer or lab environment.
+- The **`gpt-5.4-mini`** model available for the initial playground test.
+- The **`gpt-4.1`** model available for supervised fine-tuning.
+- Permission to create fine-tuning jobs and upload datasets.
 
 # Fine-tune a language model
 
@@ -41,31 +52,11 @@ In this exercise, you will fine-tune a language model to build a **credit risk m
 
 The goal is to understand how training examples can influence a model's response patterns and make its behavior more consistent for a specific task.
 
-This exercise takes approximately **90 minutes**. The fine-tuning job itself may take approximately **60–90 minutes**, depending on available cloud capacity.
+This exercise takes approximately **100 minutes**. The fine-tuning job itself may take approximately **60–90 minutes**, depending on available cloud capacity.
 
-## Prerequisites
+## Open the existing project
 
-Before you start, ensure that you have:
-
-- An active [Azure subscription](https://azure.microsoft.com/free/).
-- A web browser.
-- A Microsoft Foundry project prepared by your trainer or lab environment.
-- The **`gpt-5.4-mini`** model available for the initial playground test.
-- The **`gpt-4.1`** model available for supervised fine-tuning.
-- Permission to create fine-tuning jobs and upload datasets.
-
-> **Note:** The project and required models are already prepared for this exercise. Do not create a new project or add another base model.
-
-## Verify the existing project
-
-Microsoft Foundry projects organize the models, resources, data, and other assets used to build an AI solution.
-
-1. Open the [Microsoft Foundry portal](https://ai.azure.com) and sign in with your Azure credentials if you have not already.
-2. Close any tips or quick-start panes that appear.
-3. On the home page, ensure that you are in the **`hakunamatata`** project.
-4. Open the model playground and confirm that the prepared **`gpt-5.4-mini`** model is available.
-
-> **Tip:** If you cannot find the project or `gpt-5.4-mini`, check with your trainer before continuing.
+1. Return to the [Microsoft Foundry portal](https://ai.azure.com) and ensure you are in the `hakunamatata` project.
 
 ## Download the training data
 
