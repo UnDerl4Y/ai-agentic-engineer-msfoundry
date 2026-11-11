@@ -56,7 +56,7 @@ This exercise takes approximately **100 minutes**. The fine-tuning job itself ma
 
 ## Open the existing project
 
-1. Return to the [Microsoft Foundry portal](https://ai.azure.com) and ensure you are in the `hakunamatata` project.
+Return to the [Microsoft Foundry portal](https://ai.azure.com) and ensure you are in the `hakunamatata` project.
 
 ## Download the training data
 
@@ -73,9 +73,9 @@ Creating and deploying your own fine-tuned model can take approximately **60–9
 .
 - **Want to create your own model?** Follow all the steps and submit the fine-tuning job. Once submitted, you can continue with the remaining lab activities while the model is being created. Stop at **[Test the fine-tuned model](#test-the-fine-tuned-model)** and return to this section once your fine-tuning job and deployment are complete. The process may take approximately **60–90 minutes**.
 
-1. In the Foundry portal, select **Fine-tune** in the left navigation.
+1. In the Foundry portal, select **Fine-tune** from the left navigation.
 
-   ![Fine-tuning page with an arrow pointing to Start fine-tuning.](../../media/fine-tune-001.png)
+   ![Fine-tuning page with an arrow pointing to Start fine-tuning.](../../media/fine-tune-001_v1.png)
 
 2. Select **Start fine-tuning**.
 3. In **Basic details**, configure the job as follows:

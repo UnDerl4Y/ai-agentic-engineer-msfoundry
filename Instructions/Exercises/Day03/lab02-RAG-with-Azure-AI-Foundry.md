@@ -168,7 +168,7 @@ The application files for the Credit Risk RAG application are provided in the [t
 6. Copy the Credit Risk RAG lab to the Desktop using the shorter folder name `lab04-RAG`:
 
    ```powershell
-   Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day03\lab04-RAG-with-Azure-AI-Foundry" "$env:USERPROFILE\Desktop\lab04-RAG" -Recurse
+   Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day03\lab02-RAG-with-Azure-AI-Foundry" "$env:USERPROFILE\Desktop\lab02-RAG" -Recurse
    ```
 
    > **Note:** The source path should normally match the extracted repository folder name. If the extracted folder name is different, update the source path accordingly.
@@ -176,13 +176,13 @@ The application files for the Credit Risk RAG application are provided in the [t
 7. Open the copied lab folder directly in Visual Studio Code:
 
    ```powershell
-   code "$env:USERPROFILE\Desktop\lab04-RAG"
+   code "$env:USERPROFILE\Desktop\lab02-RAG"
    ```
 
 8. Your application should now be located at a short path to the following, helping avoid Windows long-path issues:
 
 ```text
-C:\Users\agenticuser\Desktop\lab04-RAG
+C:\Users\agenticuser\Desktop\lab02-RAG
 ```
 
 ## Create the virtual environment
