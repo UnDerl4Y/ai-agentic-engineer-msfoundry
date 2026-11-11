@@ -35,7 +35,7 @@ Before starting this exercise, ensure you have:
 
 3. Click **Create an agent**, a dialog box will appear there enter a unique name for your agent. For example, use **`it-support-agent-project-<youruniquesuffix>`**, replace `<youruniquesuffix>` with your unique suffix.
 
-   ![Screenshot of the Create an agent dialog box.](../media/Create-an-agent_v1.png)
+   ![Screenshot of the Create an agent dialog box.](../media/Create-an-agent_v11.png)
 
 4. Under **Interaction mode**, make sure **Text** is selected.
 
@@ -43,7 +43,7 @@ Before starting this exercise, ensure you have:
 
 6. Wait for the agent to be created. After a few moments, the agent authoring canvas will open, where you can configure the agent's instructions, tools, and knowledge sources.
 
-   ![Screenshot of the agent's playground.](../media/agents-playground_v1.png)
+   ![Screenshot of the agent's playground.](../media/agents-playground_v11.png)
 
 ## Configure the Agent with Instructions and Grounding Data
 
@@ -70,24 +70,24 @@ Your agent has been created, and the **Agent's playground** is now open. In this
 
    On the file page, select **Download raw file** to download `IT_Policy.txt` to your local **Downloads** folder.
    
-   ![Screenshot of the agent's playground.](../media/howto_v1.png)
+   ![Screenshot of the agent's playground.](../media/howto_v11.png)
 
 > [!NOTE]
 > The document contains sample IT policies for password resets, software installation requests, and hardware troubleshooting.
 
 3. Return to the **Agent's playground**. In the **Tools** section, select **Add**, and then turn on **Code interpreter**.
 
-   ![Screenshot of the agent's playground.](../media/code-interpreter_v1.png)
+   ![Screenshot of the agent's playground.](../media/code-interpreter_v11.png)
 
 4. Select **Add tools**, then select **File search**. Select **Add tool** to add it to the agent.
 
-   ![Screenshot of the agent's playground.](../media/add-tool_v1.png)
+   ![Screenshot of the agent's playground.](../media/add-tool_v11.png)
 
 5. An Attach files dialog box will appear. Leave the Index option set to its default value (Create a new index). In the Vector index name field, enter index_<youruniquesuffix>. Select Browse for files, navigate to the Downloads folder, select IT_Policy.txt, and then select Attach.
 
 6. Wait for the file to finish indexing. When the file status changes to Success, select Attach to add the vector index to your agent.
 
-   ![Screenshot of the agent's playground.](../media/add-tool2_v1.png)
+   ![Screenshot of the agent's playground.](../media/add-tool2_v11.png)
 
 7. Download the system performance data file from the training repository. Open a new browser tab and enter the following URL in the address bar:
 
@@ -138,7 +138,7 @@ Let's test the agent using the grounding data and built-in tools.
 
 8. Download the generated chart and review it. Observe how the agent uses **Code interpreter** to analyze and visualize the data.
 
-   ![Screenshot of the generated CPU usage chart.](../media/cpu_usage_over_time_v1.png)
+   ![Screenshot of the generated CPU usage chart.](../media/cpu_usage_over_time_v11.png)
 
 Your agent is now configured with grounding data, **File search**, and **Code interpreter**. In the next lab, you'll use this agent with Visual Studio Code.
 
