@@ -88,8 +88,6 @@ Your agent has been created, and the **Agent's playground** is now open. In this
 
 5. Select **Add** then select **File search**.
 
-   ![Screenshot of the agent's playground.](../../media/add-tool_v11.png)
-
 6. An **Attach files** dialog box will appear. Leave the **Index** option set to its default value (**Create a new index**). In the **Vector index name** field, replace auto-generated **Vector index name** with `index_<your_unique_suffix>`. Select **Browse for files**, navigate to the **Downloads** folder, select both `IT_Policy.txt` and `system_performance.md`.
 
 7. Wait for the file to finish indexing. When the file status changes to Success, select **Attach** to add the vector index to your agent.
