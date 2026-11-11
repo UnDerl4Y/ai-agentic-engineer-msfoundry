@@ -46,7 +46,7 @@ In this exercise, you will fine-tune a language model to build a **credit risk m
 ## What you will do
 
 1. **Test the prepared `gpt-5.4-mini` model** in the playground. Observe how different instructions affect its responses.
-2. **Create a supervised fine-tuning job** with `gpt-4.1` and the provided training data. This step is optional if you want to save time.
+2. **Create a supervised fine-tuning job** with `gpt-4.1` and the provided training data. This step is optional because a prepared fine-tuned model is already available.
 3. **Review the training data** used for fine-tuning.
 4. **Test the prepared fine-tuned model** and compare its responses with the base model.
 
@@ -56,22 +56,26 @@ This exercise takes approximately **100 minutes**. The fine-tuning job itself ma
 
 ## Open the existing project
 
-Return to the [Microsoft Foundry portal](https://ai.azure.com) and ensure you are in the `hakunamatata` project.
+Open the [Microsoft Foundry portal](https://ai.azure.com) and ensure that you are in the `hakunamatata` project.
 
 ## Download the training data
 
 1. Open the [training dataset](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day04/lab02-fine-tuning/credit_risk_management.jsonl) in a browser.
 2. Download the file and save it locally as `credit_risk_management.jsonl`.
 
-> **Important:** Your browser may save the file with a `.txt` extension. If it does, rename the file so that its filename ends with `.jsonl`.
+> **Important:** Your browser may save the file with a `.txt` extension. If it does, rename the file so that it ends with `.jsonl`.
+
+## Choose your learning path
+
+A prepared fine-tuned model is already available in the project. You can use it to complete this lab without creating another fine-tuning job.
+
+Choose how you want to proceed:
+
+- **Understand the fine-tuning workflow:** We strongly recommend that you carefully read through [Start a fine-tuning job (Optional)](#start-a-fine-tuning-job-optional) to understand how fine-tuning is performed.
+
+- **Create your own fine-tuned model:** Follow the steps as instructed [Start a fine-tuning job (Optional)](#start-a-fine-tuning-job-optional).
 
 ## Start a fine-tuning job (Optional)
-
-Creating and deploying your own fine-tuned model can take approximately **60–90 minutes**, depending on available cloud capacity.
-
-- **Want to understand the workflow?** Go through the steps below to see how a fine-tuning job is configured. You can skip submitting the job and proceed directly to **[Test the base model in the playground](#test-the-base-model-in-the-playground)** to use the prepared fine-tuned model later in the lab.
-.
-- **Want to create your own model?** Follow all the steps and submit the fine-tuning job. Once submitted, you can continue with the remaining lab activities while the model is being created. Stop at **[Test the fine-tuned model](#test-the-fine-tuned-model)** and return to this section once your fine-tuning job and deployment are complete. The process may take approximately **60–90 minutes**.
 
 1. In the Foundry portal, select **Fine-tune** from the left navigation.
 
@@ -107,17 +111,15 @@ Creating and deploying your own fine-tuned model can take approximately **60–9
 
 11. Select **Submit** to start the fine-tuning job.
 
-> [!NOTE]
-> Fine-tuning and deployment can take approximately **60–90 minutes**. You do not need to wait for the job to finish before continuing with the playground testing.
+> **Note:** Fine-tuning and deployment can take approximately **60–90 minutes**. You do not need to wait for the job to finish before continuing with the playground testing.
 
 ## Test the base model in the playground
 
-> [!TIP]
-> Keep a copy of the **prompts and model responses in Notepad** as you work through the steps. You will use them later to compare the base model with the fine-tuned model.
+> **Tip:** Keep a copy of the prompts and model responses in Notepad. You will use them later to compare the base model with the fine-tuned model.
 
-While the fine-tuning job is running, or if you skipped the optional fine-tuning section, test the prepared **base model (`gpt-5.4-mini`)** in the playground.
+Whether you submitted a new fine-tuning job or skipped it, begin by testing the prepared base model (`gpt-5.4-mini`) in the playground.
 
-This test will show how instructions affect the model's responses.
+This provides a baseline for comparing how the base model responds before and after fine-tuning.
 
 1. Open the model playground for **`gpt-5.4-mini`**.
 2. In the chat pane, enter:
@@ -222,18 +224,22 @@ These examples form the supervised training data. During fine-tuning, the model 
 
 ## Test the fine-tuned model
 
-If you completed the optional fine-tuning job, you can use the model produced by that job after it finishes.
+- **If you created your own fine-tuning job:** Wait until your fine-tuned model has finished training and deployment. Then, use the model created by your job to continue with the lab.
 
-If you skipped the fine-tuning job, use the **prepared fine-tuned model** that is already available in the project.
+- **If you skipped the optional fine-tuning job:** Use the prepared fine-tuned model.
+
+Follow the steps below to open the model and test it using the same instructions and questions from the base-model testing section.
 
 1. In the left navigation, select **Models**.
-2. Find and open the prepared fine-tuned model. Its name may look similar to the following:
+
+2. Find and click the prepared fine-tuned model named:
 
    ```text
-   <your-fine-tuned-model-name>
+   25-04-14-ft-83022baa9680487cbe90bfe6efcc7049-ft-credit-test-user
    ```
 
 3. Open the fine-tuned model in the **model playground**.
+
 4. In the **Instructions** field, enter the **same credit risk management prompt** that you used when testing the base model:
 
    ```text
