@@ -95,23 +95,25 @@ Creating and deploying your own fine-tuned model can take approximately **60–9
    ![Datasets page showing credit_risk_management.jsonl uploaded and previewed.](../../media/fine-tune-003.png)
 
 9. Select **Next** to open **Optional settings**.
-10. Configure or confirm these settings:
+10. Configure these settings:
 
-    - **Display name:** Keep the generated name, or enter `ft-credit`.
+    - **Display name:** Keep the generated name, or enter `ft-credit-<your-preferred-suffix>`.
     - **Seed:** Keep the default value, **Random**.
     - **Automatically deploy model after job completion:** Turn this **on**.
     - **Deployment type:** **Developer**.
-    - **Hyperparameter tuning:** Keep **Default** selected for batch size, number of epochs, and learning-rate multiplier.
+    - Ensure that **Default** is selected for **Batch size**, **Number of epochs**, and **Learning-rate multiplier**.
 
-    ![Optional settings page showing a generated display name, Random seed, automatic deployment control, Developer deployment type, and default hyperparameters.](../../media/fine-tune-004.png)
+    ![Optional settings page showing a generated display name, Random seed, automatic deployment control, Developer deployment type, and default hyperparameters.](../../media/fine-tune-004_v1.png)
 
 11. Select **Submit** to start the fine-tuning job.
 
-> **Note:** Fine-tuning and deployment can take approximately **60–90 minutes**. You do not need to wait for the job to finish before continuing with the playground testing.
+> [!NOTE]
+> Fine-tuning and deployment can take approximately **60–90 minutes**. You do not need to wait for the job to finish before continuing with the playground testing.
 
 ## Test the base model in the playground
 
-> **Tip:** Keep a copy of the **prompts and model responses in Notepad** as you work through the steps. You will use them later to compare the base model with the fine-tuned model.
+> [!TIP]
+> Keep a copy of the **prompts and model responses in Notepad** as you work through the steps. You will use them later to compare the base model with the fine-tuned model.
 
 While the fine-tuning job is running, or if you skipped the optional fine-tuning section, test the prepared **base model (`gpt-5.4-mini`)** in the playground.
 
