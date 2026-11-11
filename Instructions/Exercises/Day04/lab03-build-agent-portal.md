@@ -98,7 +98,7 @@ Your agent has been created, and the **Agent's playground** is now open. In this
 > [!NOTE]
 > The CSV file contains simulated system metrics, including CPU, memory, and disk usage over time, which the agent can analyze.
 
-8. To the right of **Code interpreter**, select **+ Files**, then select **Browse files** and upload the `system_performance.csv` file from your **Downloads** folder. Select **Attach**.
+8. Then select **Upload files** and upload the `system_performance.csv` file from your **Downloads** folder. Select **Attach**.
 
 9. Select **Save** to save the agent configuration.
 
