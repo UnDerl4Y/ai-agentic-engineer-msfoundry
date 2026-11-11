@@ -89,24 +89,21 @@ Your agent has been created, and the **Agent's playground** is now open. In this
 
 4. Return back to **Playground** click **Add** then click **Code interpreter**
 
-5. Select **Add** then select **File search**.
+5. Select **Add**, select **Add tools**, choose **File search**, and then select **Add tool**.
 
-6. An **Attach files** dialog box will appear. Leave the **Index** option set to its default value (**Create a new index**). In the **Vector index name** field, replace auto-generated **Vector index name** with `index_<your_unique_suffix>`. Select **Browse for files**, navigate to the **Downloads** folder, select both `IT_Policy.txt` and `system_performance.md`.
+6. An **Attach files** dialog box will appear. Leave the **Index** option set to its default value (**Create a new index**). In the **Vector index name** field, replace auto-generated **Vector index name** with `index_<your_unique_suffix>`. Description is optional. Select **Browse for files**, navigate to the **Downloads** folder, select both `IT_Policy.txt` and `system_performance.md`.
 
-7. Wait for the file to finish indexing. When the file status changes to Success, select **Attach** to add the vector index to your agent.
+7. Wait for the file to finish indexing. When the file status changes to Success, select **Attach** to add the vector index to your agent click **save** you can find at the top.
 
 ## Test your agent
 
-> [!NOTE] 
-> Prompt wording matters. A broad prompt may retrieve multiple relevant sections and generate several citations, while a specific prompt helps the agent focus on the exact information you need. Compare the first two prompts below to observe the difference.
-
-1. In the chat interface on the right side of the playground, enter the following broad prompt:
+1. In the chat interface on the right side of the playground, enter the following prompt:
 
    ```text
    What's the policy for password resets?
    ```
 
-2. Review the response. The agent will use the **IT policy document** to retrieve relevant information. Observe how the broad question may retrieve multiple relevant sections and produce several citations.
+2. Review the generated response and observe how the agent answers the question.
 
 3. Next, enter a more specific prompt:
 
@@ -114,17 +111,15 @@ Your agent has been created, and the **Agent's playground** is now open. In this
    What are the password requirements for employees?
    ```
 
-4. Review the response and compare the citations with those from the previous prompt. Observe how a more specific question helps the agent focus on the exact information you need. An example is shown below however, the generated response and number of citations may vary slightly in your case.
+4. Review the response and compare it with the previous answer. Observe how the agent provides a more focused response based on the specific question. The generated responses may vary slightly in your case.
 
-   ![Screenshot of the Create an agent dialog box.](../../media/prompt_diff.png)
-
-5. Test the **Code interpreter** with the following data analysis request:
+5. Test **Code interpreter** with the following data analysis request:
 
    ```text
    Can you analyze the system performance data and identify any concerning trends?
    ```
 
-6. Review the response. The agent will use **Code interpreter** internally to analyze the uploaded system performance data and provide relevant observations. The results may vary.
+6. Review the response and observe how the agent analyzes the system performance data to identify relevant patterns and potential performance concerns. The results may vary depending on the available data.
 
 7. Ask a follow-up question:
 
@@ -132,9 +127,9 @@ Your agent has been created, and the **Agent's playground** is now open. In this
    Which system appears to have the highest average CPU usage?
    ```
 
-8. Review the response and observe how the agent used **Code interpreter** to perform additional analysis on the uploaded data. The results may vary.
+8. Review the response and observe how the agent performs additional analysis to answer the follow-up question. The results may vary depending on the available data.
 
-Your agent is now configured with grounding data, **File search** & **Code interpreter**. In the next upcoming labs, you'll use this agent with Visual Studio Code.
+Your agent is now configured with grounding data and the available tools. In the upcoming labs, you'll use this agent with Visual Studio Code.
 
 ## Summary
 
