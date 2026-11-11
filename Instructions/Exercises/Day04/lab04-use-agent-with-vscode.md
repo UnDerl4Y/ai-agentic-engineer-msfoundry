@@ -10,33 +10,19 @@ lab:
 
 ## Use your agent with VS Code
 
-In the previous lab, you created and configured an IT Support agent in the Microsoft Foundry portal. In this lab, you'll use that same agent from a Python application in Visual Studio Code.
+In the previous lab `Day04/lab03-build-agent-portal.md`, you created and configured an IT Support agent in the Microsoft Foundry portal. In this lab, you'll use that same agent from a Python application in Visual Studio Code.
 
 You'll download the lab files, configure the project endpoint and agent name, review the Python application, and run it. You'll then use the agent to answer IT policy questions and analyze system performance data.
-
-## Get the project endpoint
-
-Before working with the code, open the Microsoft Foundry project at https://ai.azure.com/.
-
-On the project **Home** page, locate the **Project endpoint** section. Select **Copy** next to the project endpoint URL and keep the value available. You'll use this endpoint to configure the application in this lab and in later labs as well.
-
-The project endpoint will be similar to:
-
-```text
-https://<resource-name>.services.ai.azure.com/api/projects/<project-name>
-```
 
 ## Open the training repository
 
 The Python application and supporting files are available in the training repository.
 
-1. Open Microsoft Edge and go to:
-
-   **https://github.com/UnDerl4Y/agentic-ai-training**
+1. Open Microsoft Edge and go to **https://github.com/Kiran-255666/AgenticAIEngineer**
 
 2. On the repository page, select the green **`<> Code`** button, then select **Download ZIP**.
 
-   ![Screenshot of the Code button.](../Media/code.png)
+   ![Screenshot of the Code button.](../../media/code_v1.png)
 
 3. When the download finishes, open your **Downloads** folder and extract the ZIP file.
 
@@ -45,13 +31,13 @@ The Python application and supporting files are available in the training reposi
 5. Copy the Lab 2 folder to your Desktop:
 
    ```powershell
-   Copy-Item "C:\Users\agenticuser\Downloads\agentic-ai-training-main\agentic-ai-training-main\Labfiles\lab02-use-agent-with-vscode" -Destination "$env:USERPROFILE\Desktop\" -Recurse
+   Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day04\lab04-use-agent-with-vscode" "$env:USERPROFILE\Desktop\lab04" -Recurse
    ```
 
 6. Open the copied Lab 2 folder in Visual Studio Code:
 
    ```powershell
-   code "$env:USERPROFILE\Desktop\lab02-use-agent-with-vscode"
+   code "$env:USERPROFILE\Desktop\lab04"
    ```
 
 > [!NOTE]
@@ -379,25 +365,13 @@ The application needs two values to connect to your agent: the Microsoft Foundry
 2. Locate the following settings:
 
    ```text
-   PROJECT_ENDPOINT=your_project_endpoint_here
+   PROJECT_ENDPOINT=https://hakunamatata11.services.ai.azure.com/api/projects/hakunamatata
    AGENT_NAME=it-support-agent
    ```
 
-3. Replace `your_project_endpoint_here` with the endpoint of your Microsoft Foundry project.
+3. Replace `it-support-agent` with the **complete name of the agent you created in the previous lab**.
 
-4. Replace `it-support-agent` with the **complete name of the agent you created in the previous lab**.
-
-   Your configuration should look similar to:
-
-   ```text
-   PROJECT_ENDPOINT=<your_project_endpoint>
-   AGENT_NAME=<your_agent_name>
-   ```
-
-   > [!TIP]
-   > You can find the project endpoint on the **Microsoft Foundry project overview** page.
-
-5. Save the `.env` file.
+4. Save the `.env` file.
 
 ## Create a Python environment
 
@@ -439,9 +413,6 @@ The application uses your Azure identity to connect to Microsoft Foundry.
    ```powershell
    az login
    ```
-
-> [!TIP]
-> If you have trouble signing in with Azure CLI, see [**Azure CLI sign-in troubleshooting**](https://github.com/UnDerl4Y/agentic-ai-training/blob/main/Instructions/Troubleshooting/az-loign.md).
 
 2. Sign in using the credentials provided for the training environment.
 
