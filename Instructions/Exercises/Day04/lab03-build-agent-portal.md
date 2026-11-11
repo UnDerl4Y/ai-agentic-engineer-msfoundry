@@ -33,7 +33,7 @@ Before starting this exercise, ensure you have:
 
 2. Click on **Home**, locate the **Create an agent** section.
 
-3. Click **Create an agent**, a dialog box will appear there enter a unique name for your agent. For example, use **`it-support-agent-project-<youruniquesuffix>`**, replace `<youruniquesuffix>` with your unique suffix.
+3. Click **Create an agent**, a dialog box will appear there enter a unique name for your agent. For example, use **`it-support-agent-project-<youruniquesuffix>`**, replace `<youruniquesuffix>` with your unique suffix. 
 
    ![Screenshot of the Create an agent dialog box.](../../media/Create-an-agent_v11.png)
 
@@ -44,6 +44,9 @@ Before starting this exercise, ensure you have:
 6. Wait for the agent to be created. After a few moments, the agent authoring canvas will open, where you can configure the agent's instructions, tools, and knowledge sources.
 
    ![Screenshot of the agent's playground.](../../media/agents-playground_v11.png)
+
+> [!TIP]
+> Remember your agent's name, as you will need it in the upcoming lab.
 
 ## Configure the Agent with Instructions and Grounding Data
 
@@ -91,8 +94,6 @@ Your agent has been created, and the **Agent's playground** is now open. In this
 6. An **Attach files** dialog box will appear. Leave the **Index** option set to its default value (**Create a new index**). In the **Vector index name** field, replace auto-generated **Vector index name** with `index_<your_unique_suffix>`. Select **Browse for files**, navigate to the **Downloads** folder, select both `IT_Policy.txt` and `system_performance.md`.
 
 7. Wait for the file to finish indexing. When the file status changes to Success, select **Attach** to add the vector index to your agent.
-
-8. Select **Save as agent** to save the agent configuration and name it `support-agent-<youruniquesuffix>` and leave the checkbox unchecked and select **Create**.
 
 ## Test your agent
 
