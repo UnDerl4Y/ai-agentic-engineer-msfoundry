@@ -14,27 +14,42 @@ In the previous lab `Day04/lab03-build-agent-portal.md`, you created and configu
 
 You'll download the lab files, configure the project endpoint and agent name, review the Python application, and run it. You'll then use the agent to answer IT policy questions and analyze system performance data.
 
-## Open the training repository
+## Get the application files from GitHub
 
-The Python application and supporting files are available in the training repository.
+### 1. Clean Up Previous Downloads
 
-1. Open Microsoft Edge and go to **https://github.com/Kiran-255666/AgenticAIEngineer**
+Before downloading the latest repository version, remove the previous downloaded files and extracted folders to avoid using an outdated copy.
 
-2. On the repository page, select the green **`<> Code`** button, then select **Download ZIP**.
+1. Open your **Downloads** folder.
+2. Delete the previously downloaded `AgenticAIEngineer-main.zip` file.
+3. Delete the previously extracted `AgenticAIEngineer-main` folder and any duplicate extracted folders, such as `AgenticAIEngineer-main (1)`.
+4. Make sure the old copies have been removed before proceeding.
 
-   ![Screenshot of the Code button.](../../media/code_v1.png)
+> **Note:** The repository has been updated. Using an older ZIP file or extracted folder may result in outdated files or incorrect paths when following the commands in this lab.
 
-3. When the download finishes, open your **Downloads** folder and extract the ZIP file.
+### 2. Download and Extract the Latest Repository
 
-4. Open **PowerShell**.
+The application files for the Credit Risk RAG application are provided in the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer).
 
-5. Copy the Lab 2 folder to your Desktop:
+1. Open the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer) in a browser.
+
+2. Select **Code** and then select **Download ZIP**.
+
+3. Once the ZIP file has downloaded, open the **Downloads** folder.
+
+4. Right-click the ZIP file and select **Extract All**.
+
+   > **Important:** Do not run the application directly from the deeply nested extracted folder in `Downloads`. The long Windows path can cause path-related problems in the VM.
+
+5. After extracting the repository, open **PowerShell**.
+
+6. Copy the Lab 4 folder to your Desktop:
 
    ```powershell
    Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day04\lab04-use-agent-with-vscode" "$env:USERPROFILE\Desktop\lab04" -Recurse
    ```
 
-6. Open the copied Lab 2 folder in Visual Studio Code:
+7. Open the copied Lab 4 folder in Visual Studio Code:
 
    ```powershell
    code "$env:USERPROFILE\Desktop\lab04"
