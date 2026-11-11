@@ -58,7 +58,7 @@ You'll write a small Python app that connects to your Foundry project and holds 
 
 2. On the repo page, select the green **`<> Code`** button, then select **Download ZIP**.
 
-    ![Screenshot of the Code button.](../../media/code.png)
+    ![Screenshot of the Code button.](../../media/code_v1.png)
 
 3. Once the download finishes, locate the ZIP file and extract it to a folder on your computer. 
 
