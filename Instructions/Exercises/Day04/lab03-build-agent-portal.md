@@ -83,7 +83,7 @@ Your agent has been created, and the **Agent's playground** is now open. In this
 
    ![Screenshot of the agent's playground.](../../media/add-tool_v11.png)
 
-5. An Attach files dialog box will appear. Leave the Index option set to its default value (Create a new index). In the Vector index name field, enter index_<youruniquesuffix>. Select Browse for files, navigate to the Downloads folder, select IT_Policy.txt, and then select Attach.
+5. An **Attach files** dialog box will appear. Leave the **Index** option set to its default value (**Create a new index**). In the **Vector index name** field, enter `index_<your_unique_suffix>`. Select **Browse for files**, navigate to the **Downloads** folder, select `IT_Policy.txt`, and then select **Attach**.
 
 6. Wait for the file to finish indexing. When the file status changes to Success, select Attach to add the vector index to your agent.
 
@@ -98,7 +98,7 @@ Your agent has been created, and the **Agent's playground** is now open. In this
 > [!NOTE]
 > The CSV file contains simulated system metrics, including CPU, memory, and disk usage over time, which the agent can analyze.
 
-8. Then select **Upload files** and upload the `system_performance.csv` file from your **Downloads** folder. Select **Attach**.
+8. Then select **Upload files** and upload the `system_performance.csv` file from your **Downloads** folder. Leave the **Index** option set to its default value (**Create a new index**). In the **Vector index name** field, enter `index_<your_another_unique_suffix>` and Select **Attach**.
 
 9. Select **Save** to save the agent configuration.
 
