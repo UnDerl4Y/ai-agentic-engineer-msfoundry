@@ -60,7 +60,7 @@ Return to the [Microsoft Foundry portal](https://ai.azure.com) and ensure you ar
 
 ## Download the training data
 
-1. Open the [training dataset](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day04/lab01-fine-tuning/credit_risk_management.jsonl) in a browser.
+1. Open the [training dataset](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day04/lab02-fine-tuning/credit_risk_management.jsonl) in a browser.
 2. Download the file and save it locally as `credit_risk_management.jsonl`.
 
 > **Important:** Your browser may save the file with a `.txt` extension. If it does, rename the file so that its filename ends with `.jsonl`.
