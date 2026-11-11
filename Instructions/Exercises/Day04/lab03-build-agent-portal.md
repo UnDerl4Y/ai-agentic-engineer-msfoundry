@@ -75,72 +75,67 @@ Your agent has been created, and the **Agent's playground** is now open. In this
 > [!NOTE]
 > The document contains sample IT policies for password resets, software installation requests, and hardware troubleshooting.
 
-3. Return to the **Agent's playground**. In the **Tools** section, select **Add**, and then turn on **Code interpreter**.
+3. Download the system performance data file from the training repository. Open a new browser tab and enter the following URL in the address bar:
 
-   ![Screenshot of the agent's playground.](../../media/code-interpreter_v11.png)
+   **https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day04/lab03-build-agent-portal/system_performance.md**
 
-4. Select **Add tools**, then select **File search**. Select **Add tool** to add it to the agent.
+   On the file page, select **Download raw file** to download `system_performance.md` to your local **Downloads** folder.
+
+> [!NOTE]
+> The .md file contains simulated system metrics, including CPU, memory, and disk usage over time, which the agent can analyze.
+
+4. Return back to **Playground** click **Add** then click **Code interpreter**
+
+5. Select **Add** then select **File search**.
 
    ![Screenshot of the agent's playground.](../../media/add-tool_v11.png)
 
-5. An **Attach files** dialog box will appear. Leave the **Index** option set to its default value (**Create a new index**). In the **Vector index name** field, enter `index_<your_unique_suffix>`. Select **Browse for files**, navigate to the **Downloads** folder, select `IT_Policy.txt`, and then select **Attach**.
+6. An **Attach files** dialog box will appear. Leave the **Index** option set to its default value (**Create a new index**). In the **Vector index name** field, replace auto-generated **Vector index name** with `index_<your_unique_suffix>`. Select **Browse for files**, navigate to the **Downloads** folder, select both `IT_Policy.txt` and `system_performance.md`.
 
-6. Wait for the file to finish indexing. When the file status changes to Success, select Attach to add the vector index to your agent.
+7. Wait for the file to finish indexing. When the file status changes to Success, select **Attach** to add the vector index to your agent.
 
-   ![Screenshot of the agent's playground.](../../media/add-tool2_v11.png)
-
-7. Download the system performance data file from the training repository. Open a new browser tab and enter the following URL in the address bar:
-
-   **https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day04/lab03-build-agent-portal/system_performance.csv**
-
-   On the file page, select **Download raw file** to download `system_performance.csv` to your local **Downloads** folder.
-
-> [!NOTE]
-> The CSV file contains simulated system metrics, including CPU, memory, and disk usage over time, which the agent can analyze.
-
-8. Click **Add** under the **web search**. Now enable **Code interpreter**, select **+ Files**, then select **Browse files** and upload the `system_performance.csv` file from your **Downloads** folder. Select **Attach**.
-
-9. Select **Save** to save the agent configuration.
+8. Select **Save as agent** to save the agent configuration and name it `support-agent-<youruniquesuffix>` and leave the checkbox unchecked and select **Create**.
 
 ## Test your agent
 
-Let's test the agent using the grounding data and built-in tools.
+> [!NOTE] 
+> Prompt wording matters. A broad prompt may retrieve multiple relevant sections and generate several citations, while a specific prompt helps the agent focus on the exact information you need. Compare the first two prompts below to observe the difference.
 
-1. In the chat interface on the right side of the playground, enter the following prompt:
+1. In the chat interface on the right side of the playground, enter the following broad prompt:
 
    ```text
    What's the policy for password resets?
    ```
 
-2. Review the response. The agent will use the **IT policy document** to provide information about password reset procedures. The exact response may vary.
+2. Review the response. The agent will use the **IT policy document** to retrieve relevant information. Observe how the broad question may retrieve multiple relevant sections and produce several citations.
 
-3. Try another prompt:
+3. Next, enter a more specific prompt:
 
    ```text
-   How do I request new software?
+   What are the password requirements for employees?
    ```
 
-4. Review the response and observe how the agent uses the **IT policy document** to answer the question.
+4. Review the response and compare the citations with those from the previous prompt. Observe how a more specific question helps the agent focus on the exact information you need. An example is shown below however, the generated response and number of citations may vary slightly in your case.
+
+   ![Screenshot of the Create an agent dialog box.](../../media/prompt_diff.png)
 
 5. Test the **Code interpreter** with the following data analysis request:
 
    ```text
-   Can you analyze the system performance data and tell me if there are any concerning trends?
+   Can you analyze the system performance data and identify any concerning trends?
    ```
 
-6. Review the response. The agent will use **Code interpreter** to analyze the uploaded CSV data and provide relevant observations. The results may vary.
+6. Review the response. The agent will use **Code interpreter** internally to analyze the uploaded system performance data and provide relevant observations. The results may vary.
 
-7. Ask the agent to create a visualization:
+7. Ask a follow-up question:
 
    ```text
-   Create a chart showing CPU usage over time from the performance data.
+   Which system appears to have the highest average CPU usage?
    ```
 
-8. Download the generated chart and review it. Observe how the agent uses **Code interpreter** to analyze and visualize the data.
+8. Review the response and observe how the agent used **Code interpreter** to perform additional analysis on the uploaded data. The results may vary.
 
-   ![Screenshot of the generated CPU usage chart.](../../media/cpu_usage_over_time_v11.png)
-
-Your agent is now configured with grounding data, **File search**, and **Code interpreter**. In the next lab, you'll use this agent with Visual Studio Code.
+Your agent is now configured with grounding data, **File search** & **Code interpreter**. In the next upcoming labs, you'll use this agent with Visual Studio Code.
 
 ## Summary
 
