@@ -41,11 +41,9 @@ This gives you a baseline for understanding how the model answers questions **be
 
 1. Return to the [Microsoft Foundry portal](https://ai.azure.com/).
 
-2. In the Home page, under **Model selection**, locate and click **Test in playground**.
+2. Select **Home**, locate the **Model selection** section, and then select **Test in playground**.
 
    > **Note:** Selecting **Test in playground** opens the **Chat Playground**, where you can interact with the deployed model and review its responses.
-
-   ![Screenshot](../../media/d1.png)
 
 3. In the **Instructions** field, replace the following prompt:
 

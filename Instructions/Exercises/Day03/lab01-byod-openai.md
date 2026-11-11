@@ -34,9 +34,9 @@ In this section, you will use the deployed model playground in Microsoft Foundry
 ## 1. Open the Model Playground
 
 1. Open the [Microsoft Foundry portal](https://ai.azure.com).
-2. Select your training project and open **Home Page**.
+2. Select your training project, then click **Home**.
 3. Under **Model selection**, select **Test in playground**.
-4. Verify that the selected deployment appears at the top of the left pane.
+4. Ensure that **gpt-5.4-mini** appears at the top of the left pane.
 
 The playground has two main areas:
 
