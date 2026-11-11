@@ -69,7 +69,7 @@ This exercise takes approximately **100 minutes**. The fine-tuning job itself ma
 
 Creating and deploying your own fine-tuned model can take approximately **60–90 minutes**, depending on available cloud capacity.
 
-- **Want to understand the workflow?** Go through the steps below to see how a fine-tuning job is configured. You can skip submitting the job and proceed directly to **[Test `gpt-5.4-mini` in the playground](#test-gpt-5.4-mini-in-the-playground)** to use the prepared fine-tuned model as creating your own model is a optional thing.
+- **Want to understand the workflow?** Go through the steps below to see how a fine-tuning job is configured. You can skip submitting the job and proceed directly to **[Test the base model in the playground](#test-the-base-model-in-the-playground)** to use the prepared fine-tuned model later in the lab.
 .
 - **Want to create your own model?** Follow all the steps and submit the fine-tuning job. Once submitted, you can continue with the remaining lab activities while the model is being created. Stop at **[Test the fine-tuned model](#test-the-fine-tuned-model)** and return to this section once your fine-tuning job and deployment are complete. The process may take approximately **60–90 minutes**.
 
@@ -109,11 +109,11 @@ Creating and deploying your own fine-tuned model can take approximately **60–9
 
 > **Note:** Fine-tuning and deployment can take approximately **60–90 minutes**. You do not need to wait for the job to finish before continuing with the playground testing.
 
-## Test `gpt-5.4-mini` in the playground
+## Test the base model in the playground
 
 > **Tip:** Keep a copy of the **prompts and model responses in Notepad** as you work through the steps. You will use them later to compare the base model with the fine-tuned model.
 
-While the fine-tuning job is running, or if you skipped the optional fine-tuning section, test the prepared **`gpt-5.4-mini`** model in the playground.
+While the fine-tuning job is running, or if you skipped the optional fine-tuning section, test the prepared **base model (`gpt-5.4-mini`)** in the playground.
 
 This test will show how instructions affect the model's responses.
 
@@ -242,7 +242,7 @@ If you skipped the fine-tuning job, use the **prepared fine-tuned model** that i
    Clearly identify missing documents or data and explain how they affect the assessment.
    ```
 
-5. Ask the **same five questions** that you tested with the base `gpt-5.4-mini` model.
+5. Ask the **same five questions** to the fine-tuned model (`gpt-4.1`).
 
    **Question 1**
 
