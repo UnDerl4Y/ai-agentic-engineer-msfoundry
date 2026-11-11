@@ -165,7 +165,7 @@ The application files for the Credit Risk RAG application are provided in the [t
 
 5. After extracting the repository, open **PowerShell**.
 
-6. Copy the Credit Risk RAG lab to the Desktop using the shorter folder name `lab04-RAG`:
+6. Copy the Credit Risk RAG lab to the Desktop using the shorter folder name `lab02-RAG`:
 
    ```powershell
    Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day03\lab02-RAG-with-Azure-AI-Foundry" "$env:USERPROFILE\Desktop\lab02-RAG" -Recurse
