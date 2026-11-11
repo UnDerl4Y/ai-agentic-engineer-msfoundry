@@ -437,7 +437,7 @@ The application uses your Azure identity to connect to Microsoft Foundry.
    az account show
    ```
 
-4. Make sure the correct subscription is selected.
+4. Make sure the correct subscription is selected andiIf prompted to select a subscription, enter the subscription number (for example, 1) and press Enter.
 
 ## Run the application
 
