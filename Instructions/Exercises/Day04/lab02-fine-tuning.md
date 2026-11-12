@@ -3,7 +3,7 @@ lab:
   title: Fine-tune a language model
   description: Learn how to use your own training data to fine-tune a model and customize its behavior.
   level: 300
-  duration: 100
+  duration: 150
   islab: true
   status: 'released'
 ---
@@ -52,7 +52,8 @@ In this exercise, you will fine-tune a language model to build a **credit risk m
 
 The goal is to understand how training examples can influence a model's response patterns and make its behavior more consistent for a specific task.
 
-This exercise takes approximately **100 minutes**. The fine-tuning job itself may take approximately **60–90 minutes**, depending on available cloud capacity.
+> [!NOTE]
+> This exercise takes approximately **150 minutes** if you choose to create your own fine-tuned model. The fine-tuning job itself may take approximately **120–140 minutes** to complete, including training and model preparation. Therefore, we highly recommend using the **already fine-tuned model** provided in this lab to complete the exercise without waiting for a new model to be trained and deployed.
 
 ## Open the existing project
 
@@ -111,7 +112,7 @@ Choose how you want to proceed:
 
 11. Select **Submit** to start the fine-tuning job.
 
-> **Note:** Fine-tuning and deployment can take approximately **60–90 minutes**. You do not need to wait for the job to finish before continuing with the playground testing.
+> **Note:** Fine-tuning and deployment can take approximately **120–140 minutes**. You do not need to wait for the job to finish before continuing with the playground testing.
 
 ## Test the base model in the playground
 
@@ -235,7 +236,7 @@ Follow the steps below to open the model and test it using the same instructions
 2. Find and click the prepared fine-tuned model named:
 
    ```text
-   25-04-14-ft-83022baa9680487cbe90bfe6efcc7049-ft-credit-test-user
+   25-04-14-ft-2b1542e1167844c4a875c813c9344c89-ft-credit-test-user
    ```
 
 3. Open the fine-tuned model in the **model playground**.
