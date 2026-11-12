@@ -160,13 +160,13 @@ The application files for the Credit Risk RAG application are provided in the [t
 
 5. After extracting the repository, open **PowerShell**.
 
-6. Copy the Lab 4 folder to your Desktop:
+6. Copy the Lab 3 folder to your Desktop:
 
    ```powershell
    Copy-Item "$env:USERPROFILE\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day04\lab03-build-and-use-agent" "$env:USERPROFILE\Desktop\lab03" -Recurse
    ```
 
-7. Open the copied Lab 4 folder in Visual Studio Code:
+7. Open the copied Lab 3 folder in Visual Studio Code:
 
    ```powershell
    code "$env:USERPROFILE\Desktop\lab03"
