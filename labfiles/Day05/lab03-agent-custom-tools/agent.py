@@ -1,3 +1,4 @@
+
 import os
 import json
 from dotenv import load_dotenv
@@ -50,29 +51,24 @@ def main():
         document_tool = FunctionTool(
             name="verify_documents",
             description=(
-                "Check whether the required company registration "
-                "and GST documents are available."
+                "Verify whether the required company registration "
+                "and GST documents are available for a company. "
+                "Retrieve the company details using its name from "
+                "the sample company data file."
             ),
             parameters={
                 "type": "object",
                 "properties": {
-                    "company_registration": {
-                        "type": "boolean",
+                    "company_name": {
+                        "type": "string",
                         "description": (
-                            "Whether the Company Registration Certificate "
-                            "is available."
-                        ),
-                    },
-                    "gst_certificate": {
-                        "type": "boolean",
-                        "description": (
-                            "Whether the GST Certificate is available."
+                            "Name of the company whose documents "
+                            "need to be verified."
                         ),
                     },
                 },
                 "required": [
-                    "company_registration",
-                    "gst_certificate",
+                    "company_name",
                 ],
                 "additionalProperties": False,
             },
@@ -83,44 +79,24 @@ def main():
         ratio_tool = FunctionTool(
             name="calculate_financial_ratios",
             description=(
-                "Calculate basic financial ratios used in "
-                "credit-risk assessment."
+                "Calculate the current ratio, debt-to-equity ratio, "
+                "and net profit margin for a company. Retrieve its "
+                "financial data using the company name from the "
+                "sample company data file."
             ),
             parameters={
                 "type": "object",
                 "properties": {
-                    "current_assets": {
-                        "type": "number",
-                        "description": "Current assets of the company.",
-                    },
-                    "current_liabilities": {
-                        "type": "number",
-                        "description": "Current liabilities of the company.",
-                    },
-                    "total_debt": {
-                        "type": "number",
-                        "description": "Total debt of the company.",
-                    },
-                    "equity": {
-                        "type": "number",
-                        "description": "Total equity of the company.",
-                    },
-                    "net_profit": {
-                        "type": "number",
-                        "description": "Net profit of the company.",
-                    },
-                    "revenue": {
-                        "type": "number",
-                        "description": "Total revenue of the company.",
+                    "company_name": {
+                        "type": "string",
+                        "description": (
+                            "Name of the company whose financial "
+                            "ratios need to be calculated."
+                        ),
                     },
                 },
                 "required": [
-                    "current_assets",
-                    "current_liabilities",
-                    "total_debt",
-                    "equity",
-                    "net_profit",
-                    "revenue",
+                    "company_name",
                 ],
                 "additionalProperties": False,
             },
@@ -131,34 +107,23 @@ def main():
         summary_tool = FunctionTool(
             name="generate_risk_summary",
             description=(
-                "Generate a simple credit-risk assessment summary "
-                "using company information and calculated financial ratios."
+                "Generate a credit-risk assessment summary for a "
+                "company using its stored financial data and the "
+                "configured risk thresholds."
             ),
             parameters={
                 "type": "object",
                 "properties": {
                     "company_name": {
                         "type": "string",
-                        "description": "Name of the company.",
-                    },
-                    "current_ratio": {
-                        "type": "number",
-                        "description": "Current ratio of the company.",
-                    },
-                    "debt_to_equity": {
-                        "type": "number",
-                        "description": "Debt-to-equity ratio.",
-                    },
-                    "net_profit_margin": {
-                        "type": "number",
-                        "description": "Net profit margin as a percentage.",
+                        "description": (
+                            "Name of the company for which the "
+                            "credit-risk summary is required."
+                        ),
                     },
                 },
                 "required": [
                     "company_name",
-                    "current_ratio",
-                    "debt_to_equity",
-                    "net_profit_margin",
                 ],
                 "additionalProperties": False,
             },
@@ -176,9 +141,18 @@ def main():
                 You are a credit-risk assessment assistant.
 
                 Help users perform basic credit-risk assessment tasks.
+
                 Use the available tools when document verification,
                 financial calculations, or risk summaries are required.
-                Explain the results clearly.
+
+                Always use the company name provided by the user
+                to retrieve the corresponding company information.
+
+                Do not invent company documents or financial values.
+                Use only the information returned by the tools.
+
+                Explain the results clearly, including document
+                availability, financial ratios, and risk levels.
                 """,
                 tools=[
                     document_tool,
@@ -238,6 +212,7 @@ def main():
             # Check the run status for failures
             if response.status == "failed":
                 print(f"Response failed: {response.error}")
+                continue
 
             # Process function calls
             for item in response.output:
@@ -248,20 +223,16 @@ def main():
 
                     print(f"Calling tool: {item.name}")
 
+                    arguments = json.loads(item.arguments)
+
                     if item.name == "verify_documents":
-                        result = verify_documents(
-                            **json.loads(item.arguments)
-                        )
+                        result = verify_documents(**arguments)
 
                     elif item.name == "calculate_financial_ratios":
-                        result = calculate_financial_ratios(
-                            **json.loads(item.arguments)
-                        )
+                        result = calculate_financial_ratios(**arguments)
 
                     elif item.name == "generate_risk_summary":
-                        result = generate_risk_summary(
-                            **json.loads(item.arguments)
-                        )
+                        result = generate_risk_summary(**arguments)
 
                     input_list.append(
                         FunctionCallOutput(
@@ -284,6 +255,9 @@ def main():
                         }
                     },
                 )
+
+                # Clear processed function call outputs
+                input_list.clear()
 
             # Display the agent's response
             print(f"AGENT: {response.output_text}")
