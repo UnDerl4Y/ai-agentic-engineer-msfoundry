@@ -8,7 +8,7 @@ lab:
     status: 'released'
 ---
 
-# Build AI agents with Microsoft Foundry portal
+# Build and use AI agents with Microsoft Foundry portal
 
 In this exercise, you'll build a complete AI agent solution using both the Microsoft Foundry portal and the Foundry Toolkit VS Code extension. You'll start by creating a basic agent in the portal with grounding data and built-in tools, then interact with it programmatically using VS Code to use advanced capabilities like code interpreter for data analysis.
 
