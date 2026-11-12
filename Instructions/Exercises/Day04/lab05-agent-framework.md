@@ -22,9 +22,6 @@ Before starting this exercise, ensure you have:
 - An active [Azure subscription](https://azure.microsoft.com/free/)
 - [Python 3.12.10](https://www.python.org/downloads/) installed
 - [Git](https://git-scm.com/downloads) installed on your local machine
-- Foundry Toolkit VS Code extension
-
-> This lab was tested with Python 3.12.10.
 
 ## Use the Deployed Model
 
@@ -43,9 +40,9 @@ Before starting this exercise, ensure you have:
 5. Open ****PowerShell**** and run the following two commands to avoid long path issues:
 
 ```powershell
-Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day06\lab01-agent-framework" "$env:USERPROFILE\Desktop\lab01-agent-framework" -Recurse
+Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day04\lab04-agent-framework" "$env:USERPROFILE\Desktop\lab05-agent-framework" -Recurse
 
-code "$env:USERPROFILE\Desktop\lab01-agent-framework"
+code "$env:USERPROFILE\Desktop\lab05-agent-framework"
 ```
 
 The first command copies the lab folder to your ****Desktop****, and the second command opens the copied folder directly in ****Visual Studio Code****.
@@ -201,7 +198,7 @@ The application is now ready to run.
 az account show
 ```
 
-If your Azure account details are displayed, continue to the next step.
+If your Azure account details are displayed, continue to [**Test Case 1: Low Risk**](#test-case-1-low-risk).
 
 If you are not signed in, run:
 
