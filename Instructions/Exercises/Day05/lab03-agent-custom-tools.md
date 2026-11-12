@@ -28,20 +28,36 @@ Before starting this exercise, ensure you have:
 
 ## Use the deployed model
 
+A project and deployed models are already available below. Use the existing project and one of its deployed model for this exercise.
 
-# Get the application files from GitHub
+## Get the application files from GitHub
 
-1. If you have already downloaded and extracted the repository in a previous lab, delete the existing ZIP file and the extracted folder. This will allow us to use the PowerShell commands in the following steps and help avoid long path issues.
+### 1. Clean Up Previous Downloads 
 
-2. Open a web browser and go to the [lab files on GitHub](https://github.com/Kiran-255666/AgenticAIEngineer).
+Before downloading the latest repository version, remove the previous downloaded files and extracted folders to avoid using an outdated copy.
 
-3. On the repository page, select the green **`<> Code`** button, and then select **Download ZIP**.
+1. Open your **Downloads** folder.
+2. Delete the previously downloaded `AgenticAIEngineer-main.zip` file.
+3. Delete the previously extracted `AgenticAIEngineer-main` folder and any duplicate extracted folders, such as `AgenticAIEngineer-main (1)`.
+4. Make sure the old copies have been removed before proceeding.
 
-4. Once the download finishes, extract the ZIP file.
+> **Note:** The repository has been updated. Using an older ZIP file or extracted folder may result in outdated files or incorrect paths when following the commands in this lab.
 
-5. Open ****PowerShell**** and run the following two commands to avoid long path issues:
+### 2. Download and Extract the Latest Repository
 
-   ![Screenshot of the Foundry Toolkit sidebar showing My Resources and Developer Tools sections before sign-in.](../../media/POWERSHELL.png)
+The application files for the Credit Risk RAG application are provided in the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer).
+
+1. Open the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer) in a browser.
+
+2. Select **Code** and then select **Download ZIP**.
+
+3. Once the ZIP file has downloaded, open the **Downloads** folder.
+
+4. Right-click the ZIP file and select **Extract All**.
+
+   > **Important:** Do not run the application directly from the deeply nested extracted folder in `Downloads`. The long Windows path can cause path-related problems in the VM.
+
+5. After extracting the repository, open **PowerShell** and run these commands.
 
 ```powershell
 Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day05\lab01-agent-custom-tools" "$env:USERPROFILE\Desktop\lab01-agent-custom-tools" -Recurse

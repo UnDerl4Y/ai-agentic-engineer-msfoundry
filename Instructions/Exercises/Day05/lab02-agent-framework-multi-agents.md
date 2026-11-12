@@ -10,8 +10,6 @@ lab:
 
 # Develop a multi-agent solution with Microsoft Agent Framework
 
-**Note: We have already updated the mentioned files with the code mentioned in the instructions, but we would highly suggest going through it before executing it**
-
 In this exercise, you'll practice using the sequential orchestration pattern in the Microsoft Agent Framework SDK. You'll create a simple pipeline of three agents that work together to process customer feedback and suggest next steps. You'll create the following agents:
 
 - The Summarizer agent will condense raw feedback into a short, neutral sentence.
@@ -30,29 +28,40 @@ Before starting this exercise, ensure you have:
 
 - [Visual Studio Code](https://code.visualstudio.com/) installed on your local machine
 - An active [Azure subscription](https://azure.microsoft.com/free/)
-- [Python 3.13](https://www.python.org/downloads/) or later installed
-* **Foundry Toolkit for VS Code** extension
-
-> **Tip:** If you haven't installed it yet, refer to the [Day 05 Lab 01: Agent Custom Tools](https://github.com/kiran-255666/AgenticAIEngineer/blob/main/Instructions/Exercises/Day05/lab01-agent-custom-tools.md) lab for installation instructions.
-
-
-> \* Python 3.13 is available, but some dependencies are not yet compiled for that release. The lab has been successfully tested with Python 3.12.10.
+- [Python 3.12](https://www.python.org/downloads/) or later installed.
 
 ## Use the deployed model
 
 Use the deployed model that's already available in your Foundry project.
 
-# Get the application files from GitHub
+## Get the application files from GitHub
 
-1. If you have already downloaded and extracted the repository in a previous lab, delete the existing ZIP file and the extracted folder. This will allow us to use the PowerShell commands in the following steps and help avoid long path issues.
+### 1. Clean Up Previous Downloads 
 
-2. Open a web browser and go to the [lab files on GitHub](https://github.com/Kiran-255666/AgenticAIEngineer).
+Before downloading the latest repository version, remove the previous downloaded files and extracted folders to avoid using an outdated copy.
 
-3. On the repository page, select the green **`<> Code`** button, and then select **Download ZIP**.
+1. Open your **Downloads** folder.
+2. Delete the previously downloaded `AgenticAIEngineer-main.zip` file.
+3. Delete the previously extracted `AgenticAIEngineer-main` folder and any duplicate extracted folders, such as `AgenticAIEngineer-main (1)`.
+4. Make sure the old copies have been removed before proceeding.
 
-4. Once the download finishes, extract the ZIP file.
+> **Note:** The repository has been updated. Using an older ZIP file or extracted folder may result in outdated files or incorrect paths when following the commands in this lab.
 
-5. Open ****PowerShell**** and run the following two commands to avoid long path issues:
+### 2. Download and Extract the Latest Repository
+
+The application files for the Credit Risk RAG application are provided in the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer).
+
+1. Open the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer) in a browser.
+
+2. Select **Code** and then select **Download ZIP**.
+
+3. Once the ZIP file has downloaded, open the **Downloads** folder.
+
+4. Right-click the ZIP file and select **Extract All**.
+
+   > **Important:** Do not run the application directly from the deeply nested extracted folder in `Downloads`. The long Windows path can cause path-related problems in the VM.
+
+5. After extracting the repository, open **PowerShell** and run these commands.
 
 ```powershell
 Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day05\lab02-agent-framework-multi-agents" "$env:USERPROFILE\Desktop\lab02-agent-framework-multi-agents" -Recurse
@@ -201,16 +210,11 @@ The application is now ready to run.
 1. In the integrated terminal, make sure you are logged in to Azure:
 
 ```powershell
-az login
+az account show
 ```
+If your details are displayed correctly, you're good to go. If your details are missing or an error appears, run `az login` to sign in again.
 
-2. If your virtual environment is not already active, activate it:
-
-```powershell
-.\labenv\Scripts\Activate.ps1
-```
-
-3. Run the application:
+2. Run the application:
 
 ```powershell
 python agents.py
