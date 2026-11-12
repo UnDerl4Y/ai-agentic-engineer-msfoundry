@@ -28,25 +28,34 @@ Before starting this exercise, ensure you have:
 - Install Azure CLI using the link- https://aka.ms/installazurecliwindows
 - Foundry Toolkit for VS Code
 
-> **Note:** If you have already installed and configured the **Foundry Toolkit for VS Code** extension, skip this section and proceed to the next step. If not, follow the installation steps in the [AgenticAIEngineer Day 05 Lab 01 documentation](https://github.com/uday-meteoros/AgenticAIEngineer/blob/main/Instructions/Exercises/Day05/lab01-agent-custom-tools.md).
+## Get the application files from GitHub
 
+### 1. Clean Up Previous Downloads 
 
+Before downloading the latest repository version, remove the previous downloaded files and extracted folders to avoid using an outdated copy.
 
-> \* Python 3.13 is available, but some dependencies are not yet compiled for that release. The lab has been successfully tested with Python 3.12.
+1. Open your **Downloads** folder.
+2. Delete the previously downloaded `AgenticAIEngineer-main.zip` file.
+3. Delete the previously extracted `AgenticAIEngineer-main` folder and any duplicate extracted folders, such as `AgenticAIEngineer-main (1)`.
+4. Make sure the old copies have been removed before proceeding.
 
-## Download the starter code repository
+> **Note:** The repository has been updated. Using an older ZIP file or extracted folder may result in outdated files or incorrect paths when following the commands in this lab.
 
-# Get the application files from GitHub
+### 2. Download and Extract the Latest Repository
 
-1. If you have already downloaded and extracted the repository in a previous lab, delete the existing ZIP file and the extracted folder. This will allow us to use the PowerShell commands in the following steps and help avoid long path issues.
+The application files for the Credit Risk RAG application are provided in the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer).
 
-2. Open a web browser and go to the [lab files on GitHub](https://github.com/Kiran-255666/AgenticAIEngineer).
+1. Open the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer) in a browser.
 
-3. On the repository page, select the green **`<> Code`** button, and then select **Download ZIP**.
+2. Select **Code** and then select **Download ZIP**.
 
-4. Once the download finishes, extract the ZIP file.
+3. Once the ZIP file has downloaded, open the **Downloads** folder.
 
-5. Open ****PowerShell**** and run the following two commands to avoid long path issues:
+4. Right-click the ZIP file and select **Extract All**.
+
+   > **Important:** Do not run the application directly from the deeply nested extracted folder in `Downloads`. The long Windows path can cause path-related problems in the VM.
+
+5. After extracting the repository, open **PowerShell** and run these commands.
 
 ```powershell
 Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day05\lab04-mcp-integration" "$env:USERPROFILE\Desktop\lab04-mcp-integration" -Recurse

@@ -40,9 +40,9 @@ Before starting this exercise, ensure you have:
 5. Open ****PowerShell**** and run the following two commands to avoid long path issues:
 
 ```powershell
-Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day04\lab04-agent-framework" "$env:USERPROFILE\Desktop\lab05-agent-framework" -Recurse
+Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day05\lab01-agent-framework" "$env:USERPROFILE\Desktop\lab01-agent-framework" -Recurse
 
-code "$env:USERPROFILE\Desktop\lab05-agent-framework"
+code "$env:USERPROFILE\Desktop\lab01-agent-framework"
 ```
 
 The first command copies the lab folder to your ****Desktop****, and the second command opens the copied folder directly in ****Visual Studio Code****.

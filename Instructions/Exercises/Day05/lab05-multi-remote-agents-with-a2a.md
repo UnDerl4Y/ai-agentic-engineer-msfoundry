@@ -229,37 +229,6 @@ to exit the application.
 
 Type `quit` to exit. The agent may organize its answer differently, but it should not invent facts or a final credit decision.
 
-### Summary
+## Conclusion
 
-In this exercise, you use **Azure AI Agent Service with the A2A protocol** to build a Credit Risk Assessment application with multiple specialist agents.
-
-The application follows this flow:
-
-```text
-User → CLI → Routing Agent → Specialist Agent → Answer
-```
-
-The Routing Agent sends each question to the appropriate specialist:
-
-* **Document Verification Agent** — checks company documents, availability, status, and name matching.
-* **Financial Analysis Agent** — provides financial information and calculates financial ratios.
-* **Credit Risk Assessment Agent** — summarizes the available credit-risk information and identifies missing information.
-
-The application reads the required information from the files in the `data/` folder rather than hardcoding company details or financial values in Python.
-
-The main functions to review are:
-
-* `load_all_data()` — loads the source documents.
-* `compute_financial_ratios()` — calculates the required financial ratios.
-* `send_message(...)` — sends requests between agents using A2A.
-* `run_conversation(...)` — prepares the specialist agent's response.
-
-You then run the application with:
-
-```text
-python run_all.py
-```
-
-and test company documents, financial ratios, credit bureau information, and the overall credit-risk assessment.
-
-The application should **only use information available in the source documents**, clearly distinguish calculated values from document facts, and state when information is unavailable rather than inventing it.
+By completing this lab, you will understand how to connect remote agents using the A2A protocol and enable them to communicate and collaborate. You will also learn how a Routing Agent delegates tasks to specialized agents, how they exchange information, and how multiple agents work together to complete tasks such as document verification, financial analysis, and credit risk assessment using Azure AI Agent Service.
