@@ -214,7 +214,7 @@ flowchart LR
 When you ask about an IT policy, the agent can use **File search** to find information in the policy document. When you ask about the performance data, it can use **Code interpreter** to analyze the CSV file.
 
 > [!IMPORTANT]
-> Use the agent you created in the previous lab. You do not need to create another agent for this lab.
+> Use the agent you created recently.
 
 ## Review the Python application
 
@@ -238,7 +238,7 @@ agent_name = os.environ.get("AGENT_NAME", "it-support-agent")
 The application then reads:
 
 * `PROJECT_ENDPOINT` for the Microsoft Foundry project.
-* `AGENT_NAME` for the agent created in the previous lab.
+* `AGENT_NAME` for the agent created recently.
 
 This keeps the project and agent settings outside the Python code.
 
@@ -353,7 +353,7 @@ response = openai_client.responses.create(
 
 The `agent_reference` identifies the agent that should handle the conversation.
 
-The agent can use the instructions and tools configured in the previous lab.
+The agent can use the instructions and tools configured recently.
 
 A policy question can use **File search**, while a data analysis request can use **Code interpreter**.
 
@@ -501,7 +501,7 @@ The application needs two values to connect to your agent: the Microsoft Foundry
    AGENT_NAME=it-support-agent
    ```
 
-3. Replace `it-support-agent` with the **complete name of the agent you created in the previous lab**.
+3. Replace `it-support-agent` with the **complete name of the agent you created recently**.
 
 4. Save the `.env` file.
 
