@@ -503,34 +503,29 @@ Now test **Code interpreter** with the system performance data.
 
 2. Review the response.
 
-   The agent will use **Code interpreter** with the `system_performance.csv` file to analyze the data. Your response will be similar to the response shown in this lab.
-
-3. Ask for disk usage statistics:
+3. Enter:
 
    ```text
    What are the average, minimum, and maximum disk usage values in the performance data?
    ```
 
-4. Compare CPU and memory usage:
+4. Review the response.
+
+5. Enter:
 
    ```text
    Find any correlation between high CPU usage and memory usage in the performance data.
    ```
 
-5. Ask the agent to create a chart:
+6. Review the response.
+
+7. Enter:
 
    ```text
-   Create a line chart showing memory usage trends over time.
+   Summarize the three most important findings from the performance data.
    ```
 
-6. Review the generated chart.
-
-   The agent will use **Code interpreter** with the `system_performance.csv` file to generate the chart. Your chart will be similar to the one shown in this lab.
-
-7. In the VS Code Explorer, open the **`agent_outputs`** folder to view the generated files.
-
-   > [!NOTE]
-   > AI-generated analysis and charts may differ slightly between agents and runs. The overall results will be similar.
+8. Review the response and observe how the agent uses **Code interpreter** to analyze the uploaded CSV file.
 
 ## Exit the application
 
@@ -553,7 +548,7 @@ In this lab, you:
 * Ran the application from Visual Studio Code.
 * Used **File search** to answer IT policy questions.
 * Used **Code interpreter** to analyze system performance data.
-* Generated and saved a chart locally.
+* Used Code interpreter to analyze system performance data and generate insights.
 
 The application flow is:
 
