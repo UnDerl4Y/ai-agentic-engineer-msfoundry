@@ -73,13 +73,13 @@ The new experience is best suited for agents that need to handle open-ended, con
 
 1. At the bottom of the left-hand navigation, select the current **environment name**, then select **All environments**. Select the **environment you created earlier for this exercise**.
 
-   ![Safe Travels template.](../media/Testuser.png)
+   ![Safe Travels template.](../../media/Testuser.png)
 
 ### Task 1.2 – Review the New Interface
 
 Take a moment to review how the new Copilot Studio experience is organized before creating your agent.
    
-   ![New Interface](../media/uiuiui.png)
+   ![New Interface](../../media/uiuiui.png)
 
 | Location | Name | Purpose |
 |----------|------|---------|
@@ -104,11 +104,11 @@ In this exercise, you will create an IT support agent for a fictional company ca
 
 2. Now you are in **Agents** page. Select the **New Agent** dropdown.
 
-   ![Select Agent (standard).](../media/select-standard-agent22.png)
+   ![Select Agent (standard).](../../media/select-standard-agent22.png)
 
 3. Under **Other ways to build**, select **Agent (standard)**.
 
-   ![Select Agent (standard).](../media/select-standard-agent11.png)
+   ![Select Agent (standard).](../../media/select-standard-agent11.png)
 
 4. On the **Name your agent** page, in the **Name is required to create a new agent** field, enter the following name:
 
@@ -116,7 +116,7 @@ In this exercise, you will create an IT support agent for a fictional company ca
    Contoso IT Helpdesk
    ```
 
-   ![Enter the agent name.](../media/enter-agent-name1.png)
+   ![Enter the agent name.](../../media/enter-agent-name1.png)
 
 5. Under **Agent settings (Optional)**, review the available settings.
 
@@ -130,7 +130,7 @@ In this exercise, you will create an IT support agent for a fictional company ca
 
 10. Wait for Copilot Studio to create the agent.
 
-   ![Configure agent settings.](../media/configure-agent-settings22.png)
+   ![Configure agent settings.](../../media/configure-agent-settings22.png)
 
 ### Task 2.2 – Add instructions to the agent
 
@@ -152,7 +152,7 @@ Do not speculate about hardware failures. For physical hardware issues, tell the
 When an employee's issue cannot be resolved, use the Send an email action to notify the IT helpdesk at helpdesk@contoso.com with the employee's name, email, and issue description.
 ```
 
-![Configure the agent instructions.](../media/configure-agent-instructions11.png)
+![Configure the agent instructions.](../../media/configure-agent-instructions11.png)
 
 4. Select **Save** and wait for the changes to be processed.
 
