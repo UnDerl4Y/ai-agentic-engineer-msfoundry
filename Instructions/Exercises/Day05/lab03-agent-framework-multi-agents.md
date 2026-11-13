@@ -64,9 +64,9 @@ The application files for the Credit Risk RAG application are provided in the [t
 5. After extracting the repository, open **PowerShell** and run these commands.
 
 ```powershell
-Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day05\lab02-agent-framework-multi-agents" "$env:USERPROFILE\Desktop\lab02-agent-framework-multi-agents" -Recurse
+Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day05\lab03-agent-framework-multi-agents" "$env:USERPROFILE\Desktop\lab03-agent-framework-multi-agents" -Recurse
 
-code "$env:USERPROFILE\Desktop\lab02-agent-framework-multi-agents"
+code "$env:USERPROFILE\Desktop\lab03-agent-framework-multi-agents"
 ```
 
 The first command copies the lab folder to your ****Desktop****, and the second command opens the copied folder directly in ****Visual Studio Code****.
