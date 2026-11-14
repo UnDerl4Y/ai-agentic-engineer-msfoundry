@@ -34,8 +34,7 @@ In this lab, we introduce **Foundry IQ**, which provides a knowledge layer that 
 
 > [!IMPORTANT]
 > The credit-risk documents required for this lab are available in the [`lab02-integrate-agent-with-foundry-iq/data`](https://github.com/Kiran-255666/AgenticAIEngineer/tree/main/labfiles/Day06/lab02-integrate-agent-with-foundry-iq/data) folder.
-
-These files are provided so you can **refer to the source documents and understand the data being used**. They are not loaded or read directly by the Python application. Instead, the documents are stored in an Azure data source and connected to the agent through **Foundry IQ**.
+> These files are provided so you can **refer to the source documents and understand the data being used**. They are not loaded or read directly by the Python application. Instead, the documents are stored in an Azure data source and connected to the agent through **Foundry IQ**.
 
 ```mermaid
 flowchart LR
