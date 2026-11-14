@@ -54,8 +54,6 @@ To complete this exercise, you need:
 
 4. Select **Target: Dataset** and click **Upload new dataset**.
 
-   ![Screenshot](../../media/TargetDataset.png)
-
 5. Open the following GitHub folder and manually download the `credit-risk-prompt-evaluation.jsonl` file:
 
    https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab02-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation.jsonl
@@ -97,8 +95,6 @@ To complete this exercise, you need:
 2. Open the completed evaluation run.
 3. Review the scores, metrics, reasoning, and detailed data view.
 4. Use the results to identify where prompt, model, or dataset improvements are required.
-   
-   ![Screenshot](../../media/O4xResult.png)
 
 ## Conclusion
 
