@@ -67,79 +67,36 @@ The model you deployed has a default guardrail applied, which has a balanced set
 
     The default content filter may block the prompt on the basis that it could be interpreted as including a reference to self-harm.
 
+1. Click **Save as an agent** at the top, enter a unique name using the `agent-gt-<your-preferred-suffix>` naming convention, then click **Create** and wait for the agent to be created.
+
 ## Create and apply a custom guardrail
 
 When the default guardrail doesn't meet your needs, you can create custom guardrails to take greater control over the prevention of potentially harmful or offensive content generation.
 
 1. In the left navigation pane, select **Guardrails**.
 
-   ![Screenshot of left navigation pane with Guardrails selected](../../media/guardrails-nav.png)
-
 1. In the **Guardrail** page, select **Create**.
-
-   ![Screenshot of Guardrails page with Create button highlighted](../../media/guardrails-create-button.png)
 
 1. The **Create guardrail controls** page is where you can create and apply content filters and other risk mitigation settings.
 
-   ![Screenshot of Create guardrail controls page](../../media/create-guardrail-controls-page.png)
+1. Scroll down to find **Content harms (4)**
 
-1. Under **Content harms (4)**, you can find the **Risk** dropdown.
+1. For each of the **Hate, Sexual, Self-harm, and Violence** categories, move the blocking threshold slider from **Medium blocking** to **Highest blocking**.
 
-    You can select the risk you specifically want to address with your content filter.
+1. Try exploring the other sections on the page. **We highly recommend exploring these settings and applying the appropriate blocking thresholds to both previously created agents and any agents you create moving forward**.
 
-1. Verify that the **Hate** category is selected under **Content harms**.
+1. Select **Next**
 
-    > **Note:** In most versions of Azure AI Foundry, the **Hate** category is selected by default with the blocking threshold set to **Medium blocking**. If it isn't selected, select it first. Then, drag the slider to change the blocking threshold to **Highest blocking**.
+1. In the **Select agents and models** section, search for the agent you previously created using the name `agent-gt-<your-preferred-suffix>`, then select the checkbox next to it.
 
-1. Repeat the same steps for the **Violence**, **Sexual**, and **Self-harm** categories, setting the blocking threshold to **Highest blocking** for each category.
+1. Click **Next**.
 
-    > **Note:** In most versions of Azure AI Foundry, these categories are selected by default. If any category isn't selected, select it first, then drag its blocking threshold slider to **Highest blocking**.
+1. On the **Review** section, and for the Guardrail name use **gr-<your-preferred-suffix>** as the naming convention then read the summary and then select **Create**, and wait for the guardrail to be saved.
 
-    Filters are applied to both prompts and completions. The selected blocking thresholds determine what types of content are intercepted and blocked.
+1. Search for your `gr-<your-preferred-suffix>` guardrail using the search box. Check its application status, assigned agents/models, and resource type. Select it, click **Try in playground**, and rerun the prompts to observe the updated guardrail behavior.
 
-   ![Screenshot of Create guardrail controls page](../../media/content-harm-2.png)
-
-1. Try exploring the other sections on the page. We highly recommend exploring them and selecting the sections that are relevant to your use cases. Select **Next** after modifying the content filter settings for all four risk categories and any additional categories you selected.
-
-1. In the **Select agents and models** section, scroll down to **Models** and check the checkbox next to **gpt-5.4-mini**. Then apply the new guardrail and click Next.
-
-   ![Screenshot of Create guardrail controls page](../../media/agents-and-models.png)
-
-1. On the **Review** section, read the summary and then select **Create**, and wait for the guardrail to be saved.
-
-   ![Screenshot of Create guardrail controls page](../../media/review-page.png)
-
-1. In the pane on the left, select **Deployments**. If the guardrail is still being saved, wait for the **Saving guardrail** process to complete. Then, select the **gpt-5.4-mini** model to open it in the playground.
-
-1. Select the model's **Details** page and confirm that the new guardrail has been applied to the model. If you'd like, click **Try in playground** to retry the prompts and observe the updated guardrail behavior.
-
-   ![Screenshot of Create guardrail controls page](../../media/details-3.png)
-
-> **Note**: The default guardrail is generally pretty effective against the kinds of offensive content we can include in a lab such as this; so the more restrictive guardrail we created may not change the response from the prompts tried earlier in this lab. However, it will be more effective against prompts that reference extreme violence, sexual content, hate speech, or self-harm.
-
-## Test the custom guardrail
-
-Now that the custom guardrail has been applied to **gpt-5.4-mini**, test the model again in the playground.
-
-1. Select **Try in playground** for the **gpt-5.4-mini** deployment.
-
-2. Retry the prompts from the previous section and observe the responses. The responses will generally be similar to what you saw with the default guardrail, as the default guardrail is already effective at handling these prompts. **We highly recommend trying the prompts again to verify that the custom guardrail is working as expected.**
-
-3. Feel free to try a few **jailbreak-style prompts** of your own to see how the model and guardrail handle attempts to bypass the safety controls.
-
-   > **Note:** Please keep these experiments within the scope of this lab and use them for **educational purposes only**. Avoid going beyond the content categories covered in this exercise or trying to generate content that could cause real-world harm.
-
-   ![Screenshot](../../media/Exam.png)
-
-4. Observe whether the model refuses the request or the Foundry guardrail blocks the interaction. You may see a response similar to:
-
-   > I'm sorry, but I cannot assist with that request.
-
-   Or a guardrail message such as:
-
-   > **Interaction blocked** This interaction was blocked by a safety and security control in this asset's Foundry guardrail. **Risk type:** **Hate (Low)** is detected at **User Input**.
-
-   The exact response and risk level may vary depending on the prompt and model behavior.
+> [!NOTE]
+> You may notice only slight differences in responses because Microsoft Foundry already applies default guardrails to models and agents. However, we recommend configuring additional guardrails based on your context and use-case scenarios, as jailbreak risks and potential threats can vary across applications.
 
 ## Conclusion
 
