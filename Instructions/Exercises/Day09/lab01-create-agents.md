@@ -173,9 +173,9 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Select **Agents** in the left-hand navigation.
 
-1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **⚙️** icon.
+1. Select **+ Create blank agent**
 
-   ![Screenshot of the agent settings dialog.](../../media/agent-settings-dialog.png)
+1. Enter **Benefits Assistant** as the agent name, then click the **Optional** section.
 
 1. Leave **English (United States)** set as the primary language for the agent.
 
@@ -183,23 +183,9 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Enter `govbenefitsagent` for the *Schema name*.
 
-   ![Screenshot of the Schema Name](../../media/SchemaName.png)
-
 1. Select **Update**.
 
-1. In the *Start building by describing what your agent needs to do* text box, Enter the following prompt:
-
-   ```prompt
-   You are an agent that assists with questions related to claiming US government benefits.
-   ```
-
-1. Select the **Send (→)** icon.
-
-   Your agent will be created.
-
-   ![Screenshot of the created agent.](../../media/new-agent-overview.png)
-
-   Once your agent has been provisioned, you may proceed with configuring your agent.
+1. Wait until the agent finishes setting up and the message `This feature isn't available until your agent has finished setting up.` **disappears**.
 
 ### Task 2.2 – Configure the Overview tab
 
