@@ -22,7 +22,7 @@ Before starting this exercise, ensure you have:
 
 - An [Azure subscription](https://azure.microsoft.com/free/)
 - [Visual Studio Code](https://code.visualstudio.com/) installed on your local machine
-- [Python 3.13](https://www.python.org/downloads/) or later installed
+- [Python 3.12](https://www.python.org/downloads/) or later installed
 - An existing Foundry project with deployed chat and embedding models
 - Basic familiarity with the Microsoft Foundry portal and Python programming
 
@@ -50,24 +50,20 @@ flowchart LR
 
 This means the agent can search the connected knowledge source and retrieve relevant information when you ask a question, rather than requiring the documents to be included directly in the application code or model prompt.
 
-## Use your Foundry project and deployed models
-
-1. In a web browser, open the [Foundry portal](https://ai.azure.com) and sign in using your Azure credentials.
-1. Select your existing Foundry project.
-1. On the project home page, verify that **gpt-5.2** chat model and **text-embedding-3-small** embedding model are already deployed and available.
-1. Keep the Foundry portal open. You'll use the existing chat model when creating the agent and knowledge base, and the existing embedding model when creating the knowledge source.
-
 ## Create an agent
 
-Create an agent that will search the credit-risk knowledge base.
+1. In a web browser, open the [Foundry portal](https://ai.azure.com) and sign in using your Azure credentials if you haven't / logout.
 
-1. On the project home page, find the **Build an agent** card and select **Start building**.
+1. Select your existing Foundry project.
 
-2. Create an agent with a descriptive name, such as `credit-risk-assessment-agent-<unique_suffix>`, and set the **Interaction mode** to **Text**.
+1. Click **Home**, then click **Create an agent**.
+
+2. Create an agent with a descriptive name, such as `cra-<unique_suffix>`, and set the **Interaction mode** to **Text**.
 
 3. Select **Create**.
 
 4. After the agent is created, the agent playground opens
+
 5. Give your agent the following instructions to make it a **credit-risk assessment agent**:
 
     ```
@@ -79,6 +75,7 @@ Create an agent that will search the credit-risk knowledge base.
     ```
     
 6. Select **Save** to save your current agent configuration.
+
 7. You'll now use configured the agent with credit-risk assessment information from Foundry IQ.
 
 <details>
@@ -169,7 +166,7 @@ The search resource provides the retrieval layer for the knowledge base. Next, u
 
 1. Your Foundry IQ knowledge base is now connected to the credit-risk assessment documents and ready for use by your agent.
 
-1. Navigate back to your agent from the project home page. Select **View Deployments**, then select **Agents** from the side panel. Click the agent you created earlier, such as `credit-risk-assessment-agent-<unique_suffix>`.
+1. Navigate back to your agent from the project home page. Select **View Deployments**, then select **Agents** from the side panel. Click the agent you created earlier, such as `cra-<unique_suffix>`.
 
 </details>
 
@@ -256,7 +253,7 @@ The agent should successfully retrieve the credit bureau information from the co
 
 1. In the agent details page, copy the following information to a notepad. You'll use these values when configuring the client application:
 
-    - **Agent name**: The name you created, such as `credit-risk-assessment-agent-<unique_suffix>`
+    - **Agent name**: The name you created, such as `cra-<unique_suffix>`
     - **Project endpoint**: Available from the project home page such as `https://hakunamatata11.services.ai.azure.com/api/projects/hakunamatata`
 
 # Connect to your agent from an app
