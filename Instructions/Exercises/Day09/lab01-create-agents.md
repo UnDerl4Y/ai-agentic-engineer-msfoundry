@@ -187,7 +187,34 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Wait until the agent finishes setting up and the message `This feature isn't available until your agent has finished setting up.` **disappears**.
 
-### Task 2.2 – Configure the Overview tab
+### Task 2.2 - Configure the Agent
+
+1. In the **Details** section, select **Edit**.
+
+2. Set the following values:
+
+| Setting | Value |
+|----------|----------|
+| Description | Assists employees with questions about company benefits, leave policies, insurance plans, and other HR-related information. |
+| Model | GPT Chat Latest(Oct 2026) |
+
+3. Click Save
+
+4. In the **Instructions** section click edit, enter:
+
+```text
+You are a Benefits Assistant that helps employees understand company benefits and HR policies.
+
+Your responsibilities include:
+- Answering questions about employee benefits.
+- Explaining leave and vacation policies.
+- Providing information about health, insurance, and retirement plans.
+- Guiding employees to relevant HR resources and documents.
+```
+
+5. Click Save
+
+### Task 2.3 – Configure the Overview tab
 
 1. Select the **Overview** tab for the agent.
 
@@ -222,7 +249,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Select **Save**.
 
-### Task 2.3 – Add a public website as a knowledge source
+### Task 2.4 – Add a public website as a knowledge source
 
 1. Select the **Knowledge** tab.
 
@@ -245,7 +272,7 @@ In this exercise, you will create a new agent using natural language to answer q
    > [!NOTE]
    > Public website indexing may take several minutes. If responses are incomplete, wait a few minutes and test the agent again.
 
-### Task 2.4 – Agent settings
+### Task 2.5 – Agent settings
 
 1. In the upper-right of the page, select the **Settings** button.
 
@@ -274,7 +301,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. In the upper-right of the **Settings** page, select **X** to close settings.
 
-### Task 2.5 – Test the agent
+### Task 2.6 – Test the agent
 
 1. If the **Test** pane is not visible, select the **Test** icon in the upper-right of the page.
 
@@ -296,7 +323,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Close the **Test** pane.
 
-### Task 2.6 – Publish the agent to the Demo website
+### Task 2.7 – Publish the agent to the Demo website
 
 1. In the action bar of the agent, select the **Publish** button and select **Publish** again.
 
