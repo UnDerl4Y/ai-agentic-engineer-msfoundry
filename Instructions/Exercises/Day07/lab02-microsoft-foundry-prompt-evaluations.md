@@ -69,8 +69,6 @@ To complete this exercise, you need:
 8. Upload the downloaded JSONL dataset and click **Upload**.
 
 9. After the dataset is uploaded, click **Next**.
-   
-   ![Screenshot](../../media/NextNext1.png)
 
 ## Select Evaluation Scope
 

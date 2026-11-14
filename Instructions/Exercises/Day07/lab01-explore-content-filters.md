@@ -22,27 +22,24 @@ To complete this exercise, you need:
 
 - An [Azure subscription](https://azure.microsoft.com/free/) with permissions to create AI resources.
 
-# Verify the created Microsoft Foundry project
+# Open Azure AI Foundry
 
-Microsoft Foundry uses projects to organize models, resources, data, and other assets used to develop an AI solution.
+1. Return to the **Microsoft Foundry portal**: https://ai.azure.com/
 
-1. In a web browser, click the [Microsoft Foundry portal](https://ai.azure.com) hyperlink to redirect to the portal. Then, sign in using your Azure credentials if you haven’t already. Close any tips or Quick Start panes that appear the first time you sign in.
+2. Sign in using the provided credentials if you haven’t logged in before or if you have logged out.
 
-1. In the project view, click the purple **View deployments** button.
+3. By default, it should take you to the `hakunamatata1` project's home page.
 
-   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../media/view-deployment.png)
+   <details>
+   <summary>If you are not redirected to the project</summary>
 
-## Verify the deployed model
+   Click **Select the project**, choose `hakunamatata1`, and you will be redirected to the project's home page.
 
-Next, let's verify the deployed model that you'll use in your chat application.
-
-1. Once the Microsoft Foundry project is open, locate the Playgrounds section and open the chat playground. Verify that the **gpt-5.4-mini** model is auto-selected.
-
-   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../media/playground-deployment.png)
+   </details>
 
 ## Chat using the default guardrail
 
-The model you deployed has a default guardrail applied, which has a balanced set of filters that will disallow most harmful content while allowing input and output language considered reasonably safe.
+When a model is deployed, a default guardrail is applied with a balanced set of filters that block most harmful content while allowing input and output that are considered reasonably safe.
 
 1. In the model playground, submit the following prompt and view the response:
 
