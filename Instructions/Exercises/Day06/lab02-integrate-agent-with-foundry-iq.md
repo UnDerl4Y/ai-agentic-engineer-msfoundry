@@ -32,9 +32,8 @@ In the previous labs, you worked with data that was either stored locally in the
 
 In this lab, we introduce **Foundry IQ**, which provides a knowledge layer that allows an AI agent to search and retrieve information from connected data sources when answering questions.
 
-For this lab, you can see the credit-risk documents in:
-
-`lab02-integrate-agent-with-foundry-iq\data`
+> [!IMPORTANT]
+> The credit-risk documents required for this lab are available in the [`lab02-integrate-agent-with-foundry-iq/data`](https://github.com/Kiran-255666/AgenticAIEngineer/tree/main/labfiles/Day06/lab02-integrate-agent-with-foundry-iq/data) folder.
 
 These files are provided so you can **refer to the source documents and understand the data being used**. They are not loaded or read directly by the Python application. Instead, the documents are stored in an Azure data source and connected to the agent through **Foundry IQ**.
 
@@ -54,10 +53,8 @@ This means the agent can search the connected knowledge source and retrieve rele
 
 ## Use your Foundry project and deployed models
 
-This lab uses the Foundry project and deployed models that are already available to you. You don't need to create a new Foundry project or deploy a new model for this exercise.
-
 1. In a web browser, open the [Foundry portal](https://ai.azure.com) and sign in using your Azure credentials.
-1. Select your existing Foundry project **(hakunamatata1)** from the project selector.
+1. Select your existing Foundry project.
 1. On the project home page, verify that **gpt-5.2** chat model and **text-embedding-3-small** embedding model are already deployed and available.
 1. Keep the Foundry portal open. You'll use the existing chat model when creating the agent and knowledge base, and the existing embedding model when creating the knowledge source.
 
