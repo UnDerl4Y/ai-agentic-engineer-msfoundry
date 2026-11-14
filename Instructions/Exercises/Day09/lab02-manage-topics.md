@@ -67,35 +67,40 @@ Topics are especially useful when you need to:
 
 ## Exercise 1 - Create an agent
 
-In this exercise, you will create a new agent using natural language to answer questions about government benefits.
+In this exercise, you will create a new agent to assist with reviewing insurance claims, including damage assessment details and repair estimates.
 
-### Task 1.1 – Create an agent to review insurance claims
+### **Task 1.1 – Create an agent to review insurance claims**
 
-1. In the **Copilot Studio** home page `https://copilotstudio.microsoft.com/`, verify that you are in the environment that you have created recently for this exercise.
+1. In the **Copilot Studio** home page `https://copilotstudio.microsoft.com/`, verify that you are working in the environment you created earlier and that you are using the **Classic Experience** UI.
+2. Select **Agents** in the left-hand navigation.
+3. Select **+ Create blank agent**.
+4. Enter **Insurance Claims Assistant** as the agent name, then click the **Optional** section.
+5. Leave **English (United States)** set as the primary language for the agent.
+6. In the **Solution** drop-down, select **Lab Exercises**.
+7. Enter `insuranceagent` for the *Schema name*.
+8. Select **Update**.
+9. Wait until the agent finishes setting up and the message `This feature isn't available until your agent has finished setting up.` **disappears**.
+10. In the **Details** section, select **Edit**.
+11. Set the following values:
 
-1. Select **Agents** in the left-hand navigation.
+| **Setting** | **Value**                                                                                          |
+| ----------- | -------------------------------------------------------------------------------------------------- |
+| Description | Assists with reviewing insurance claims, including damage assessment details and repair estimates. |
 
-1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **⚙️** icon.
+12. Click **Save**.
+13. In the **Instructions** section, select **Edit** and enter:
 
-   ![Screenshot of the agent settings dialog.](../../media/agent-settings-dialog.png)
+```
+You are an Insurance Claims Assistant that helps review insurance claims.
 
-1. Leave **English (United States)** set as the primary language for the agent.
+Your responsibilities include:
+- Reviewing insurance claims.
+- Analyzing damage assessment details.
+- Reviewing repair estimates.
+- Providing guidance based on the available claim information.
+```
 
-1. In the **Solution** drop-down, select **Lab Exercises** that you created earlier for this exercise.
-
-1. Enter `insuranceagent` for the *Schema name*.
-
-1. Select **Update**.
-
-1. In the *Start building by describing what your agent needs to do* text box, Enter the following prompt:
-
-   ```prompt
-   You are an agent that assists with reviewing insurance claims including damage assessment details and repair estimates.
-   ```
-
-1. Select the **Send (→)** icon.
-
-   Once your agent has been provisioned, you may proceed with configuring your agent.
+14. Click **Save**.
 
 ## Exercise 2 - Manage topics
 

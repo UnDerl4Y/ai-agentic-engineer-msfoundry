@@ -98,37 +98,40 @@ In this exercise, you will create a Dataverse table that will be used as a knowl
 
 ## Exercise 2 - Create an agent
 
-In this exercise, you will create a new agent using natural language to answer questions about expense policies in a fictional corporation.
+In this exercise, you will create a new agent to help employees understand expense claims, expense policies, and related procedures.
 
-### Task 2.1 – Create an agent for expense claims
+### **Task 2.1 – Create an agent for expense claims**
 
-1. Navigate to the **Copilot Studio** home page `https://copilotstudio.microsoft.com/` and switch back to classic experience
+1. In the **Copilot Studio** home page `https://copilotstudio.microsoft.com/`, verify that you are working in the environment you created earlier and that you are using the **Classic Experience** UI.
+2. Select **Agents** in the left-hand navigation.
+3. Select **+ Create blank agent**.
+4. Enter **Expense Claims Assistant** as the agent name, then click the **Optional** section.
+5. Leave **English (United States)** set as the primary language for the agent.
+6. In the **Solution** drop-down, select **Lab Exercises**.
+7. Enter `expenseagent` for the *Schema name*.
+8. Select **Update**.
+9. Wait until the agent finishes setting up and the message `This feature isn't available until your agent has finished setting up.` **disappears**.
+10. In the **Details** section, select **Edit**.
+11. Set the following values:
 
-1. At the top of the page, verify that you are working in the environment you want to just created for this exercise.
+| **Setting** | **Value**                                                                       |
+| ----------- | ------------------------------------------------------------------------------- |
+| Description | Helps employees with expense claims, including expense policies and procedures. |
 
-1. Select **Agents** in the left-hand navigation.
+12. Click **Save**.
+13. In the **Instructions** section, select **Edit** and enter:
 
-1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **⚙️** icon.
+```
+You are an Expense Claims Assistant that helps employees with expense claims and related policies.
 
-   ![Screenshot of the agent settings dialog.](../../media/agent-settings-dialog.png)
+Your responsibilities include:
+- Answering questions about expense claims.
+- Explaining company expense policies.
+- Providing guidance on expense claim procedures.
+- Helping employees understand expense-related requirements.
+```
 
-1. Leave **English (United States)** set as the primary language for the agent.
-
-1. In the **Solution** drop-down, select **Lab Exercises** or another solution you want to use for this exercise.
-
-1. Enter `expenseagent` for the *Schema name*.
-
-1. Select **Update**.
-
-1. In the *Start building by describing what your agent needs to do* text box, enter the following prompt:
-
-   ```prompt
-   You are an agent that helps employees with expense claims including questions around expense policy and procedures.
-   ```
-
-1. Select the **(→)** Send icon.
-
-   Once your agent has been provisioned, you may proceed with configuring your agent.
+14. Click **Save**.
 
 ## Exercise 3 - Ground the agent with knowledge
 
