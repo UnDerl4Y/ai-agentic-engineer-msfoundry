@@ -23,7 +23,6 @@ In this exercise, you will:
 - Add the Dataverse table as a knowledge source
 - Configure generative orchestration settings
 - Configure the Create generative answers node
-- Publish the agent to Microsoft Teams
 
 This exercise will take approximately **60** minutes to complete.
 
@@ -414,27 +413,7 @@ You will get a response indicating that the requested information **could not be
 
    ![Screenshot of the conversation using the Fallback topic.](../../media/knowledge-conversation-5.png)
 
-## Exercise 5 - Publish the agent and optionally validate in Microsoft Teams
-
-In this exercise, you will publish the agent to Microsoft Teams, first ensuring that Microsoft Entra ID authentication is enabled.
-
-### Task 5.1 - Microsoft Entra ID authentication
-
-1. In the upper-right of the agent page, select the **Settings** button.
-
-2. In the left-hand side of the **Settings** page, select **Security**.
-
-3. Select **Authentication**.
-
-4. If not already selected, select **No authentication**. then Select **Save** and select **Save** again.
-
-> [!TIP] 
->
-> Here we use No authentication to simplify the Microsoft Teams deployment experience and keep the focus on creating, configuring, and publishing the agent.
-
-5. In the upper-right of the **Settings** page, select **X** to close settings.
-
-### Task 5.2 – Publish the agent
+## Exercise 5 - Publish the agent
 
 1. On the agent page, select **Publish** and select **Publish** again to confirm.
 
