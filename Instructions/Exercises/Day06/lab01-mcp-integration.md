@@ -253,9 +253,7 @@ az account show
 > az account show
 > ```
 
-2. Ensure you have activated the virtual environment by **.\labenv\Scripts\Activate.ps1**
-
-3. Run the MCP client:
+2. Run the MCP client:
 
 ```powershell
 python client.py
