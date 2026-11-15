@@ -112,49 +112,77 @@ This means the agent can search the connected knowledge source and retrieve rele
     ```
 
 1. Open the [Azure portal](https://portal.azure.com). In the top search bar, search for **Storage accounts** and select **Storage accounts**.
+
 1. Click **+ Create** to create a storage account with the following settings:
 
-    - **Subscription**: Your Azure subscription - **Labs**
-    - **Resource group**: Use the same resource group as your Foundry project - **Agentic_Al_Engineer_Al_Resources**
-    - **Storage account name**: A unique storage account name
-    - **Region**: The same location as your Foundry project - If at capacity, select Central US
-    - **Primary service**: Azure Blob Storage or Azure Data Lake Storage
-    - **Performance**: Standard
-    - **Redundancy**: Locally-redundant storage (LRS)
+- **Subscription**: Use the default subscription. 
+- **Resource group**: Use the default resource group.
+- **Storage account name**: Enter a unique, memorable name that you can easily identify and reuse throughout the lab. Ideally, use a consistent naming format such as `st<your_unique_prefix>`.
+- **Region**: Use the default region. If that region is unavailable due to capacity constraints, select **Central US**.
+- **Primary service**: Select **Azure Blob Storage or Azure Data Lake Storage**.
+- **Primary workload**: Leave the default selection unchanged and proceed to the next step.
+- **Performance**: Select **Standard**.
+- **Redundancy**: Select **Locally-redundant storage (LRS)**.
 
-1. Click **Review + Create**, then **Create** again.
-1. After the storage account is created, click **Go to Resource** to open it.
+1. Click **Review and Create**, then **Create** again.
+
+1. After the storage account is created, you can see a **notification** there
+click **Go to Resource** to open it.
+
 1. Select **Upload** from the top bar.
+
 1. In the **Upload blob** pane, select **Create new**.
+
 1. Name it `creditriskdocuments`.
+
 1. Leave the **Anonymous access level** as **Private**.
+
 1. Click **OK**.
-1. Browse to the prepared credit-risk assessment files, select all four PDFs, and select **Upload**.
-1. After the files are uploaded, navigate to the search service you created. You can do this by selecting the **Resource Group** name, where you can find your search service.
-1. In the left pane, select **Security + networking** > **Keys**. For **API Access control**, select **Both** and confirm the selection.
-1. Leave the Azure portal tab open. Return to the Foundry portal and refresh the page.
+
+1. Click **Browse for files** so we can browse to the prepared credit-risk assessment files, select all four **.md's**, and select **Upload**.
+
+> **Tip:** Did you miss the path to the `.md` files for uploading? You can find them here: `labfiles\Day06\lab02-integrate-agent-with-foundry-iq\data`
+
+1. On the **Overview** page of your storage account, under **Essentials**, select the **Resource group** name (**AgenticAIEngineer_AI_Resources**). 
+
+1. This will open the resource group, where you can find your **Azure AI Search service(s)** and click recently created `credit-risk-search` **Foundary IQ (Azure AI Search)**.
+
+1. In the left pane, select **Security + networking** > **Keys**. For **API Access control**, select **Both** and confirm the selection by clicking **Yes**.
+
+1. Return to the Foundry portal and refresh the page.
+
 1. On the **Knowledge (Foundry IQ)** page, select **Create a knowledge base**.
-1. You will be redirected to **Create a new knowledge base**. Under **Knowledge sources (Foundry IQ)**, select it.
-1. Click **Add Source**, choose **Azure Blob Storage** as the knowledge source, and configure the following settings:
+    
+    ![Screenshot](../../media/caisr2.png)
+
+1. You will be redirected to **Create a new knowledge base**. Under **Knowledge sources (Foundry IQ)**. Click **Add Source**, choose **Azure Blob Storage** as the knowledge source, and configure the following settings:
 
    * **Name**: `ks-creditriskdocuments`
    * **Description**: `Credit risk assessment documents`
-   * **Storage account name**: Select your storage account
+   * **Storage account name**: Select the storage account you created earlier using the name `st<your_unique_prefix>`.
    * **Container name**: `creditriskdocuments`
    * **Authentication type**: API Key
    * **Content extraction mode**: minimal
-   * **Embedding model**: Select your available deployed embedding model (`text-embedding-3-small`)
+   * **Embedding model**: Select your available deployed embedding model (`text-embeddings-ada-002`)
    * **Chat completions model**: Select your available deployed chat model (`gpt-5.2`)
 
    > **Note:** `gpt-5.4-mini` isn't available, so select `gpt-5.2` as the chat completions model.
 
-1. Select **Create**.
-1. It will take 1-2 minutes to complete saving the knowledge base.
-1. On the knowledge base creation page, for **Chat completions model**, select **gpt-5.2** from the dropdown and leave the remaining settings unchanged.
+1. Select **Create**. It will take 1-2 minutes to complete saving the knowledge base.
+
+1. You will now be returned to the **Knowledge Base creation** page:
+
+- **Name**:knowledgebase<your_unique_prefix>,
+- **Description** : `A knowledge base for storing and retrieving information from uploaded documents to support AI-powered search and responses`
+- **Chat completions model**: **gpt-5.4-mini** from the dropdown 
+- **Remaining settings unchanged**.
+
 1. Select **Save knowledge base**. Refresh the browser until the knowledge source status is **Active**.
+
 1. Select the back button to return to the **Knowledge** page, then select **Manage** next to the **Connection** dropdown.
 
-    ![Screenshot](../../media/Manage.png)
+    ![Screenshot](../../media/caisr4.png)
+    ![Screenshot](../../media/caisr3.png)
 
 1. Scroll to **Connected resources**, select your search service, and find the **Authentication** section.
 1. Select **Key authentication**, then select **Edit authentication**.
