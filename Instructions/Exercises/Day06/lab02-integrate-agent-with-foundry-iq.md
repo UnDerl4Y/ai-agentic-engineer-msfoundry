@@ -85,15 +85,20 @@ This means the agent can search the connected knowledge source and retrieve rele
     
 1. In the **Knowledge** section, expand the **Add** dropdown and select **Connect to Foundry IQ**.
 1. In the Foundry IQ setup window, select **Connect to an AI Search resource**, then select **Create new resource**.
+
+    ![Screenshot](../../media/caisr.png)
+    
+    ![Screenshot](../../media/caisr1.png)
+
 1. Create a search resource with the following settings:
 
-    - **Resource name**: A globally unique name
-    - **Subscription**: Your Azure subscription
-    - **Resource group**: Use the same resource group as your Foundry project - **Agentic_AI_Engineer_AI_Resources**
-    - **Region**: The same location as your Foundry project (If quota is maxed, change to Central US)
-    - **Pricing tier**: Basic
-    - Select the checkbox acknowledging that agentic retrieval usage beyond the free monthly allowance will incur additional costs, billed through Azure AI Search.
-    - If asked about **Foundry IQ Knowledge base capabilities**: Pause until next month
+   - **Resource name**: Replace the default populated name with an appropriate, descriptive name. Ideally, use `credit-risk-search` for this lab to make the resource easy to identify, manage, and maintain.
+   - **Subscription**: Keep the default selected subscription.
+   - **Resource group**: Keep the default populated resource group.
+   - **Region**: Keep the default populated region. If the quota is exhausted, change the region to **Central US**.
+   - **Pricing tier**: Change to **Basic**.
+   - Select the checkbox acknowledging that agentic retrieval usage beyond the free monthly allowance will incur additional costs, billed through Azure AI Search.
+   - If prompted about **Foundry IQ Knowledge Base capabilities**, pause and continue next month.
 
 The search resource provides the retrieval layer for the knowledge base. Next, upload the source credit-risk assessment documents.
 
@@ -102,10 +107,10 @@ The search resource provides the retrieval layer for the knowledge base. Next, u
     The folder contains the following files:
 
     ```
-    company_documents.pdf
-    financial_data.pdf
-    credit_bureau_report.pdf
-    credit_risk_assessment_rules.pdf
+    company_documents.txt
+    financial_data.txt
+    credit_bureau_report.txt
+    credit_risk_assessment_rules.txt
     ```
 
 1. Open the [Azure portal](https://portal.azure.com). In the top search bar, search for **Storage accounts** and select **Storage accounts**.
