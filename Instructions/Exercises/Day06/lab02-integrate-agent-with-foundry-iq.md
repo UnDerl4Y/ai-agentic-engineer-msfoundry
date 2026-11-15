@@ -100,17 +100,15 @@ This means the agent can search the connected knowledge source and retrieve rele
    - Select the checkbox acknowledging that agentic retrieval usage beyond the free monthly allowance will incur additional costs, billed through Azure AI Search.
    - If prompted about **Foundry IQ Knowledge Base capabilities**, pause and continue next month.
 
-The search resource provides the retrieval layer for the knowledge base. Next, upload the source credit-risk assessment documents.
-
-1. Open the prepared credit-risk assessment PDF files from `labfiles\Day06\lab02-integrate-agent-with-foundry-iq\data`.
+1. Open the prepared credit-risk assessment files from `labfiles\Day06\lab02-integrate-agent-with-foundry-iq\data`.
 
     The folder contains the following files:
 
     ```
-    company_documents.txt
-    financial_data.txt
-    credit_bureau_report.txt
-    credit_risk_assessment_rules.txt
+    company_documents.md
+    financial_data.md
+    credit_bureau_report.md
+    credit_risk_assessment_rules.md
     ```
 
 1. Open the [Azure portal](https://portal.azure.com). In the top search bar, search for **Storage accounts** and select **Storage accounts**.
