@@ -25,9 +25,6 @@ Before starting this exercise, ensure you have:
 - [Python 3.13](https://www.python.org/downloads/) or later installed
 - Foundry Toolkit for VS Code extension 
 
-
-> \* Python 3.13 is available, but some dependencies are not yet compiled for that release. The lab has been successfully tested with Python 3.12.10
-
 # Get the application files from GitHub
 
 1. If you have already downloaded and extracted the repository in a previous lab, delete the existing ZIP file and the extracted folder. This will allow us to use the PowerShell commands in the following steps and help avoid long path issues.
@@ -41,9 +38,9 @@ Before starting this exercise, ensure you have:
 5. Open ****PowerShell**** and run the following two commands to avoid long path issues:
 
 ```powershell
-Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day05\lab03-multi-remote-agents-with-a2a" "$env:USERPROFILE\Desktop\lab03-multi-remote-agents-with-a2a" -Recurse
+Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day06\lab02-multi-remote-agents-with-a2a" "$env:USERPROFILE\Desktop\lab02-multi-remote-agents-with-a2a" -Recurse
 
-code "$env:USERPROFILE\Desktop\lab03-multi-remote-agents-with-a2a"
+code "$env:USERPROFILE\Desktop\lab02-multi-remote-agents-with-a2a"
 ```
 
 The first command copies the lab folder to your ****Desktop****, and the second command opens the copied folder directly in ****Visual Studio Code****.

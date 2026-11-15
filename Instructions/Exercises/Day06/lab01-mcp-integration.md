@@ -58,9 +58,9 @@ The application files for the Credit Risk RAG application are provided in the [t
 5. After extracting the repository, open **PowerShell** and run these commands.
 
 ```powershell
-Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day05\lab04-mcp-integration" "$env:USERPROFILE\Desktop\lab04-mcp-integration" -Recurse
+Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day06\lab01-mcp-integration" "$env:USERPROFILE\Desktop\lab01-mcp-integration" -Recurse
 
-code "$env:USERPROFILE\Desktop\lab04-mcp-integration"
+code "$env:USERPROFILE\Desktop\lab01-mcp-integration"
 ```
 
 The first command copies the lab folder to your ****Desktop****, and the second command opens the copied folder directly in ****Visual Studio Code****.
