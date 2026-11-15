@@ -81,7 +81,8 @@ This means the agent can search the connected knowledge source and retrieve rele
 
 ## Configure Foundry IQ
 
-**Optional**: The required Azure AI Search, Storage Account, and Foundry IQ resources are already provisioned for this lab. You can skip the steps below and continue with Configure the playground. If you want to create and configure the resources yourself, expand the section below.
+> **Note:** 
+> The Azure AI Search, Storage Account, and Foundry IQ resources required for this lab have already been provisioned. This section is provided to help you understand the resource creation process and Foundry IQ configuration from scratch. Review the steps to understand the setup process, then skip to [Configure the playground](#configure-the-playground) to continue with the lab.
     
 1. In the **Knowledge** section, expand the **Add** dropdown and select **Connect to Foundry IQ**.
 1. In the Foundry IQ setup window, select **Connect to an AI Search resource**, then select **Create new resource**.
@@ -184,18 +185,19 @@ click **Go to Resource** to open it.
     ![Screenshot](../../media/caisr4.png)
     ![Screenshot](../../media/caisr3.png)
 
-1. Scroll to **Connected resources**, select your search service, and find the **Authentication** section.
+1. Scroll to **Connected resources**, select your search service.
+1. After selecting your search service, a **details panel** will appear on the right. Scroll down in the panel to find the **Authentication** section.
 1. Select **Key authentication**, then select **Edit authentication**.
 
-    ![Screenshot](../../media/Edit_authentication.png)
+    ![Screenshot](../../media/caisr5.png)
 
-1. You will be redirected to **Edit authentication**. Change **Auth Type** to **API** from the dropdown and enter the **API Key**.
+1. You will be redirected to **Edit authentication**. Change **Auth Type** to **API** from the dropdown.
+
 1. Return to the Azure portal. Under **Keys** > **Manage admin keys** > **Primary admin key**, copy the key and paste it into **API Key**.
-1. Click **Save**.
 
-1. Your Foundry IQ knowledge base is now connected to the credit-risk assessment documents and ready for use by your agent.
+1. Click **Save**. Now your **Foundry IQ knowledge base** is now connected to the **credit-risk assessment documents** and ready for use by your agent.
 
-1. Navigate back to your agent from the project home page. Select **View Deployments**, then select **Agents** from the side panel. Click the agent you created earlier, such as `cra-<unique_suffix>`.
+1. Navigate back to your agent from the project **Home** then select **Agents** from the side panel. Search the agent you created earlier, such as `cra-<unique_suffix>`.
 
 </details>
 
@@ -203,19 +205,18 @@ click **Go to Resource** to open it.
 
 1. Under **Tools**, select **Knowledge**, click **Add**, and then select **Connect to Foundry IQ**.
 
-2. In the **Connect to Foundry IQ** pop-up, configure the following:
+2. In the **Connect to Foundry IQ** pop-up, configure the following settings:
 
-   * **Connection**: Selected displayed Connection
-   * **Knowledge base**: Select Knowledge base
+- **Connection**: Open the dropdown and select the connection associated with the `credit-risk-search` Azure AI Search resource.
+- **Knowledge base**: Open the dropdown and select the Knowledge Base you created earlier. Ideally, it should be `knowledgebase<your_unique_prefix>`.
 
-   Then select **Connect**.
+3. Select **Connect**.
 
-3. Click Save
+4. Click Save
 
 ## Test the agent in the playground
 
-1. **Note:** **You may notice minor parsing or rendering differences in the agent's responses, such as formatting, emojis, special characters, or line breaks. Kindly ignore these differences when comparing the responses.**
-2. Use the following expected responses to verify that the agent is successfully retrieving information from the Foundry IQ knowledge source.
+1. Use the following expected responses to verify that the agent is successfully retrieving information from the Foundry IQ knowledge source.
 
 #### Query 1
 
