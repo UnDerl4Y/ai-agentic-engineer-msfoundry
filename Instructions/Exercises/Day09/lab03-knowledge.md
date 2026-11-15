@@ -434,60 +434,37 @@ In this exercise, you will publish the agent to Microsoft Teams, first ensuring 
 
 5. In the upper-right of the **Settings** page, select **X** to close settings.
 
-### Task 5.2 - Publish the agent
+### Task 5.2 – Publish the agent
 
 1. On the agent page, select **Publish** and select **Publish** again to confirm.
 
-### Task 5.3 - Microsoft Teams channel
-> [!NOTE]
-> Publishing to Teams in this lab is intended for testing and learning purposes. Production deployments may require additional governance, security, and app approval processes.
-
 1. Select the **Channels** tab.
 
-   ![Screenshot of Channels tab in Copilot Studio.](../../media/channels-tab-teams.png)
+   ![Screenshot of Channels in Copilot Studio.](../../media/channels-tab.png)
 
-2. Select the **Microsoft 365 and Microsoft Teams** tile.
+1. Select the **Demo website** channel. This channel is useful for quickly testing and previewing your agent experience.
 
-3. Deselect the **Make agent available in Microsoft 365 Copilot** checkbox.
+1. In the **Demo Website** pane, enter the following settings:
+   - **Welcome message**: `Hello! I'm your Expense Claims Assistant. I can help you with expense claims, company expense policies, and related procedures.`
+   - **Conversation starters**:
+     ```
+     What expenses can I claim?
+     What is the company travel expense policy?
+     How do I submit an expense claim?
+     ```
 
-4. Select **Add channel**.
+1. Select **Save**.
 
-   ![Screenshot Teams channel Copilot Studio.](../../media/channel-teams.png)
+1. Select **Open demo website**.
 
-5. Select **See agent in Teams**.
+1. Enter the following prompt:
+   ```
+   What expenses can I claim, and what are the requirements for reimbursement?
+   ```
 
-6. Select **Cancel** in the dialog box for **This site is trying to open Microsoft Teams (work or school)**.
-
-7. In the pop-up, select **Cancel** and select **Use the web app instead**.
-
-8. Select **Add** to add the agent to Teams.
-
-   ![Screenshot of dialog to add the app to Teams.](../../media/channel-teams-app.png)
-
-9. Select **Open** and wait for the agent to load in Teams.
-
-### Task 5.4 - Configure Authentication and Test the Agent in Microsoft Teams
-
-1. Return to **Copilot Studio**.
-2. Select **Settings**.
-3. Under **Security**, select **Authentication**.
-4. Select **Authenticate with Microsoft**.
-5. Select **Save**. Then, select **Save** again.
-6. Close pane by selecting the **X** icon.
-7. Select **Publish** to open the **Publish this agent** dialog box.
-8. Select **Publish** again to confirm.
-9. Wait for publishing to complete.
-10. Return to **Microsoft Teams**.
-11. Open the published agent and test it by asking:
-
-    `What can I claim for expenses?`
-
-    
-    ![Screenshot of the agent in Teams.](../../media/channel-teams-test.png)
-
-> [!NOTE]
->
-> Authentication was temporarily set to **No authentication** earlier in this lab to simplify the initial Teams deployment. Before testing the final published agent, switch the authentication method back to **Authenticate with Microsoft** and republish the agent.
+   The response should reference information from the configured knowledge sources and may include citations or source references.
+   
+1. Try a few more questions and view the responses from your agent. It will have limited functionality, but should be able to provide relevant answers to questions about expense claims and policies.
 
 ## Summary
 
