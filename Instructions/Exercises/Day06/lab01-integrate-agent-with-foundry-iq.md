@@ -31,7 +31,7 @@ In the previous labs, you worked with data that was either stored locally in the
 In this lab, we introduce **Foundry IQ**, which provides a knowledge layer that allows an AI agent to search and retrieve information from connected data sources when answering questions.
 
 > [!IMPORTANT]
-> The credit-risk documents required for this lab are available in the [`lab02-integrate-agent-with-foundry-iq/data`](https://github.com/Kiran-255666/AgenticAIEngineer/tree/main/labfiles/Day06/lab02-integrate-agent-with-foundry-iq/data) folder.
+> The credit-risk documents required for this lab are available in the [`lab01-integrate-agent-with-foundry-iq/data`](https://github.com/Kiran-255666/AgenticAIEngineer/tree/main/labfiles/Day06/lab01-integrate-agent-with-foundry-iq/data) folder.
 > These files are provided so you can **refer to the source documents and understand the data being used**. They are not loaded or read directly by the Python application. Instead, the documents are stored in an Azure data source and connected to the agent through **Foundry IQ**.
 
 ```mermaid
@@ -101,7 +101,7 @@ This means the agent can search the connected knowledge source and retrieve rele
    - Select the checkbox acknowledging that agentic retrieval usage beyond the free monthly allowance will incur additional costs, billed through Azure AI Search.
    - If prompted about **Foundry IQ Knowledge Base capabilities**, pause and continue next month.
 
-1. Open the prepared credit-risk assessment files from `labfiles\Day06\lab02-integrate-agent-with-foundry-iq\data`.
+1. Open the prepared credit-risk assessment files from `labfiles\Day06\lab01-integrate-agent-with-foundry-iq\data`.
 
     The folder contains the following files:
 
@@ -142,7 +142,7 @@ click **Go to Resource** to open it.
 
 1. Click **Browse for files** so we can browse to the prepared credit-risk assessment files, select all four **.md's**, and select **Upload**.
 
-> **Tip:** Did you miss the path to the `.md` files for uploading? You can find them here: `labfiles\Day06\lab02-integrate-agent-with-foundry-iq\data`
+> **Tip:** Did you miss the path to the `.md` files for uploading? You can find them here: `labfiles\Day06\lab01-integrate-agent-with-foundry-iq\data`
 
 1. On the **Overview** page of your storage account, under **Essentials**, select the **Resource group** name (**AgenticAIEngineer_AI_Resources**). 
 
@@ -303,9 +303,9 @@ Now that the agent and knowledge base work in the portal, use the provided Pytho
 5. Open ****PowerShell**** and run the following two commands to avoid long path issues:
 
 ```powershell
-Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day06\lab02-integrate-agent-with-foundry-iq" "$env:USERPROFILE\Desktop\lab02-integrate-agent-with-foundry-iq" -Recurse
+Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day06\lab01-integrate-agent-with-foundry-iq" "$env:USERPROFILE\Desktop\lab01-integrate-agent-with-foundry-iq" -Recurse
 
-code "$env:USERPROFILE\Desktop\lab02-integrate-agent-with-foundry-iq"
+code "$env:USERPROFILE\Desktop\lab01-integrate-agent-with-foundry-iq"
 ```
 
 The first command copies the lab folder to your ****Desktop****, and the second command opens the copied folder directly in ****Visual Studio Code****.
