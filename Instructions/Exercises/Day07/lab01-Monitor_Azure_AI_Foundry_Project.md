@@ -107,7 +107,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 2: Data In**
 
 1. Click **Add metric**.
-2. Keep the default **Scope:** and **Metric Namespace:**
+2. Keep the default **Scope** and **Metric Namespace**
 3. In the **Metric** dropdown, select **Data In**.
 4. Set **Aggregation** to **Sum**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -118,7 +118,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 3: Time Between Token**
 
 1. Click **Add metric**.
-2. Keep the default **Scope:** and **Metric Namespace:**
+2. Keep the default **Scope** and **Metric Namespace**
 3. In the **Metric** dropdown, select **Time Between Token**.
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -129,7 +129,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 4: Time to First Byte**
 
 1. Click **Add metric**.
-2. Keep the default **Scope:** and **Metric Namespace:**
+2. Keep the default **Scope** and **Metric Namespace**
 3. In the **Metric** dropdown, select **Normalized Time to First Byte**.
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -140,7 +140,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 5: Azure OpenAI Availability Rate**
 
 1. Click **Add metric**.
-2. Keep the default **Scope:** and **Metric Namespace:**
+2. Keep the default **Scope** and **Metric Namespace**
 3. In the **Metric** dropdown, select **Azure OpenAI Availability Rate**.
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
