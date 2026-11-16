@@ -43,7 +43,6 @@ This exercise should take approximately **45** minutes to complete.
 
 1. From the left menu, find **Monitoring** section.
 2. Expand Monitoring to view the available monitoring options.
-3. Review the available options before opening Metrics.
 
 ### Step 4: Understand the Monitoring Options
 
@@ -90,12 +89,6 @@ The Monitoring section contains several options. Explain the purpose of each opt
 3. Keep the **Time range** as the default **Local Time: Last 24 hours**.
 
 ![Screenshot](../../media/abcd21.png)
-
-4. Click **Add metric** to start adding metrics to the chart.
-
-![Screenshot](../../media/abcd2.png)
-
-*Figure 2: Metrics Explorer area where multiple metrics are added to the chart.*
 
 ### **Step 6: Add Metrics to the Chart**
 
