@@ -90,23 +90,14 @@ The Monitoring section contains several options. Explain the purpose of each opt
 
 ![Screenshot](../../media/abcd21.png)
 
-### **Step 6: Add Metrics to the Chart**
-
-> [!IMPORTANT]
-> Add at least five metrics. Each time you click **Add metric**, keep the following settings unchanged:
->
-> - **Scope:** `hakunamatata11`
-> - **Metric Namespace:** **Cognitive Services / Azure OpenAI metrics**
->
-> Only change the **Metric** and **Aggregation** according to the specifications provided for each metric below.
+### Step 6: Add Metrics to the Chart
 
 #### **Metric 1: Azure OpenAI Requests**
 
-1. Click **Add metric**.
-2. Keep the default **Scope** and **Metric Namespace**.
-3. In the **Metric** dropdown, select **Azure OpenAI Requests**.
-4. Set **Aggregation** to **Sum**.
-5. Confirm that the metric appears as a chip above the chart by clicking Finish editing metric
+1. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
+2. In the **Metric** dropdown, select **Azure OpenAI Requests**.
+3. Set **Aggregation** to **Sum**.
+4. Confirm that the metric appears as a chip above the chart by clicking Finish editing metric
 
 ![Screenshot](../../media/abcd11.png)
 
@@ -116,7 +107,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 2: Data In**
 
 1. Click **Add metric**.
-2. Keep the default **Scope** and **Metric Namespace**.
+2. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
 3. In the **Metric** dropdown, select **Data In**.
 4. Set **Aggregation** to **Sum**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -127,7 +118,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 3: Time Between Token**
 
 1. Click **Add metric**.
-2. Keep the default **Scope** and **Metric Namespace**.
+2. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
 3. In the **Metric** dropdown, select **Time Between Token**.
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -138,7 +129,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 4: Time to First Byte**
 
 1. Click **Add metric**.
-2. Keep the default **Scope** and **Metric Namespace**.
+2. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
 3. In the **Metric** dropdown, select **Normalized Time to First Byte**.
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -149,7 +140,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 5: Azure OpenAI Availability Rate**
 
 1. Click **Add metric**.
-2. Keep the default **Scope** and **Metric Namespace**.
+2. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
 3. In the **Metric** dropdown, select **Azure OpenAI Availability Rate**.
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
