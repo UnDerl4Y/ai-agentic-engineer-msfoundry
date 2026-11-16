@@ -56,7 +56,7 @@ To complete this exercise, you need:
 
 5. Open the following GitHub folder and manually download the `credit-risk-prompt-evaluation.jsonl` file:
 
-   https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab02-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation.jsonl
+   https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation.jsonl
    
    ![Screenshot](../../media/JSONLDownload1.png)
 
