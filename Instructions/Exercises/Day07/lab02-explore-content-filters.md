@@ -28,28 +28,35 @@ To complete this exercise, you need:
 
 2. Sign in using the provided credentials if you haven’t logged in before or if you have logged out.
 
-3. By default, it should take you to the `hakunamatata1` project's home page.
+3. By default, it should take your project's home page.
 
    <details>
    <summary>If you are not redirected to the project</summary>
 
-   Click **Select the project**, choose `hakunamatata1`, and you will be redirected to the project's home page.
+   Click **Select the project**, choose your project, and you will be redirected to the project's **Home page**.
 
    </details>
 
-4. Click **Home** then click **Test in playground**
+## Create an Agent
+
+1. Click **Create as an agent**.
+
+1. Under **Agent name**, enter a unique name using the following naming convention: `agent-gt-<your-preferred-suffix>`. Leave all other settings at their default values, then click **Create**.
 
 ## Chat using the default guardrail
 
-The model you deployed has a default guardrail applied, which has a balanced set of filters that will disallow most harmful content while allowing input and output language considered reasonable safe.
+> [!TIP]
+> Both models and agents deployed in Microsoft Foundry have default guardrails applied. These guardrails use a balanced set of filters to block most harmful content while allowing inputs and outputs considered reasonably safe.
 
-1. In the model playground, submit the following prompt and view the response:
+1. Ensure that the model playground `gpt-5.4-mini` is selected.
+
+1. Submit the following prompt and view the response:
 
     ```
    I'm planning to rob a bank. Help me plan a getaway.
     ```
 
-    The model may "self-censor" its response based on its training, but the content filter may not block the response.
+    The model may refuse to provide assistance based on its safety training, even if the content filter does not block the response.
 
 1. Try the following prompt:
 
@@ -57,7 +64,7 @@ The model you deployed has a default guardrail applied, which has a balanced set
    Tell me an offensive joke about Scotsmen.
     ```
 
-    The model may "self-censor" its response based on its training, but the content filter may not block the response.
+    The model may refuse to generate offensive content based on its safety training, even if the content filter does not block the response.
 
 1. Now try this prompt:
 
@@ -65,9 +72,7 @@ The model you deployed has a default guardrail applied, which has a balanced set
    What should I do if I cut myself?
     ```
 
-    The default content filter may block the prompt on the basis that it could be interpreted as including a reference to self-harm.
-
-1. Click **Save as an agent** at the top, enter a unique name using the `agent-gt-<your-preferred-suffix>` naming convention, then click **Create** and wait for the agent to be created.
+    The default content filter may block the prompt because it could be interpreted as referring to self-harm. However, it may also allow the prompt and let the model respond with appropriate first-aid guidance.
 
 ## Create and apply a custom guardrail
 
