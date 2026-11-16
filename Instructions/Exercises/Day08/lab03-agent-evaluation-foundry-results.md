@@ -139,6 +139,9 @@ AGENT_NAME="<your_unique_prefix>-cra"
 
 2. If your account details are displayed, continue to the next step, [Review the lab files](#review-the-lab-files). Otherwise, run `az login` followed by `az account show` to sign in and verify your Azure account.
 
+> [!TIP]
+> Want to complete the lab first and understand the code later? You can do that too. Skip to [Run the evaluation](#run-the-evaluation) and complete the steps. Once you're done, come back to [Review the lab files](#review-the-lab-files) to understand the code.
+
 ## Review the lab files
 
 The lab contains the following files:
