@@ -142,13 +142,12 @@ AGENT_NAME="<your_unique_prefix>-cra"
 > [!TIP]
 > Want to complete the lab first and understand the code later? You can do that too. Skip to [Run the evaluation](#run-the-evaluation) and complete the steps. Once you're done, come back to [Review the lab files](#review-the-lab-files) to understand the code.
 
-## Review the lab files
+## Review the Lab Files
 
 The lab contains the following files:
 
 ```text
 lab04-agent-evaluation-foundry-results/
-
 ├── .env
 ├── requirements.txt
 ├── evaluate_agent_advanced.py
@@ -159,15 +158,15 @@ lab04-agent-evaluation-foundry-results/
 
 The files have the following purpose:
 
-- **`.env`** contains the Microsoft Foundry project and agent configuration.
-- **`requirements.txt`** contains the required Python packages.
-- **`credit_risk_test_queries.jsonl`** contains the test queries.
-- **`evaluate_agent_advanced.py`** contains the evaluation workflow.
-- **`results/`** stores the local evaluation summary created by the script.
+- **`.env`**: Contains the Microsoft Foundry project and agent configuration.
+- **`requirements.txt`**: Contains the required Python packages.
+- **`data/credit_risk_test_queries.jsonl`**: Contains the test queries.
+- **`evaluate_agent_advanced.py`**: Contains the evaluation workflow.
+- **`results/`**: Stores the local evaluation summary created by the script.
 
-## Review the test dataset
+## Review the Test Dataset
 
-Open:
+Open the following file:
 
 ```text
 data/credit_risk_test_queries.jsonl
@@ -185,12 +184,12 @@ The evaluation script uses the `query` field to send each test case to the Credi
 
 The dataset contains questions covering different aspects of credit risk assessment.
 
-> [!Note] 
+> [!NOTE]
 > You can add or replace test queries with questions relevant to your Credit Risk Assessment agent. Keep the `query` field in each JSON object.
 
-## Review the evaluation script
+## Review the Evaluation Script
 
-Open:
+Open the following file:
 
 ```text
 evaluate_agent_advanced.py
@@ -206,21 +205,19 @@ The Azure identity is provided through `DefaultAzureCredential`.
 
 This allows the script to use the Azure account authenticated through Azure CLI.
 
-### Upload the test dataset
+### Upload the Test Dataset
 
-The script uploads:
+The script uploads the following file to the Microsoft Foundry project as an evaluation dataset:
 
 ```text
 data/credit_risk_test_queries.jsonl
 ```
 
-to the Microsoft Foundry project as an evaluation dataset.
-
 Each `query` is used as an input to the agent.
 
-### Configure built-in evaluators
+### Configure Built-in Evaluators
 
-The evaluation uses built-in Azure AI evaluators:
+The evaluation uses the following built-in Azure AI evaluators:
 
 - **Coherence**: Evaluates whether the response is clear and logically consistent.
 - **Violence**: Evaluates the response against the configured safety criteria.
@@ -228,9 +225,9 @@ The evaluation uses built-in Azure AI evaluators:
 
 The evaluators are configured directly in the evaluation script.
 
-The configured model deployment is used by the model-based evaluators that require a judge model.
+The configured model deployment is used by model-based evaluators that require a judge model.
 
-### Create and run the evaluation
+### Create and Run the Evaluation
 
 The script creates an evaluation using the uploaded dataset and configured evaluators.
 
@@ -271,67 +268,57 @@ Status: completed
 Result counts: ResultCounts(errored=0, failed=0, passed=7, total=7, skipped=0)
 ```
 
-> **Note:** The number of test cases and evaluation results depends on the dataset and evaluation run.
+> [!NOTE] 
+> The number of test cases and evaluation results depends on the dataset and evaluation run & evaluation output can vary slightly between runs because model-generated responses and evaluator results can differ.
 
-> **Note:** Evaluation output can vary slightly between runs because model-generated responses and evaluator results can differ.
-
-## Review the evaluation results in Microsoft Foundry
+## Review the Evaluation Results in Microsoft Foundry
 
 1. Open the report URL displayed in the terminal.
+   
+   If the URL is not available:
+   1. Open [Microsoft Foundry](https://ai.azure.com/).
+   2. Select the Microsoft Foundry project used by the lab.
+   3. Open **Evaluations**.
+   4. Select the evaluation run created by the script.
 
-2. If the URL is not available, open [Microsoft Foundry](https://ai.azure.com/).
+2. Review the evaluation results, including:
+   - Overall evaluation status.
+   - Individual test case results.
+   - Coherence results.
+   - Violence safety results.
+   - Task Adherence results.
+   - Evaluator reasoning.
+   - Failed or weak test cases.
 
-3. Select the Microsoft Foundry project used by the lab.
-
-4. Open **Evaluations**.
-
-5. Select the evaluation run created by the script.
-
-6. Review the evaluation results.
-
-Review the following information:
-
-- Overall evaluation status.
-- Individual test case results.
-- Coherence results.
-- Violence safety results.
-- Task Adherence results.
-- Evaluator reasoning.
-- Failed or weak test cases.
-
-### Review individual test cases
+### Review Individual Test Cases
 
 Open individual test cases to compare:
-
 - The original query.
 - The agent response.
 - The evaluator result.
 - The evaluator reasoning.
 
-Pay particular attention to test cases where the agent receives a low score or where an evaluator identifies a quality issue.
+Pay particular attention to test cases where the agent receives a low score or an evaluator identifies a quality issue.
 
-## Improve the agent and re-evaluate
+## Improve the Agent and Re-evaluate
 
-Choose one weak or failed test case.
+1. Choose one weak or failed test case from the evaluation results.
+2. Review the result and identify the likely cause of the issue:
+   - Agent instructions.
+   - Agent knowledge.
+   - Agent tools.
+   - Test query.
+   - Response quality.
+3. Make one improvement to the agent based on your findings.
+4. Run the evaluation again.
+5. Compare the new evaluation run with the previous run.
 
-Review the result and determine whether the issue is related to:
-
-- Agent instructions.
-- Agent knowledge.
-- Agent tools.
-- Test query.
-- Response quality.
-
-Make one improvement to the agent and run the evaluation again.
-
-Compare the new evaluation run with the previous run.
-
-Consider whether the change improved the result without introducing problems in other test cases.
+Check whether the change improved the selected test case without introducing issues in other test cases.
 
 ## Summary
 
 In this exercise, you used the Azure AI Projects SDK to evaluate an existing Credit Risk Assessment agent.
 
-You prepared a JSONL test dataset, configured built-in evaluators, ran the evaluation, and reviewed the results in Microsoft Foundry.
+You prepared a JSONL test dataset, connected to your Microsoft Foundry project, configured built-in evaluators, and ran an evaluation against the agent.
 
-You also identified weak test cases and re-evaluated the agent after making improvements.
+You then reviewed the evaluation results, identified weak test cases, improved the agent, and ran the evaluation again to assess whether the changes improved its performance.
