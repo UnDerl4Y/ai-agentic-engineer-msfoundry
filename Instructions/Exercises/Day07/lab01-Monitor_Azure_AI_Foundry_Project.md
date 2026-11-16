@@ -94,7 +94,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 
 #### **Metric 1: Azure OpenAI Requests**
 
-1. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
+1. Keep the default **Scope:** and **Metric Namespace:**
 2. In the **Metric** dropdown, select **Azure OpenAI Requests**.
 3. Set **Aggregation** to **Sum**.
 4. Confirm that the metric appears as a chip above the chart by clicking Finish editing metric
@@ -107,7 +107,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 2: Data In**
 
 1. Click **Add metric**.
-2. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
+2. Keep the default **Scope:** and **Metric Namespace:**
 3. In the **Metric** dropdown, select **Data In**.
 4. Set **Aggregation** to **Sum**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -118,7 +118,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 3: Time Between Token**
 
 1. Click **Add metric**.
-2. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
+2. Keep the default **Scope:** and **Metric Namespace:**
 3. In the **Metric** dropdown, select **Time Between Token**.
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -129,7 +129,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 4: Time to First Byte**
 
 1. Click **Add metric**.
-2. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
+2. Keep the default **Scope:** and **Metric Namespace:**
 3. In the **Metric** dropdown, select **Normalized Time to First Byte**.
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -140,7 +140,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 #### **Metric 5: Azure OpenAI Availability Rate**
 
 1. Click **Add metric**.
-2. Keep the default **Scope:** `hakunamatata11` and **Metric Namespace:** `Cognitive Services / Azure OpenAI metrics`
+2. Keep the default **Scope:** and **Metric Namespace:**
 3. In the **Metric** dropdown, select **Azure OpenAI Availability Rate**.
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
@@ -152,11 +152,11 @@ The Monitoring section contains several options. Explain the purpose of each opt
 
 ### Optional Metrics to Explore
 
+If you have some extra time, feel free to explore the following metrics as well to gain a better understanding of the available monitoring options:
+
 - Time to Last Byte
 - Time to Response
-- Processed Fine-Tuned Training Hours
 - Generated Completion Tokens
-- Generated Prompt Tokens
 - Total Tokens
 
 ### Review the Metrics Chart
