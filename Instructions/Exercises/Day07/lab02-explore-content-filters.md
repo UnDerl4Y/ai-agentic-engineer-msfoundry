@@ -96,7 +96,7 @@ When the default guardrail doesn't meet your needs, you can create custom guardr
 1. Search for your `gr-<your-preferred-suffix>` guardrail using the search box. Check its application status, assigned agents/models, and resource type. Select it, click **Try in playground**, and rerun the prompts to observe the updated guardrail behavior.
 
 > [!NOTE]
-> You may notice only slight differences in responses because Microsoft Foundry already applies default guardrails to models and agents. However, we recommend configuring additional guardrails based on your context and use-case scenarios, as jailbreak risks and potential threats can vary across applications.
+> **You may not notice any differences in the responses, as Microsoft Foundry already applies default guardrails to models and agents.** However, we recommend exploring and understanding how to configure guardrails so you can apply them effectively in future scenarios based on your specific context and use cases. This will help you address varying jailbreak risks and potential threats across different applications.
 
 ## Conclusion
 

@@ -18,8 +18,7 @@ This exercise should take approximately **45** minutes to complete.
 
 - Azure portal access with the provided credentials.
 - Access to the **hakunamatata11** Microsoft Foundry project.
-- Sufficient permission to view Monitoring and Metrics for the resource.
-- Recent activity on the project is helpful so that metrics display meaningful values.
+- Permissions to view Monitoring and Metrics for the resource.
 
 ## Step-by-Step Instructions
 
@@ -100,12 +99,13 @@ The Monitoring section contains several options. Explain the purpose of each opt
 
 ### **Step 6: Add Metrics to the Chart**
 
-> **Important:** Add at least five metrics. Each time you click **Add metric**, keep the following settings unchanged:
+> [!IMPORTANT]
+> Add at least five metrics. Each time you click **Add metric**, keep the following settings unchanged:
 >
-> * **Scope:** `hakunamatata11`
-> * **Metric Namespace:** **Cognitive Services / Azure OpenAI metrics**
+> - **Scope:** `hakunamatata11`
+> - **Metric Namespace:** **Cognitive Services / Azure OpenAI metrics**
 >
-> Only change the **Metric** and **Aggregation** as specified for each metric below.
+> Only change the **Metric** and **Aggregation** according to the specifications provided for each metric below.
 
 #### **Metric 1: Azure OpenAI Requests**
 
@@ -117,6 +117,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 
 ![Screenshot](../../media/abcd11.png)
 
+> [!NOTE]
 > **Why this metric is useful:** Shows the total number of Azure OpenAI requests during the selected time range.
 
 #### **Metric 2: Data In**
@@ -127,6 +128,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 4. Set **Aggregation** to **Sum**.
 5. Confirm that the metric appears as a chip above the chart.
 
+> [!NOTE]
 > **Why this metric is useful:** Shows how much input data is sent to the service.
 
 #### **Metric 3: Time Between Token**
@@ -137,6 +139,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
 
+> [!NOTE]
 > **Why this metric is useful:** Shows the average delay between streamed tokens and helps review response streaming performance.
 
 #### **Metric 4: Time to First Byte**
@@ -147,6 +150,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
 
+> [!NOTE]
 > **Why this metric is useful:** Shows how quickly the service starts returning the response after a request is submitted.
 
 #### **Metric 5: Azure OpenAI Availability Rate**
@@ -157,6 +161,7 @@ The Monitoring section contains several options. Explain the purpose of each opt
 4. Set **Aggregation** to **Average**.
 5. Confirm that the metric appears as a chip above the chart.
 
+> [!NOTE]
 > **Why this metric is useful:** Shows service availability during the selected time range.
 
 ![Screenshot](../../media/abcd3.png)
@@ -182,4 +187,5 @@ The Monitoring section contains several options. Explain the purpose of each opt
 
 In this lab, we monitored the **`hakunamatata11`** Microsoft Foundry project from the Azure portal. We explored the Monitoring section and understood how Alerts, Metrics, Diagnostic settings, and Logs support operational visibility.
 
-> **Key takeaway:** Monitoring is important because it gives visibility into how an AI resource is performing and being used. Metrics provide a quick operational view, while logs and diagnostic settings support deeper troubleshooting and long-term analysis.
+> [!TIP] 
+> Monitoring is important because it gives visibility into how an AI resource is performing and being used. Metrics provide a quick operational view, while logs and diagnostic settings support deeper troubleshooting and long-term analysis.

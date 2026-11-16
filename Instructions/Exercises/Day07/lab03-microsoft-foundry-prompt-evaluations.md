@@ -22,7 +22,6 @@ To complete this exercise, you need:
 
 - Active Azure subscription.
 - Access to Microsoft Foundry.
-- Permission to use or deploy the required model.
 - Prepared JSONL dataset for evaluation.
 - Browser access to the Microsoft Foundry portal.
 
