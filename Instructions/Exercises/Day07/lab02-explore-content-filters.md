@@ -100,8 +100,8 @@ When the default guardrail doesn't meet your needs, you can create custom guardr
 
 ## Conclusion
 
-In this exercise, you've explored content filters and how custom guardrails can help safeguard AI applications against potentially harmful or offensive content. You also tested different prompts and jailbreak-style attempts to understand how these controls work in practice.
+In this exercise, you've explored content filters and how custom guardrails can help safeguard AI applications against potentially harmful or offensive content.
 
-In real-world applications, guardrails can help protect models from harmful requests, jailbreak attempts, and accidental exposure of sensitive or confidential information when the model is used by customers or other users. This becomes especially important when AI applications work with business data or other sensitive information.
+In real-world applications, guardrails can help protect models and its agents from harmful requests, jailbreak attempts, and accidental exposure of sensitive or confidential information when the model is used by customers or other users. This becomes especially important when AI applications work with business data or other sensitive information.
 
 Content filters are only one element of a comprehensive responsible AI solution. See [Responsible AI for Foundry](https://learn.microsoft.com/azure/ai-foundry/responsible-use-of-ai-overview) for more information.
