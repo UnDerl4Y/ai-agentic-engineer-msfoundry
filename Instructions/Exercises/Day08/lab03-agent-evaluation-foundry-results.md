@@ -39,19 +39,19 @@ Before starting this exercise, ensure you have:
 
 1. Return to [Microsoft Foundry](https://ai.azure.com/?utm_source=chatgpt.com) and select your project if you haven't been automatically redirected to the home page.
 
-1. Click on **Create an agent**
+2. Click on **Create an agent**
 
-1. A dialog box will appear. Enter your agent name in the following format: `<your_unique_prefix>-cra`.
+3. A dialog box will appear. Enter your agent name in the following format: `<your_unique_prefix>-cra`.
 
-1. Leave the other settings unchanged. Click **Create**.
+4. Leave the other settings unchanged. Click **Create**.
 
-1. Replace the default instructions with the following:
+5. Replace the default instructions with the following:
 
 ```text
 You are a Credit Risk Assessment Agent. Help users understand factors that may affect credit risk and provide clear, concise responses based on the information provided.
 ```
 
-1. After creating the agent, note its name in Notepad, as you will need to use the same name in the `.env` file shortly:
+6. After creating the agent, note its name in Notepad, as you will need to use the same name in the `.env` file shortly:
 
 ```env
 AGENT_NAME="<your_unique_prefix>-credit-risk-assessment-agent"
@@ -112,41 +112,32 @@ The application files for the Credit Risk RAG application are provided in the [t
    pip install -r requirements.txt
    ```
 
-## Configure the environment
+### **Configure the environment**
 
 The lab includes a `.env` file with the configuration required by the evaluation script.
 
-Open saved the `.env` file and replace these placeholders value with your actual values:
+Use the agent name you saved in Notepad in the previous step to replace `<your_unique_prefix>-cra`.
 
-```env
-AZURE_AI_PROJECT_ENDPOINT="https://<your-foundry-resource>.services.ai.azure.com/api/projects/<your-project-name>"
+> [!TIP]
+> `AZURE_AI_PROJECT_ENDPOINT` and `AZURE_AI_MODEL_DEPLOYMENT_NAME` are already prefilled. You only need to replace the `AGENT_NAME` value with the agent name you saved earlier in Notepad.
 
-AZURE_AI_MODEL_DEPLOYMENT_NAME="<your-model-deployment>"
-
-AGENT_NAME="<your-agent-name>"
 ```
+AZURE_AI_PROJECT_ENDPOINT="https://hakunamatata11.services.ai.azure.com/api/projects/hakunamatata"
 
-Make sure the values match your Microsoft Foundry project.
+AZURE_AI_MODEL_DEPLOYMENT_NAME="gpt-5.4-mini"
 
-The `AGENT_NAME` value must match the existing Credit Risk Assessment agent that you want to evaluate.
-
-> **Important:** Use the **model deployment name** for `AZURE_AI_MODEL_DEPLOYMENT_NAME`, not only the underlying model name.
+AGENT_NAME="<your_unique_prefix>-cra"
+```
 
 ## Sign in to Azure
 
-1. In the integrated terminal, sign in to Azure:
-
-   ```powershell
-   az login
-   ```
-
-2. Verify the active Azure account:
+1. In the terminal, run:
 
    ```powershell
    az account show
    ```
 
-If multiple Azure subscriptions are available, make sure the correct subscription is selected before continuing.
+1. If your account details are displayed, continue to the next step, [Review the lab files](#review-the-lab-files). Otherwise, run `az login` followed by `az account show` to sign in and verify your Azure account.
 
 ## Review the lab files
 
@@ -245,21 +236,13 @@ The script then monitors the evaluation run until it reaches a terminal state.
 
 ## Run the evaluation
 
-1. Make sure the virtual environment is active.
-
-2. Verify your Azure account:
-
-   ```powershell
-   az account show
-   ```
-
-3. From the lab root folder, run:
+1. In terminal use
 
    ```powershell
    python evaluate_agent_advanced.py
    ```
 
-4. The script performs the following operations:
+1. The script performs the following operations:
 
    1. Uploads the credit risk test dataset.
    2. Configures the built-in evaluators.
@@ -269,7 +252,7 @@ The script then monitors the evaluation run until it reaches a terminal state.
    6. Displays the Microsoft Foundry report URL.
    7. Saves a local evaluation summary.
 
-5. When the evaluation completes, the terminal displays the evaluation status, evaluation ID, run ID, report URL, and result counts.
+1. When the evaluation completes, the terminal displays the evaluation status, evaluation ID, run ID, report URL, and result counts.
 
 The local summary is saved to:
 
