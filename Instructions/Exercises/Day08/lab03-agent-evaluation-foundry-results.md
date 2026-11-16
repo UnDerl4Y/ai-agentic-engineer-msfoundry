@@ -421,22 +421,3 @@ In this exercise, you used the Azure AI Projects SDK to evaluate an existing Cre
 You prepared a JSONL test dataset, configured built-in evaluators, ran the evaluation, and reviewed the results in Microsoft Foundry.
 
 You also identified weak test cases and re-evaluated the agent after making improvements.
-
-## The key takeaway is that **agent evaluation provides a repeatable way to test response quality and identify areas for improvement using defined test cases and evaluators**.
-
-### What I fixed
-
-The important production corrections are:
-
-* Removed **all rubric generation** references.
-* Removed **Agent Quality generated rubric evaluator** references.
-* Removed the incorrect **6-step** execution flow.
-* Updated the flow to match the **actual successful Python script**.
-* Added **Task Adherence** because your working script actually uses it.
-* Updated the results section to match the three real evaluators.
-* Added the actual successful `7/7` output as an example, while making clear that results depend on the dataset.
-* Kept the Credit Risk Assessment scenario throughout.
-* Kept the existing folder structure and commands unchanged.
-* Removed the old misleading troubleshooting section about rubric generation.
-
-One small thing I would **not** put in the published lab: your actual `eval_*` IDs, agent name `it-support-agent`, dataset version, or report URL. Those are run-specific and should stay out of the static documentation.
