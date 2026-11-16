@@ -18,28 +18,28 @@ This exercise takes approximately **40 minutes** to complete.
 
 By the end of this exercise, you'll be able to:
 
-* Prepare a JSONL dataset for agent evaluation.
-* Connect to a Microsoft Foundry project using the Python SDK.
-* Configure built-in evaluators.
-* Run an evaluation against an Azure AI agent.
-* Review evaluation results in Microsoft Foundry.
-* Identify weak test cases and suggest improvements.
+- Prepare a JSONL dataset for agent evaluation.
+- Connect to a Microsoft Foundry project using the Python SDK.
+- Configure built-in evaluators.
+- Run an evaluation against an Azure AI agent.
+- Review evaluation results in Microsoft Foundry.
+- Identify weak test cases and suggest improvements.
 
 ## Prerequisites
 
 Before starting this exercise, ensure you have:
 
-* [Visual Studio Code](https://code.visualstudio.com/) installed on your local machine.
-* [Python 3.12.10](https://www.python.org/downloads/) installed.
-* [Git](https://git-scm.com/downloads) installed on your local machine.
-* [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed.
-* Access to the Microsoft Foundry project and a model deployment within the same project.
+- [Visual Studio Code](https://code.visualstudio.com/) installed on your local machine.
+- [Python 3.12.10](https://www.python.org/downloads/) installed.
+- [Git](https://git-scm.com/downloads) installed on your local machine.
+- [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed.
+- Access to the Microsoft Foundry project and a model deployment within the same project.
 
 ## Create the agent
 
 1. Return to [Microsoft Foundry](https://ai.azure.com/?utm_source=chatgpt.com) and select your project if you haven't been automatically redirected to the home page.
 
-2. Click on **Create an agent**
+2. Click on **Create an agent**.
 
 3. A dialog box will appear. Enter your agent name in the following format: `<your_unique_prefix>-cra`.
 
@@ -47,19 +47,19 @@ Before starting this exercise, ensure you have:
 
 5. Replace the default instructions with the following:
 
-```text
-You are a Credit Risk Assessment Agent. Help users understand factors that may affect credit risk and provide clear, concise responses based on the information provided.
-```
+   ```text
+   You are a Credit Risk Assessment Agent. Help users understand factors that may affect credit risk and provide clear, concise responses based on the information provided.
+   ```
 
 6. After creating the agent, note its name in Notepad, as you will need to use the same name in the `.env` file shortly:
 
-```env
-AGENT_NAME="<your_unique_prefix>-credit-risk-assessment-agent"
-```
+   ```env
+   AGENT_NAME="<your_unique_prefix>-credit-risk-assessment-agent"
+   ```
 
 ## Get the application files from GitHub
 
-### 1. Clean Up Previous Downloads 
+### 1. Clean Up Previous Downloads
 
 Before downloading the latest repository version, remove the previous downloaded files and extracted folders to avoid using an outdated copy.
 
@@ -83,7 +83,7 @@ The application files for the Credit Risk RAG application are provided in the [t
 
 4. Right-click the ZIP file and select **Extract All**.
 
-   > **Important:** Do not run the application directly from the deeply nested extracted folder in `Downloads`. The long Windows path can cause path-related problems in the VM.
+> **Important:** Do not run the application directly from the deeply nested extracted folder in `Downloads`. The long Windows path can cause path-related problems in the VM.
 
 5. After extracting the repository, open **PowerShell** and run these commands.
 
@@ -112,16 +112,16 @@ The application files for the Credit Risk RAG application are provided in the [t
    pip install -r requirements.txt
    ```
 
-### **Configure the environment**
-
-The lab includes a `.env` file with the configuration required by the evaluation script.
-
-Use the agent name you saved in Notepad in the previous step to replace `<your_unique_prefix>-cra`.
+### Configure the environment
 
 > [!TIP]
 > `AZURE_AI_PROJECT_ENDPOINT` and `AZURE_AI_MODEL_DEPLOYMENT_NAME` are already prefilled. You only need to replace the `AGENT_NAME` value with the agent name you saved earlier in Notepad.
 
-```
+1. The lab includes a `.env` file with the configuration required by the evaluation script.
+
+2. Use the agent name you saved in Notepad in the previous step to replace `<your_unique_prefix>-cra`.
+
+```env
 AZURE_AI_PROJECT_ENDPOINT="https://hakunamatata11.services.ai.azure.com/api/projects/hakunamatata"
 
 AZURE_AI_MODEL_DEPLOYMENT_NAME="gpt-5.4-mini"
@@ -137,7 +137,7 @@ AGENT_NAME="<your_unique_prefix>-cra"
    az account show
    ```
 
-1. If your account details are displayed, continue to the next step, [Review the lab files](#review-the-lab-files). Otherwise, run `az login` followed by `az account show` to sign in and verify your Azure account.
+2. If your account details are displayed, continue to the next step, [Review the lab files](#review-the-lab-files). Otherwise, run `az login` followed by `az account show` to sign in and verify your Azure account.
 
 ## Review the lab files
 
@@ -156,11 +156,11 @@ lab04-agent-evaluation-foundry-results/
 
 The files have the following purpose:
 
-* **`.env`** contains the Microsoft Foundry project and agent configuration.
-* **`requirements.txt`** contains the required Python packages.
-* **`credit_risk_test_queries.jsonl`** contains the test queries.
-* **`evaluate_agent_advanced.py`** contains the evaluation workflow.
-* **`results/`** stores the local evaluation summary created by the script.
+- **`.env`** contains the Microsoft Foundry project and agent configuration.
+- **`requirements.txt`** contains the required Python packages.
+- **`credit_risk_test_queries.jsonl`** contains the test queries.
+- **`evaluate_agent_advanced.py`** contains the evaluation workflow.
+- **`results/`** stores the local evaluation summary created by the script.
 
 ## Review the test dataset
 
@@ -182,7 +182,8 @@ The evaluation script uses the `query` field to send each test case to the Credi
 
 The dataset contains questions covering different aspects of credit risk assessment.
 
-> **Note:** You can add or replace test queries with questions relevant to your Credit Risk Assessment agent. Keep the `query` field in each JSON object.
+> [!Note] 
+> You can add or replace test queries with questions relevant to your Credit Risk Assessment agent. Keep the `query` field in each JSON object.
 
 ## Review the evaluation script
 
@@ -218,9 +219,9 @@ Each `query` is used as an input to the agent.
 
 The evaluation uses built-in Azure AI evaluators:
 
-* **Coherence**: Evaluates whether the response is clear and logically consistent.
-* **Violence**: Evaluates the response against the configured safety criteria.
-* **Task Adherence**: Evaluates whether the response follows the expected task.
+- **Coherence**: Evaluates whether the response is clear and logically consistent.
+- **Violence**: Evaluates the response against the configured safety criteria.
+- **Task Adherence**: Evaluates whether the response follows the expected task.
 
 The evaluators are configured directly in the evaluation script.
 
@@ -242,7 +243,7 @@ The script then monitors the evaluation run until it reaches a terminal state.
    python evaluate_agent_advanced.py
    ```
 
-1. The script performs the following operations:
+2. The script performs the following operations:
 
    1. Uploads the credit risk test dataset.
    2. Configures the built-in evaluators.
@@ -252,7 +253,7 @@ The script then monitors the evaluation run until it reaches a terminal state.
    6. Displays the Microsoft Foundry report URL.
    7. Saves a local evaluation summary.
 
-1. When the evaluation completes, the terminal displays the evaluation status, evaluation ID, run ID, report URL, and result counts.
+3. When the evaluation completes, the terminal displays the evaluation status, evaluation ID, run ID, report URL, and result counts.
 
 The local summary is saved to:
 
@@ -287,22 +288,22 @@ Result counts: ResultCounts(errored=0, failed=0, passed=7, total=7, skipped=0)
 
 Review the following information:
 
-* Overall evaluation status.
-* Individual test case results.
-* Coherence results.
-* Violence safety results.
-* Task Adherence results.
-* Evaluator reasoning.
-* Failed or weak test cases.
+- Overall evaluation status.
+- Individual test case results.
+- Coherence results.
+- Violence safety results.
+- Task Adherence results.
+- Evaluator reasoning.
+- Failed or weak test cases.
 
 ### Review individual test cases
 
 Open individual test cases to compare:
 
-* The original query.
-* The agent response.
-* The evaluator result.
-* The evaluator reasoning.
+- The original query.
+- The agent response.
+- The evaluator result.
+- The evaluator reasoning.
 
 Pay particular attention to test cases where the agent receives a low score or where an evaluator identifies a quality issue.
 
@@ -312,11 +313,11 @@ Choose one weak or failed test case.
 
 Review the result and determine whether the issue is related to:
 
-* Agent instructions.
-* Agent knowledge.
-* Agent tools.
-* Test query.
-* Response quality.
+- Agent instructions.
+- Agent knowledge.
+- Agent tools.
+- Test query.
+- Response quality.
 
 Make one improvement to the agent and run the evaluation again.
 
