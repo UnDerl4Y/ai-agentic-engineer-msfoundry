@@ -33,80 +33,80 @@ Before starting this exercise, ensure you have:
 * [Python 3.12.10](https://www.python.org/downloads/) installed.
 * [Git](https://git-scm.com/downloads) installed on your local machine.
 * [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed.
-* Access to the Microsoft Foundry project used for this lab.
-* An existing Credit Risk Assessment agent.
-* A model deployment available in the same Microsoft Foundry project.
-
-> This lab was tested with Python 3.12.10.
-
-## Use the deployed model
-
-Use the model deployment already available in your Microsoft Foundry project at [ai.azure.com](https://ai.azure.com/).
-
-The model deployment is used by the evaluation script for model-based evaluation.
-
-> **Important:** Use the **model deployment name**, not only the underlying model name.
+* Access to the Microsoft Foundry project and a model deployment within the same project.
 
 ## Create the agent
 
-Create a new agent in the same Microsoft Foundry project.
+1. Return to [Microsoft Foundry](https://ai.azure.com/?utm_source=chatgpt.com) and select your project if you haven't been automatically redirected to the home page.
 
-Use the following name:
+1. Click on **Create an agent**
 
-```text
-<your_unique_prefix>-credit-risk-assessment-agent
-```
+1. A dialog box will appear. Enter your agent name in the following format: `<your_unique_prefix>-cra`.
 
-Configure the agent for the **Credit Risk Assessment** use case and make sure it uses the model deployment selected above.
+1. Leave the other settings unchanged. Click **Create**.
 
-If you want to provide custom instructions, you can replace the default instructions with the following:
+1. Replace the default instructions with the following:
 
 ```text
 You are a Credit Risk Assessment Agent. Help users understand factors that may affect credit risk and provide clear, concise responses based on the information provided.
 ```
 
-After creating the agent, use the same agent name in the `.env` file:
+1. After creating the agent, note its name in Notepad, as you will need to use the same name in the `.env` file shortly:
 
 ```env
 AGENT_NAME="<your_unique_prefix>-credit-risk-assessment-agent"
 ```
 
-> **Important:** Replace `<your_unique_prefix>` with a unique prefix assigned to you before creating the agent.
-
 ## Get the application files from GitHub
 
-1. Open a web browser and go to the [AgenticAIEngineer repository](https://github.com/Kiran-255666/AgenticAIEngineer).
+### 1. Clean Up Previous Downloads 
 
-   > **Important:** Before downloading, make sure you don't already have an older ZIP file or extracted `AgenticAIEngineer-main` folder from a previous download. Delete or move the old files if needed.
+Before downloading the latest repository version, remove the previous downloaded files and extracted folders to avoid using an outdated copy.
 
-2. Select **<> Code**, and then select **Download ZIP**.
+1. Open your **Downloads** folder.
+2. Delete the previously downloaded `AgenticAIEngineer-main.zip` file.
+3. Delete the previously extracted `AgenticAIEngineer-main` folder and any duplicate extracted folders, such as `AgenticAIEngineer-main (1)`.
+4. Make sure the old copies have been removed before proceeding.
 
-3. Extract the downloaded ZIP file.
+> [!TIP]
+> Make sure to download the latest repository ZIP file, as it contains the current lab files and instructions required to complete the steps in this exercise.
 
-4. Open **PowerShell** and run the following command to copy the `lab02-agent-evaluation-foundry-results` folder to your Desktop:
+### 2. Download and Extract the Latest Repository
+
+The application files for the Credit Risk RAG application are provided in the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer).
+
+1. Open the [training repository](https://github.com/Kiran-255666/AgenticAIEngineer) in a browser.
+
+2. Select **Code** and then select **Download ZIP**.
+
+3. Once the ZIP file has downloaded, open the **Downloads** folder.
+
+4. Right-click the ZIP file and select **Extract All**.
+
+   > **Important:** Do not run the application directly from the deeply nested extracted folder in `Downloads`. The long Windows path can cause path-related problems in the VM.
+
+5. After extracting the repository, open **PowerShell** and run these commands.
 
    ```powershell
-   Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day08\lab02-agent-evaluation-foundry-results" "$env:USERPROFILE\Desktop\lab02-agent-evaluation-foundry-results" -Recurse
+   Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day08\lab03-agent-evaluation-foundry-results" "$env:USERPROFILE\Desktop\lab02-agent-evaluation-foundry-results" -Recurse
    ```
 
-5. Run the following command to open the copied lab folder from your Desktop in Visual Studio Code:
+6. Run the following command to open the copied lab folder from your Desktop in Visual Studio Code:
 
    ```powershell
-   code "$env:USERPROFILE\Desktop\lab02-agent-evaluation-foundry-results"
+   code "$env:USERPROFILE\Desktop\lab03-agent-evaluation-foundry-results"
    ```
 
-   > Update the source path in step 4 if the extracted ZIP is in a different location or has a different folder name.
+7. In Visual Studio Code, select **Terminal > New Terminal**.
 
-6. In Visual Studio Code, select **Terminal > New Terminal**.
-
-7. Create and activate a virtual environment:
+8. Create and activate a virtual environment:
 
    ```powershell
    python -m venv .venv
    .\.venv\Scripts\Activate.ps1
    ```
 
-8. Install the required Python packages:
+9. Install the required Python packages:
 
    ```powershell
    pip install -r requirements.txt
@@ -116,7 +116,7 @@ AGENT_NAME="<your_unique_prefix>-credit-risk-assessment-agent"
 
 The lab includes a `.env` file with the configuration required by the evaluation script.
 
-Open the `.env` file and replace these placeholders value with your actual values:
+Open saved the `.env` file and replace these placeholders value with your actual values:
 
 ```env
 AZURE_AI_PROJECT_ENDPOINT="https://<your-foundry-resource>.services.ai.azure.com/api/projects/<your-project-name>"
