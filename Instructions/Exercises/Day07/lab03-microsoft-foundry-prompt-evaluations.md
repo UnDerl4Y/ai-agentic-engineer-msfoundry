@@ -33,12 +33,12 @@ To complete this exercise, you need:
 
 3. Sign in using the provided credentials if you haven’t logged in before or if you have logged out.
 
-4. By default, it should take you to the `hakunamatata1` project's home page.
+4. By default, it should take your project's home page.
 
    <details>
    <summary>If you are not redirected to the project</summary>
 
-   Click **Select the project**, choose `hakunamatata1`, and you will be redirected to the project's home page.
+   Click **Select the project**, choose your project, and you will be redirected to the project's home page.
 
    </details>
 
