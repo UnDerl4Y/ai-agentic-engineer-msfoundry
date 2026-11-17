@@ -86,10 +86,6 @@ The Monitoring section contains several options. Explain the purpose of each opt
 
 2. Confirm that the **Scope** is set to **`hakunamatata11`**.
 
-3. Keep the **Time range** as the default **Local Time: Last 24 hours**.
-
-![Screenshot](../../media/abcd21.png)
-
 ### Step 6: Add Metrics to the Chart
 
 #### **Metric 1: Azure OpenAI Requests**
@@ -98,8 +94,6 @@ The Monitoring section contains several options. Explain the purpose of each opt
 2. In the **Metric** dropdown, select **Azure OpenAI Requests**.
 3. Set **Aggregation** to **Sum**.
 4. Confirm that the metric appears as a chip above the chart by clicking Finish editing metric
-
-![Screenshot](../../media/abcd11.png)
 
 > [!NOTE]
 > **Why this metric is useful:** Shows the total number of Azure OpenAI requests during the selected time range.
@@ -147,8 +141,6 @@ The Monitoring section contains several options. Explain the purpose of each opt
 
 > [!NOTE]
 > **Why this metric is useful:** Shows service availability during the selected time range.
-
-![Screenshot](../../media/abcd3.png)
 
 ### Optional Metrics to Explore
 
