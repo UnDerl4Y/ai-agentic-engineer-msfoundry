@@ -79,7 +79,7 @@ To complete this exercise, you need:
 1. Click **Next**.
 
 > [!TIP]
-> You can add more evaluators if needed.
+> **You can add more evaluators if needed but for this lab go with the suggested evaluators and Judge model**.
 
 ## Review & Submit the Evaluation
 
@@ -97,13 +97,63 @@ To complete this exercise, you need:
 
 4. Use the results to identify where prompt, model, or dataset improvements are required.
 
-5. To see how an improved dataset affects the results, use the sample we prepared [credit-risk-prompt-evaluation-v1.jsonl](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation-v1.jsonl) link.
+## Download the new dataset
 
-6. Locate `credit-risk-prompt-evaluation-v1.jsonl` and manually download the file using the **Download raw file** option.
+1. To see how an improved dataset affects the results, use the sample we prepared [credit-risk-prompt-evaluation-v1.jsonl](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation-v1.jsonl) link.
 
-7. Repeat the evaluation steps using the updated dataset by navigating to the [Go to Evaluation](#go-to-evaluation) section.
+2. Locate `credit-risk-prompt-evaluation-v1.jsonl` and manually download the file using the **Download raw file** option.
 
-8. Compare the results of both runs and note which scores changed and why.
+## Go to Evaluation
+
+1. From the left navigation pane, select **Evaluations**.
+
+2. Click **Create** to create a new evaluation.
+
+3. Select **Target: Dataset** and click **Upload new dataset**.
+
+4. On the **Dataset** page, click **Upload new dataset** in the top-right corner.
+
+5. In the **Upload new dataset** dialog, enter a name for the dataset, such as `crpe-v1-<your_unique_prefix>` and replace `<your_unique_prefix>` with a unique prefix of your choice, removing the angle brackets (`<` and `>`) as well.
+
+6. Click **Choose file** 
+
+6. Upload the recently downloaded JSONL dataset and click **Upload**.
+
+7. After the dataset is uploaded, click **Next**.
+
+## Select Evaluation Scope
+
+1. In the **Scope** section, verify that **Individual turns** is selected by default. The current dataset contains separate question-and-response pairs, so each response can be evaluated independently.
+
+| Option                 | Use When                                                                                               |
+| ---------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Individual turns**   | The dataset contains separate question-and-response pairs, with each response evaluated independently. |
+| **Full conversations** | The dataset contains complete multi-turn conversations with multiple back-and-forth messages.          |
+
+2. Click **Next**
+
+## Criteria
+
+1. In the **Criteria** section, observe the evaluators and Judge model automatically suggested by Microsoft Foundry. Foundry assigns the basic evaluators required by default.
+
+1. Click **Next**.
+
+> [!TIP]
+> **You can add more evaluators if needed but for this lab go with the suggested evaluators and Judge model**.
+
+## Review & Submit the Evaluation
+
+1. For **Evaluation name** provide a meaningful evaluation name ideally `eval-v1-<your_unique_prefix>` and replace `<your_unique_prefix>` with a unique prefix of your choice, removing the angle brackets (`<` and `>`) as well.
+
+2. Click Submit.
+
+## Review Evaluation Results
+
+1. Refresh the evaluation status if needed and wait till **Status** turns form **In progress** to **Completed**
+
+2. Open the completed evaluation run by clicking your `eval-v1-<your_unique_prefix>`
+
+3. Compare the results of both runs and note which scores changed and why.
 
 > [!NOTE]
 > You may need multiple iterations to reach good scores. Each round, review the failed rows and the evaluator reasoning, then refine the dataset (remove weak entries, adjust answers, add context) and run the evaluation again. Scores can also vary slightly between runs because the Judge model is non-deterministic. The v1 dataset is a smaller sample with a few entries removed and others adjusted to better fit this credit risk use case. The goal of this step is to understand how dataset quality and context affect evaluation results, not to hit a specific score on the first attempt.
