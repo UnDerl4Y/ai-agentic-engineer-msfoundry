@@ -97,11 +97,23 @@ To complete this exercise, you need:
 
 4. Use the results to identify where prompt, model, or dataset improvements are required.
 
-## Download the new dataset
+## Download the new improved dataset
 
-1. To see how an improved dataset affects the results, use the sample we prepared [credit-risk-prompt-evaluation-v1.jsonl](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation-v1.jsonl) link.
+To see how an improved dataset affects the results, use the sample we prepared 
+
+1. Click the [credit-risk-prompt-evaluation-v1.jsonl](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation-v1.jsonl) link.
 
 2. Locate `credit-risk-prompt-evaluation-v1.jsonl` and manually download the file using the **Download raw file** option.
+
+> [!NOTE]
+> Good evaluation scores usually take multiple iterations. After each run, review the failed rows and the evaluator reasoning, refine the dataset, and run the evaluation again.
+>
+> The v1 dataset is the result of this process. Compared to the original, we:
+> - Added a `context` field to every row with the policy and scorecard rules each answer relies on, so the Groundedness evaluator has a source to check against.
+> - Included the assistant's scope rule in the context of the out-of-scope question, so a correct refusal is not marked as a failure.
+> - Reworded the first answer to clearly separate the required documents from the additional checks.
+>
+> Scores can vary slightly between runs because the Judge model is non-deterministic, so your results may differ from ours. The goal of this step is to learn how dataset quality and context affect evaluation results, not to match a specific score.
 
 ## Go to Evaluation
 
@@ -155,12 +167,9 @@ To complete this exercise, you need:
 
 3. Compare the results of both runs and note which scores changed and why.
 
-> [!NOTE]
-> You may need multiple iterations to reach good scores. Each round, review the failed rows and the evaluator reasoning, then refine the dataset (remove weak entries, adjust answers, add context) and run the evaluation again. Scores can also vary slightly between runs because the Judge model is non-deterministic. The v1 dataset is a smaller sample with a few entries removed and others adjusted to better fit this credit risk use case. The goal of this step is to understand how dataset quality and context affect evaluation results, not to hit a specific score on the first attempt.
-
 ## Conclusion
 
-In this exercise, you used a JSONL file in Microsoft Foundry to evaluate generative AI responses. You configured a dataset-based evaluation, selected the appropriate evaluation scope, reviewed the available evaluators, submitted the evaluation run, and reviewed the results. You then repeated the evaluation with an improved dataset and compared the two runs to see how dataset quality and context affect the scores.
+In this exercise, you used a JSONL file in Microsoft Foundry to evaluate generative AI responses. You configured a dataset-based evaluation, selected the appropriate evaluation scope, reviewed the available evaluators, submitted the evaluation run, and reviewed the results. You then repeated the evaluation with an improved dataset and compared the two runs. The jump in scores came from adding context to each row and clarifying the assistant's scope, which shows how much dataset quality and evaluator inputs affect results.
 
 Good evaluation results usually take multiple iterations. Review the failed rows and the evaluator reasoning, refine the dataset or prompt, and run the evaluation again.
 
