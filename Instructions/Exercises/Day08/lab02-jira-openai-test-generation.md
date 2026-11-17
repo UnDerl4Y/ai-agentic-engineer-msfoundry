@@ -333,6 +333,9 @@ This is the value you will use for `JIRA_BASE_URL`.
 
 1. Open the [Atlassian API token page](https://id.atlassian.com/manage-profile/security/api-tokens).
 2. Complete the verification code sent to your Atlassian account email if prompted.
+
+![Screenshot](../../media/4point2.png)
+
 3. Select **Create API token**.
 4. Enter a descriptive name for the token.
 5. Set an expiration date according to your requirements.
@@ -346,6 +349,9 @@ This is the value you will use for `JIRA_BASE_URL`.
 1. Open [Atlassian Home](https://home.atlassian.com/).
 2. Open your Jira workspace.
 3. From the Jira navigation, select **Create**.
+
+![Screenshot](../../media/4point3.png)
+
 4. Leave the Space or Project field at its default value, as applicable.
 5. In **Summary**, copy the text from Section 3.1.
 6. In **Description**, copy the complete content from Section 3.2.
@@ -362,6 +368,8 @@ You've created "MDP-x" idea
 The key, such as `MDP-x`, is the `ISSUE_KEY` required by the notebook.
 
 Copy the Story key. You will use it in the notebook configuration.
+
+![Screenshot](../../media/4point3.png)
 
 ### 4.4 Configure Jira Values
 
