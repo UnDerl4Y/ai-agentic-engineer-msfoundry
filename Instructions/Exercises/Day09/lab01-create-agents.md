@@ -183,7 +183,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Enter `govbenefitsagent` for the *Schema name*.
 
-1. Select **Update**.
+1. Select **Create**.
 
 1. Wait until the agent finishes setting up and the message `This feature isn't available until your agent has finished setting up.` **disappears**.
 
