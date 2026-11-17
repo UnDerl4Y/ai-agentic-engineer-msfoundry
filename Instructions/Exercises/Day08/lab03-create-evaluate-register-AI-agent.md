@@ -38,3 +38,48 @@ This exercise takes approximately **60 minutes**.
 3. Locate the **AgenticAIEngineer** workspace in the list of available Databricks services.
 4. Click **AgenticAIEngineer** to open its overview page.
 5. Click **Launch Workspace** to open the Databricks workspace in a new browser tab.
+
+## 3. Import the Lab Notebook
+
+1. Once the Databricks workspace opens, click **New** in the left navigation panel.
+2. Select **Notebook** to create a new notebook.
+3. In the newly opened notebook, click **File** and select **Import**.
+4. Under **Import from**, select **URL**.
+5. Set the **Target folder** to:
+
+   `/Users/agenticuser3@hackable.in/Drafts`
+
+6. Paste the following GitHub notebook URL into the **URL** field:
+
+   https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab03-create%20and%20evaluate-AI-agent.ipynb
+
+7. Click **Import** to import the notebook into your Databricks workspace.
+8. Once the import is complete, the lab notebook will open with the code and instructions ready to use.
+
+## 4. Execute the Notebook
+
+You can execute the notebook in two ways:
+
+**Option 1: Run All**
+
+- Click **Run All** at the top of the notebook to execute all cells sequentially.
+- Review the code and outputs to understand the overall workflow.
+
+**Option 2: Execute Cell by Cell (Recommended)**
+
+- Read each code cell and its instructions before execution.
+- Execute the cells one at a time using the run button next to each cell.
+- Observe the outputs and understand what each step does.
+- Follow the instructions and complete the hands-on exercises alongside the code.
+
+**Recommendation:** Use the cell-by-cell approach to understand the implementation, follow the workflow, and gain practical experience rather than simply executing the entire notebook at once.
+
+## 5. Lab Reference and Completion
+
+You can also find the original lab notebook and its summary in the following GitHub repository:
+
+[Lab Notebook – Create and Evaluate an AI Agent](https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab03-create%20and%20evaluate-AI-agent.ipynb)
+
+The notebook includes the implementation, instructions, and a summary to help you understand the concepts covered.
+
+**This completes the lab.**
