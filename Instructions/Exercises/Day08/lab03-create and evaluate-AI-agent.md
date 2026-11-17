@@ -62,7 +62,7 @@ https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles
 
 6. Click **Import** to import the notebook into your Databricks workspace.
 
-7. Once the import is complete, the lab notebook will open with the code and instructions ready to execute. You can run all cells at once using **Run all** or execute them individually using **Execute Cell by Cell (Recommended)**.
+7. Once the import is complete, the lab notebook will open with the code and instructions ready to execute. **Stay in Databricks and complete all the notebook cells** by using **Run all** or executing them individually using **Execute Cell by Cell (Recommended)**.
 
 The notebook includes the implementation, instructions, and a summary to help you understand the concepts covered.
 
