@@ -414,7 +414,8 @@ Pay particular attention to test cases where the agent receives a low score or a
 
 Remember that the evaluation sends only the `query` field to the agent. The other dataset fields are retained for reference and are not supplied as agent input. Use these reference fields to manually check whether the agent's response is accurate and follows the expected credit risk assessment requirements.
 
-> **Tip:** When testing your agent with your own dataset for the first time, you may receive low evaluation scores. This is normal. Use the evaluation results to identify issues, improve your agent, and run multiple iterations until you achieve satisfactory results. The `credit_risk_test_queries.jsonl` dataset used in this lab has already gone through multiple iterations of testing and refinement.
+> [!Tip] 
+> When testing your agent with your own dataset for the first time, you may receive low evaluation scores. This is normal. Use the evaluation results to identify issues, improve your agent, and run multiple iterations until you achieve satisfactory results. The `credit_risk_test_queries.jsonl` dataset used in this lab has already gone through multiple iterations of testing and refinement.
 
 ## Summary
 
