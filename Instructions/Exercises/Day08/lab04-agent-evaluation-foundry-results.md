@@ -121,14 +121,6 @@ The application files for the Credit Risk RAG application are provided in the [t
 
 2. Use the agent name you saved in Notepad in the previous step to replace `<your_unique_prefix>-cra`.
 
-```env
-AZURE_AI_PROJECT_ENDPOINT="https://hakunamatata11.services.ai.azure.com/api/projects/hakunamatata"
-
-AZURE_AI_MODEL_DEPLOYMENT_NAME="gpt-5.4-mini"
-
-AGENT_NAME="<your_unique_prefix>-cra"
-```
-
 ## Sign in to Azure
 
 1. In the terminal, run:
@@ -172,20 +164,23 @@ Open the following file:
 data/credit_risk_test_queries.jsonl
 ```
 
-The file contains one JSON object per line.
+The file contains one JSON object per line. Each object represents a test case with the following fields:
+
+- `query`: The question sent to the Credit Risk Assessment agent.
+- `context`: The relevant policy, scorecard rules, or client-specific information required to answer the question.
+- `response`: The expected response for the test case.
+- `ground_truth`: The reference answer used to evaluate the agent's response.
 
 For example:
 
 ```json
-{"query": "What factors are usually considered when assessing a customer's credit risk?"}
+{"query":"What documents are required to start a credit risk assessment?","context":"Credit risk assessment policy. Required documents: Company Registration Certificate and GST Certificate.","response":"The two required documents are the Company Registration Certificate and the GST Certificate.","ground_truth":"The two required documents are the Company Registration Certificate and the GST Certificate."}
 ```
 
-The evaluation script uses the `query` field to send each test case to the Credit Risk Assessment agent.
-
-The dataset contains questions covering different aspects of credit risk assessment.
+The dataset contains questions covering different aspects of credit risk assessment, including document verification, financial ratios, industry risk, compliance checks, external credit scores, scorecard calculations, and credit-limit decisions.
 
 > [!NOTE]
-> You can add or replace test queries with questions relevant to your Credit Risk Assessment agent. Keep the `query` field in each JSON object.
+> You can add or replace test cases with questions relevant to your Credit Risk Assessment agent. Keep all four fields (`query`, `context`, `response`, and `ground_truth`) in each JSON object to maintain the expected dataset structure.
 
 ## Review the Evaluation Script
 
