@@ -35,7 +35,7 @@ To complete this exercise, you need:
 
 4. By default, it should take your project's home page.
 
-## Download the dataset**
+## Download the dataset
 
 1. Click the [credit-risk-prompt-evaluation.jsonl](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation.jsonl) link.
 
@@ -53,9 +53,11 @@ To complete this exercise, you need:
 
 4. On the **Dataset** page, click **Upload new dataset** in the top-right corner.
 
-5. In the **Upload new dataset** dialog, enter a name for the dataset, such as `credit-risk-prompt-evaluation-<your_unique_prefix>`.
+5. In the **Upload new dataset** dialog, enter a name for the dataset, such as `crpe-<your_unique_prefix>` and replace `<your_unique_prefix>` with a unique prefix of your choice, removing the angle brackets (`<` and `>`) as well.
 
-6. Upload the downloaded JSONL dataset and click **Upload**.
+6. Click **Choose file** 
+
+6. Upload the recently downloaded JSONL dataset and click **Upload**.
 
 7. After the dataset is uploaded, click **Next**.
 
@@ -72,19 +74,27 @@ To complete this exercise, you need:
 
 ## Criteria
 
-1. In the **Criteria** section, observer the evaluators that are auto suggested to assess the dataset responses. 
+1. In the **Criteria** section, observe the evaluators and Judge model automatically suggested by Microsoft Foundry. Foundry assigns the basic evaluators required by default.
+
 1. Click **Next**.
+
+> [!TIP]
+> You can add more evaluators if needed.
 
 ## Review & Submit the Evaluation
 
-1. For **Evaluation name** provide a meaningful evaluation name.
+1. For **Evaluation name** provide a meaningful evaluation name ideally `eval-<your_unique_prefix>` and replace `<your_unique_prefix>` with a unique prefix of your choice, removing the angle brackets (`<` and `>`) as well.
+
 2. Click Submit.
 
 ## Review Evaluation Results
 
 1. Refresh the evaluation status if needed and wait till **Status** turns form **In progress** to **Completed**
-2. Open the completed evaluation run.
+
+2. Open the completed evaluation run by clicking your `eval-<your_unique_prefix>`
+
 3. Review the scores, metrics, reasoning, and detailed data view.
+
 4. Use the results to identify where prompt, model, or dataset improvements are required.
 
 ## Conclusion
