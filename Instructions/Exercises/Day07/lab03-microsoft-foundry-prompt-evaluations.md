@@ -97,6 +97,12 @@ To complete this exercise, you need:
 
 4. Use the results to identify where prompt, model, or dataset improvements are required.
 
+5. We have done a sample for you click the [credit-risk-prompt-evaluation-v1.jsonl](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation-v1.jsonl) link.
+
+6. Locate `credit-risk-prompt-evaluation-v1.jsonl` and manually download the file using the **Download raw file** option.
+
+7. Repeat the evaluation steps using the updated dataset by doing from [Evaluation](#evaluation). This time, select `credit-risk-prompt-evaluation-v1.jsonl` instead of the original JSONL file and see the difference.
+
 ## Conclusion
 
 In this exercise, you used a JSONL file in Microsoft Foundry to evaluate generative AI responses. You configured a dataset-based evaluation, selected the appropriate evaluation scope, reviewed the available evaluators, submitted the evaluation run, and reviewed the results.
