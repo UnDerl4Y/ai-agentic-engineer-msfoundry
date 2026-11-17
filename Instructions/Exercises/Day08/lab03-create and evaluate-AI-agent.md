@@ -62,32 +62,13 @@ https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles
 
 6. Click **Import** to import the notebook into your Databricks workspace.
 
-7. Once the import is complete, the lab notebook will open with the code and instructions ready to use.
-
-## 4. Execute the Notebook
-
-You can execute the notebook in two ways:
-
-**Option 1: Run All**
-
-- Click **Run All** at the top of the notebook to execute all cells sequentially.
-- Review the code and outputs to understand the overall workflow.
-
-**Option 2: Execute Cell by Cell (Recommended)**
-
-- Read each code cell and its instructions before execution.
-- Execute the cells one at a time using the run button next to each cell.
-- Observe the outputs and understand what each step does.
-- Follow the instructions and complete the hands-on exercises alongside the code.
-
-**Recommendation:** Use the cell-by-cell approach to understand the implementation, follow the workflow, and gain practical experience rather than simply executing the entire notebook at once.
-
-## 5. Lab Reference and Completion
-
-You can also find the original lab notebook and its summary in the following GitHub repository:
-
-[Lab Notebook – Create and Evaluate an AI Agent](https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab03-create%20and%20evaluate-AI-agent.ipynb)
+7. Once the import is complete, the lab notebook will open with the code and instructions ready to execute. You can run all cells at once using **Run all** or execute them individually using **Execute Cell by Cell (Recommended)**.
 
 The notebook includes the implementation, instructions, and a summary to help you understand the concepts covered.
 
 **This completes the lab.**
+
+> [!NOTE]
+> You can also access the original lab notebook and its summary in the following GitHub repository:
+>
+> [Lab Notebook – Create and Evaluate an AI Agent](https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab03-create%20and%20evaluate-AI-agent.ipynb)
