@@ -37,27 +37,25 @@ To complete this exercise, you need:
 
 ## Go to Evaluation
 
-1. From the project's **home page**, click the **Build** tab on the top-right menu.
+1. From the left navigation pane, select **Evaluation**.
 
-2. From the left navigation pane, select **Evaluation**.
+2. Click **Create** to create a new evaluation.
 
-3. Click **Create** to create a new evaluation.
+3. Select **Target: Dataset** and click **Upload new dataset**.
 
-4. Select **Target: Dataset** and click **Upload new dataset**.
-
-5. Open the following GitHub folder and manually download the `credit-risk-prompt-evaluation.jsonl` file:
+4. Open the following GitHub folder and manually download the `credit-risk-prompt-evaluation.jsonl` file:
 
    https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation.jsonl
    
    ![Screenshot](../../media/JSONLDownload_v1.png)
 
-6. On the **Dataset** page, click **Upload new dataset** in the top-right corner.
+5. On the **Dataset** page, click **Upload new dataset** in the top-right corner.
 
-7. In the **Upload new dataset** dialog, enter a name for the dataset, such as `credit-risk-prompt-evaluation-<your_unique_prefix>`.
+6. In the **Upload new dataset** dialog, enter a name for the dataset, such as `credit-risk-prompt-evaluation-<your_unique_prefix>`.
 
-8. Upload the downloaded JSONL dataset and click **Upload**.
+7. Upload the downloaded JSONL dataset and click **Upload**.
 
-9. After the dataset is uploaded, click **Next**.
+8. After the dataset is uploaded, click **Next**.
 
 ## Select Evaluation Scope
 
