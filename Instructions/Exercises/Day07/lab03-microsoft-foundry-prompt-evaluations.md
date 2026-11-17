@@ -25,7 +25,7 @@ To complete this exercise, you need:
 - Prepared JSONL dataset for evaluation.
 - Browser access to the Microsoft Foundry portal.
 
-# Open Azure AI Foundry
+## Open Azure AI Foundry
 
 1. Open Microsoft Edge.
 
@@ -35,27 +35,29 @@ To complete this exercise, you need:
 
 4. By default, it should take your project's home page.
 
+## Download the dataset**
+
+1. Open the following GitHub link:
+
+[credit-risk-prompt-evaluation.jsonl](https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation.jsonl)
+
+2. Locate `credit-risk-prompt-evaluation.jsonl` and manually download the file using the **Download raw file** option.
+
 ## Go to Evaluation
 
-1. From the left navigation pane, select **Evaluation**.
+1. From the left navigation pane, select **Evaluations**.
 
 2. Click **Create** to create a new evaluation.
 
 3. Select **Target: Dataset** and click **Upload new dataset**.
 
-4. Open the following GitHub folder and manually download the `credit-risk-prompt-evaluation.jsonl` file:
+4. On the **Dataset** page, click **Upload new dataset** in the top-right corner.
 
-   https://github.com/Kiran-255666/AgenticAIEngineer/blob/main/labfiles/Day07/lab03-microsoft-foundry-prompt-evaluations/credit-risk-prompt-evaluation.jsonl
-   
-   ![Screenshot](../../media/JSONLDownload_v1.png)
+5. In the **Upload new dataset** dialog, enter a name for the dataset, such as `credit-risk-prompt-evaluation-<your_unique_prefix>`.
 
-5. On the **Dataset** page, click **Upload new dataset** in the top-right corner.
+6. Upload the downloaded JSONL dataset and click **Upload**.
 
-6. In the **Upload new dataset** dialog, enter a name for the dataset, such as `credit-risk-prompt-evaluation-<your_unique_prefix>`.
-
-7. Upload the downloaded JSONL dataset and click **Upload**.
-
-8. After the dataset is uploaded, click **Next**.
+7. After the dataset is uploaded, click **Next**.
 
 ## Select Evaluation Scope
 
