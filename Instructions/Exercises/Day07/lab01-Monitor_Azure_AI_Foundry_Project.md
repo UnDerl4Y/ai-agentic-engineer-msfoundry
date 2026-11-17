@@ -37,7 +37,7 @@ This exercise should take approximately **45** minutes to complete.
 3. In the side panel, select **All Resources**.
 4. From the resource list, locate the Foundry resource named **`hakunamatata11`**.
 5. Select **`hakunamatata11`** to open the resource.
-6. Confirm that the **`hakunamatata11`** project overview page is displayed.
+6. Now you'll be on the `hakunamatata11`**project overview** page.
 
 ### Step 3: Expand the Monitoring Section
 
