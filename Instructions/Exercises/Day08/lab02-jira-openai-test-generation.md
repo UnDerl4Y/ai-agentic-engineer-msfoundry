@@ -1,4 +1,3 @@
-
 ---
 lab:
   title: Generate Credit Risk Test Cases from Jira Stories using Azure OpenAI
@@ -396,6 +395,6 @@ Before running the Jira connector, verify that:
 2. Click **Download raw file** to download the `.ipynb` notebook.
 3. Open the downloaded notebook in Jupyter Notebook or JupyterLab.
 4. Configure the required Jira credentials, Story key, and Azure OpenAI details.
-5. Continue by executing the notebook cells in order.
+5. Execute the notebook cells in order and continue until all cells have completed successfully.
 
 **Tip:** You can download the notebook directly using the **Raw** option on GitHub.
