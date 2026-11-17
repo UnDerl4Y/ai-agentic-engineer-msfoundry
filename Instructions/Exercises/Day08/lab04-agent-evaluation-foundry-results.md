@@ -54,7 +54,7 @@ Before starting this exercise, ensure you have:
 6. After creating the agent, note its name in Notepad, as you will need to use the same name in the `.env` file shortly:
 
    ```env
-   AGENT_NAME="<your_unique_prefix>-credit-risk-assessment-agent"
+   AGENT_NAME="<your_unique_prefix>-cra"
    ```
 
 ## Get the application files from GitHub
