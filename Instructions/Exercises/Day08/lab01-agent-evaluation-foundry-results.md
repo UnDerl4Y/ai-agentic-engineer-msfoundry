@@ -88,13 +88,13 @@ The application files for the Credit Risk RAG application are provided in the [t
 5. After extracting the repository, open **PowerShell** and run these commands.
 
    ```powershell
-   Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day08\lab03-agent-evaluation-foundry-results" "$env:USERPROFILE\Desktop\lab02-agent-evaluation-foundry-results" -Recurse
+   Copy-Item "C:\Users\agenticuser\Downloads\AgenticAIEngineer-main\AgenticAIEngineer-main\labfiles\Day08\lab01-agent-evaluation-foundry-results" "$env:USERPROFILE\Desktop\lab01-agent-evaluation-foundry-results" -Recurse
    ```
 
 6. Run the following command to open the copied lab folder from your Desktop in Visual Studio Code:
 
    ```powershell
-   code "$env:USERPROFILE\Desktop\lab03-agent-evaluation-foundry-results"
+   code "$env:USERPROFILE\Desktop\lab01-agent-evaluation-foundry-results"
    ```
 
 7. In Visual Studio Code, select **Terminal > New Terminal**.
