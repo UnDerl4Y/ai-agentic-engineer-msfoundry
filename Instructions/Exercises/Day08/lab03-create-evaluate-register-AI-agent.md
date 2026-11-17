@@ -50,7 +50,7 @@ This exercise takes approximately **60 minutes**.
 3. In the newly opened notebook, click **File** and select **Import**.
 ![Screenshot](../../media/flieclick.png)
 
-4. Under **Import from**, select **URL**.
+4. Next to **Import from**, select **URL**.
 
 ![Screenshot](../../media/urlclick.png)
 
