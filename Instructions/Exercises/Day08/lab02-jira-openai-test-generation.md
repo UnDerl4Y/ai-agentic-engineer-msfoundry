@@ -1,3 +1,12 @@
+For Summary use the follwing
+
+```
+Automate Credit Risk Assessment for New Corporate Customers
+```
+
+For Description use the follwing
+
+```
 ## Story details
 
 **Summary**  
@@ -145,3 +154,4 @@ Credit analysts currently review corporate customer documents and financial info
    - When a complete assessment is submitted
    - Then the result must be returned within 10 seconds.
    - Sensitive document contents and financial values must not appear in application logs.
+```
