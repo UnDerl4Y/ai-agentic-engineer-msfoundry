@@ -353,8 +353,8 @@ This is the value you will use for `JIRA_BASE_URL`.
 ![Screenshot](../../media/4point3.png)
 
 4. Leave the Space or Project field at its default value, as applicable.
-5. In **Summary**, copy the text from Section 3.1.
-6. In **Description**, copy the complete content from Section 3.2.
+5. In **Summary**, copy the text from [3.1 Summary](#31-summary).
+6. In **Description**, copy the complete content from [3.2 Description](#32-description).
 7. Select **Create**.
 
 After the Story is created, Jira displays a confirmation containing the newly created issue key.
