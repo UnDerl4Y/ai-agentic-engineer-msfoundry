@@ -256,16 +256,6 @@ The local summary is saved to:
 results/evaluation_run_summary.json
 ```
 
-A successful run displays a result similar to:
-
-```text
-Status: completed
-Result counts: ResultCounts(errored=0, failed=0, passed=7, total=7, skipped=0)
-```
-
-> [!NOTE] 
-> The number of test cases and evaluation results depends on the dataset and evaluation run & evaluation output can vary slightly between runs because model-generated responses and evaluator results can differ.
-
 ## Review the Evaluation Results in Microsoft Foundry
 
 1. Open the report URL displayed in the terminal.
