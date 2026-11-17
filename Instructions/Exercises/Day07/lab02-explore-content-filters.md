@@ -30,13 +30,6 @@ To complete this exercise, you need:
 
 3. By default, it should take your project's home page.
 
-   <details>
-   <summary>If you are not redirected to the project</summary>
-
-   Click **Select the project**, choose your project, and you will be redirected to the project's **Home page**.
-
-   </details>
-
 ## Create an Agent
 
 1. Click **Create as an agent**.

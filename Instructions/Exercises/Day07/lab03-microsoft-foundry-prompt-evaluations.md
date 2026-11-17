@@ -35,14 +35,6 @@ To complete this exercise, you need:
 
 4. By default, it should take your project's home page.
 
-   <details>
-   <summary>If you are not redirected to the project</summary>
-
-   Click **Select the project**, choose your project, and you will be redirected to the project's home page.
-
-   </details>
-
-
 ## Go to Evaluation
 
 1. From the project's **home page**, click the **Build** tab on the top-right menu.
