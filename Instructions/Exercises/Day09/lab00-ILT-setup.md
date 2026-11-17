@@ -68,11 +68,11 @@ Before you start the lab exercises, you must create a development environment fo
 
 2. You will be redirected to the **new Copilot Studio UI**. This UI has fewer features than the **Classic Experience UI**. We will use the **Classic Experience UI** throughout the labs.
 
-   ![Copilot Studio interface.](../../media/newuserxp1.png)
+   ![Copilot Studio interface.](../../media/newuserxp1-v1.png)
 
 3. Select **...** (More options) at the bottom of the page. Under **Explore**, select **Open Classic Experience**, then select **Skip feedback** and if any setup prompts appear, select Get started and follow the prompts until they are completed. .
 
-   ![Copilot Studio interface.](../../media/newuserxp2.png)
+   ![Copilot Studio interface.](../../media/newuserxp2-v1.png)
 
 4. Now you are in the **Open Classic Experience**. In the **upper-right corner** of the page, just to the left of the **Settings** ⚙️ icon, locate the **Environment Selector** showing the current environment.
 
@@ -129,7 +129,7 @@ Before you start the lab exercises, you must create a development environment fo
 
 12. You now have a Power Platform environment and solution to work in.
 
-![New solution.](../../media/labex1.png)
+![New solution.](../../media/labex1-v1.png)
 
 ## Summary
 
