@@ -101,7 +101,7 @@ To complete this exercise, you need:
 
 6. Locate `credit-risk-prompt-evaluation-v1.jsonl` and manually download the file using the **Download raw file** option.
 
-7. Repeat the evaluation steps using the updated dataset by doing from [Evaluation](#evaluation). This time, select `credit-risk-prompt-evaluation-v1.jsonl` instead of the original JSONL file and see the difference.
+7. Repeat the evaluation steps using the updated dataset by navigating to the [Go to Evaluation](#go-to-evaluation) section.
 
 ## Conclusion
 
