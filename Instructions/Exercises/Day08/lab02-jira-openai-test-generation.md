@@ -299,14 +299,14 @@ Credit analysts currently review corporate customer documents and financial info
 
 ## 4. Jira Configuration
 
->[!TIP]
->Keep Notepad open while completing these steps. Copy and save your Jira workspace URL, registered email address, generated API token, and newly created Story key. You will need these values in the next section when configuring and running the lab notebook. Keep your API token private and do not share it.
+> [!TIP]
+> Keep Notepad open while completing these steps. Copy and save your Jira workspace URL, registered email address, generated API token, and newly created Story key. You will need these values in the next section when configuring and running the lab notebook. Keep your API token private and do not share it.
 
 Before running the notebook, create a Jira Cloud account, create a Jira workspace, generate an API token, and create the Story containing the credit-risk requirements.
 
 ### 4.1 Create a Jira Cloud Account
 
-1. Open [Atlassian](https://www.atlassian.com/).
+1. Open [Atlassian account signup](https://id.atlassian.com/signup).
 2. Select the option to create an account.
 3. Select **Sign up with Google** and use your personal Gmail account. You can also register using your Microsoft Outlook email.
 4. Complete the verification using the code sent to your registered email address.
