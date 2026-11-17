@@ -89,7 +89,7 @@ When the default guardrail doesn't meet your needs, you can create custom guardr
 
 1. Click **Next**.
 
-1. On the **Review** section, and for the Guardrail name use **gr-<your-preferred-suffix>** as the naming convention then read the summary and then select **Create**, and wait for the guardrail to be saved.
+1. On the **Review** section, and for the Guardrail name use `gr-<your-preferred-suffix>` as the naming convention then read the summary and then select **Create**, and wait for the guardrail to be saved.
 
 1. Search for your `gr-<your-preferred-suffix>` guardrail using the search box. Check its application status, assigned agents/models, and resource type. Select it, click **Try in playground**, and rerun the prompts to observe the updated guardrail behavior.
 
