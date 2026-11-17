@@ -1,26 +1,166 @@
-For Summary use the follwing
 
+---
+lab:
+  title: Generate Credit Risk Test Cases from Jira Stories using Azure OpenAI
+  description: Learn how to retrieve a Jira Story, extract its requirements, and use Azure OpenAI to generate structured test cases.
+  level: 200
+  duration: 60
+  islab: true
+  status: 'released'
+---
+
+# Generate Credit Risk Test Cases from Jira Stories using Azure OpenAI
+
+## Overview
+
+In this lab, you will build an AI-powered test generation agent that retrieves a user story from Jira, extracts its requirements, and generates structured software test cases using Azure OpenAI.
+
+You will first create a Jira Cloud account using your personal Gmail or Microsoft Outlook email. Next, you will create a Jira workspace, generate an API token, and create a Story containing the credit-risk assessment requirements provided in this lab.
+
+After creating the Story, you will download the provided Jupyter notebook, configure your Jira credentials and the Azure OpenAI settings provided for the lab, and execute the notebook.
+
+The generated test cases will cover positive, negative, and edge scenarios and can be exported to Markdown, CSV, and JSON formats.
+
+## Learning Objectives
+
+By the end of this lab, you will be able to:
+
+- Understand Jira projects, issues, Stories, and acceptance criteria.
+- Create a Jira Cloud workspace and generate an API token.
+- Create a Jira Story containing structured business requirements.
+- Connect to Jira using its REST API.
+- Extract requirements from a Jira issue.
+- Use Azure OpenAI to generate structured test cases.
+- Export generated test cases into CSV and JSON formats.
+
+## 1. Architecture Overview
+
+### High-level flow
+
+The solution consists of six components:
+
+1. **Config and Secrets:** Configure the Jira URL, user email, API token, and Azure OpenAI settings. Keep credentials outside the source code whenever possible.
+2. **Jira Connector (Tool):** A Python function named `fetch_jira_issue(issue_key)` calls the Jira REST API to retrieve the requested Story.
+3. **Requirement Extractor:** Extracts the Story summary, description, and acceptance criteria from the Jira issue JSON.
+4. **Azure OpenAI Wrapper:** Sends the extracted requirements to the configured Azure OpenAI deployment.
+5. **Test Generation Agent:** Orchestrates the workflow by fetching the Story, extracting requirements, constructing a prompt, calling Azure OpenAI, and returning generated test cases in Markdown.
+6. **Export:** Converts the generated Markdown test-case table into CSV and JSON formats.
+
+### Architecture diagram
+
+```mermaid
+flowchart TD
+    A["Jira Story<br/>Summary, Description, Acceptance Criteria"]
+    B["Config and Secrets<br/>Jira and Azure OpenAI Settings"]
+    C["Jira Connector<br/>fetch_jira_issue(issue_key)"]
+    D["Requirement Extractor<br/>Extract Story Requirements"]
+    E["Azure OpenAI Wrapper<br/>Configured Deployment"]
+    F["Test Generation Agent<br/>Orchestration and Prompt"]
+    G["Generated Test Cases<br/>Markdown"]
+    H["Export"]
+    I["CSV"]
+    J["JSON"]
+
+    A --> C
+    B --> C
+    B --> E
+    C --> D
+    D --> F
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    H --> J
 ```
+
+### Sample business workflow
+
+The sample business workflow used in this lab is **Automate Credit Risk Assessment for New Corporate Customers**.
+
+It describes a system that verifies submitted company documents, performs company and sanctions checks, validates financial information, calculates financial risk measures, retrieves external credit data, evaluates industry risk, and recommends appropriate credit terms.
+
+The Jira Story contains the functional requirements, non-functional requirements, and acceptance criteria for this workflow. The AI agent uses the Story as its source when generating test cases.
+
+**Important requirement-handling rules:**
+
+- Preserve all explicitly documented business rules, formulas, score weights, thresholds, and classification boundaries.
+- Do not invent missing business rules or fill gaps with assumptions.
+- The 20-point Compliance component does not have a detailed point allocation in the Story. Treat its allocation as unspecified or configurable.
+- The Story requires credit-limit and payment-term recommendations but does not define their exact mapping to risk categories. Do not invent these mappings.
+- Generate test cases for defined requirements. Where a requirement depends on missing rules, identify the missing information instead of presenting an assumed result as expected behavior.
+
+## 2. Understanding Jira and Story Details
+
+Before creating the Story, understand the following Jira concepts.
+
+| Concept | Description |
+|---|---|
+| Jira | Atlassian's project management and issue-tracking tool used to manage software development work. |
+| Project | A workspace that organizes related issues, requirements, and development activities. |
+| Issue | An individual work item in Jira, classified as a Story, Task, Bug, or Epic. |
+| Epic | Groups related work into a larger initiative. |
+| Story | Defines a user requirement from the perspective of someone who needs the functionality. |
+| Task | Defines a specific piece of work to be completed. |
+| Bug | Records a defect or unexpected software behavior. |
+| Summary | Provides the title of the issue. |
+| Description | Explains the issue's purpose, business context, and requirements. |
+| User Story | Defines who needs what functionality and why. |
+| Business Context | Explains the business problem or objective being addressed. |
+| Functional Requirements | Define what the system must do. |
+| Non-Functional Requirements | Define performance, security, reliability, and other quality expectations. |
+| Acceptance Criteria | Define testable conditions that determine whether a requirement is satisfied. |
+
+### Understanding Given–When–Then acceptance criteria
+
+Acceptance criteria are often written using the Given–When–Then format:
+
+- **Given:** Describes the initial condition or precondition.
+- **When:** Describes the action or event.
+- **Then:** Describes the expected outcome.
+
+For example:
+
+- Given a new corporate customer assessment is started.
+- When valid Company Registration and GST Certificates are uploaded.
+- Then the assessment may proceed to the next validation step.
+
+These conditions help the test generation agent identify scenarios and expected results.
+
+## 3. Story Details
+
+You will create a Jira Story using the following sample business requirements.
+
+### 3.1 Summary
+
+Use the following text in the Jira **Summary** field:
+
+```text
 Automate Credit Risk Assessment for New Corporate Customers
 ```
 
-For Description use the follwing
+### 3.2 Description
 
-```
+Copy the complete content below into the Jira **Description** field.
+
+```markdown
 ## Story details
 
-**Summary**  
+**Summary**
+
 Automate Credit Risk Assessment for New Corporate Customers
 
-**Issue Type**  
+**Issue Type**
+
 Story
 
 **Description**
 
-**User Story**  
+**User Story**
+
 As a credit analyst, I want the system to assess the credit risk of a new corporate customer using registration documents, financial information, external risk data, and industry risk so that I can assign an appropriate risk category, credit limit, and payment terms.
 
-**Business Context**  
+**Business Context**
+
 Credit analysts currently review corporate customer documents and financial information manually. This process is time-consuming, inconsistent, and difficult to audit. An automated assessment workflow will validate required evidence, identify compliance concerns, calculate transparent financial measures, combine internal and external risk signals, and provide a consistent recommendation for review.
 
 ---
@@ -155,3 +295,107 @@ Credit analysts currently review corporate customer documents and financial info
    - Then the result must be returned within 10 seconds.
    - Sensitive document contents and financial values must not appear in application logs.
 ```
+
+**Note:** The Story does not specify the detailed allocation of the 20 Compliance points or the exact credit-limit and payment-term mappings. These must remain unspecified unless a separate business policy provides them. Do not add assumed values when generating test cases.
+
+## 4. Jira Configuration
+
+Before running the notebook, create a Jira Cloud account, create a Jira workspace, generate an API token, and create the Story containing the credit-risk requirements.
+
+### 4.1 Create a Jira Cloud Account
+
+1. Open [Atlassian](https://www.atlassian.com/).
+2. Select the option to create an account.
+3. Select **Sign up with Google** and use your personal Gmail account. You can also register using your Microsoft Outlook email.
+4. Complete the verification using the code sent to your registered email address.
+5. Enter your Full Name, create a password if prompted, and continue.
+6. From the Atlassian navigation, open Jira or Jira Product Discovery, depending on the available options.
+7. Select **Try it now** if prompted to start using the product.
+8. When asked for a workspace name, enter a unique name.
+9. Wait for the workspace setup to complete. This may take a few minutes.
+
+Your Jira workspace URL will look similar to:
+
+```text
+https://<your-unique-name>.atlassian.net
+```
+
+Copy the workspace URL. Remove any additional page path after `.net`.
+
+For example:
+
+```text
+https://my-credit-lab.atlassian.net
+```
+
+This is the value you will use for `JIRA_BASE_URL`.
+
+### 4.2 Create a Jira API Token
+
+1. Open the [Atlassian API token page](https://id.atlassian.com/manage-profile/security/api-tokens).
+2. Complete the verification code sent to your Atlassian account email if prompted.
+3. Select **Create API token**.
+4. Enter a descriptive name for the token.
+5. Set an expiration date according to your requirements.
+6. Select **Create**.
+7. Copy the generated API token and keep it secure.
+
+**Important:** The API token is displayed when it is created. Store it securely because it must not be committed to source control or shared with others.
+
+### 4.3 Create a Jira Story
+
+1. Open [Atlassian Home](https://home.atlassian.com/).
+2. Open your Jira workspace.
+3. From the Jira navigation, select **Create**.
+4. Leave the Space or Project field at its default value, as applicable.
+5. In **Summary**, copy the text from Section 3.1.
+6. In **Description**, copy the complete content from Section 3.2.
+7. Select **Create**.
+
+After the Story is created, Jira displays a confirmation containing the newly created issue key.
+
+For example:
+
+```text
+You've created "MDP-x" idea
+```
+
+The key, such as `MDP-x`, is the `ISSUE_KEY` required by the notebook.
+
+Copy the Story key. You will use it in the notebook configuration.
+
+### 4.4 Configure Jira Values
+
+The notebook reads Jira configuration from environment variables or accepts values interactively. This avoids hard-coding credentials in the notebook.
+
+| Variable | Description | Example |
+|---|---|---|
+| `JIRA_BASE_URL` | Jira Cloud workspace URL | `https://my-credit-lab.atlassian.net` |
+| `JIRA_EMAIL` | Email address associated with the Jira account | `user@example.com` |
+| `JIRA_API_TOKEN` | API token generated from the Atlassian account | Your generated API token |
+| `ISSUE_KEY` | Key of the Jira Story containing the requirements | `MDP-x` |
+
+You can set these values in your shell before starting Jupyter, or enter them interactively when prompted by the notebook.
+
+Interactive values are kept in memory and are not written to a file.
+
+**Security:** Never commit your Jira API token or other credentials to source control.
+
+### 4.5 Verify the Configuration
+
+Before running the Jira connector, verify that:
+
+- `JIRA_BASE_URL` contains only the Jira workspace URL and does not include `/jira/...` or another page path.
+- `JIRA_EMAIL` matches the email address associated with your Jira account.
+- `JIRA_API_TOKEN` contains the API token you generated.
+- `ISSUE_KEY` contains the key of the Story you created, such as `MDP-x`.
+
+## 5. Download and Run the Lab Notebook
+
+1. Open the [Jira and Azure OpenAI Test Generation Notebook](https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab02-jira-openai-test-generation.ipynb).
+2. Click **Download raw file** to download the `.ipynb` notebook.
+3. Open the downloaded notebook in Jupyter Notebook or JupyterLab.
+4. Configure the required Jira credentials, Story key, and Azure OpenAI details.
+5. Continue by executing the notebook cells in order.
+
+**Tip:** You can download the notebook directly using the **Raw** option on GitHub.
