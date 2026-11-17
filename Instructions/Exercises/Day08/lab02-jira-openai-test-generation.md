@@ -307,14 +307,20 @@ Before running the notebook, create a Jira Cloud account, create a Jira workspac
 ### 4.1 Create a Jira Cloud Account
 
 1. Open [Atlassian account signup](https://id.atlassian.com/signup).
-2. Select the option to create an account.
-3. Select **Sign up with Google** and use your personal Gmail account. You can also register using your Microsoft Outlook email.
-4. Complete the verification using the code sent to your registered email address.
-5. Enter your Full Name, create a password if prompted, and continue.
-6. From the Atlassian navigation, open Jira or Jira Product Discovery, depending on the available options.
-7. Select **Try it now** if prompted to start using the product.
-8. When asked for a workspace name, enter a unique name.
-9. Wait for the workspace setup to complete. This may take a few minutes.
+2. Locate the **Email** field and enter your personal Gmail address, then select **Sign up**. Alternatively, you can continue using Google, Microsoft, Apple, or Slack. 
+> **TIP** Ideally use fill your personal Gmail address in Email field.
+3. Complete the verification using the code sent to your registered email address.
+4. Enter your Full Name, set a strong alphanumeric password, and continue.
+5. From the Atlassian navigation, open Jira Product Discovery.
+
+![Screenshot](../../media/JDP1.png)
+
+6. Select **Try it now**.
+
+![Screenshot](../../media/JDP2.png)
+
+7. When asked for a workspace name, enter a unique name and click **Next**
+8. Wait for the workspace setup to complete. This may take a few minutes.
 
 Your Jira workspace URL will look similar to:
 
@@ -324,13 +330,10 @@ https://<your-unique-name>.atlassian.net
 
 Copy the workspace URL. Remove any additional page path after `.net`.
 
-For example:
-
-```text
-https://my-credit-lab.atlassian.net
-```
-
 This is the value you will use for `JIRA_BASE_URL`.
+
+> [!TIP] 
+> Save this in NOTEPAD!
 
 ### 4.2 Create a Jira API Token
 
