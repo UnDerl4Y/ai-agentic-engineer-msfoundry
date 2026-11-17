@@ -42,19 +42,27 @@ This exercise takes approximately **60 minutes**.
 ## 3. Import the Lab Notebook
 
 1. Once the Databricks workspace opens, click **New** in the left navigation panel.
+![Screenshot](../../media/newclick.png)
+
 2. Select **Notebook** to create a new notebook.
+![Screenshot](../../media/notebookclick.png)
+
 3. In the newly opened notebook, click **File** and select **Import**.
+![Screenshot](../../media/flieclick.png)
+
 4. Under **Import from**, select **URL**.
-5. Set the **Target folder** to:
 
-   `/Users/agenticuser3@hackable.in/Drafts`
+![Screenshot](../../media/urlclick.png)
 
-6. Paste the following GitHub notebook URL into the **URL** field:
+5. Copy the following GitHub notebook URL and paste it into the **URL** field:
 
-   https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab03-create%20and%20evaluate-AI-agent.ipynb
+```
+https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab03-create%20and%20evaluate-AI-agent.ipynb
+```
 
-7. Click **Import** to import the notebook into your Databricks workspace.
-8. Once the import is complete, the lab notebook will open with the code and instructions ready to use.
+6. Click **Import** to import the notebook into your Databricks workspace.
+
+7. Once the import is complete, the lab notebook will open with the code and instructions ready to use.
 
 ## 4. Execute the Notebook
 
