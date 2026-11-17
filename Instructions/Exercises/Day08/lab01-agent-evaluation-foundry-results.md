@@ -14,17 +14,6 @@ In this exercise, you'll use the Azure AI Projects SDK to evaluate an existing C
 
 This exercise takes approximately **40 minutes** to complete.
 
-## Learning objectives
-
-By the end of this exercise, you'll be able to:
-
-- Prepare a JSONL dataset for agent evaluation.
-- Connect to a Microsoft Foundry project using the Python SDK.
-- Configure built-in evaluators.
-- Run an evaluation against an Azure AI agent.
-- Review evaluation results in Microsoft Foundry.
-- Identify weak test cases and suggest improvements.
-
 ## Prerequisites
 
 Before starting this exercise, ensure you have:
