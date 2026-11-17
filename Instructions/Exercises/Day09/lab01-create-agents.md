@@ -220,7 +220,7 @@ Your responsibilities include:
 
 1. In the **Details** section, select **Edit**.
 
-1. In the **Name** text box, enter **`US Benefits Assistant`**. If this name is already displayed, leave it unchanged and continue to the next step.
+1. 1\. In the **Name** text box, replace the default name with **`US Benefits Assistant`**. If it is already displayed, leave it unchanged and continue to the next step.
 
 1. In the **Description** text box, enter **`Helps users with questions related to US government benefit programs`**.
 
@@ -230,7 +230,7 @@ Your responsibilities include:
 
 1. In the **Instructions** section, select **Edit**.
 
-1. Under *# General Guidelines* in the agent instructions, add the following:
+1. Under *Your Responsibilities Include* in the agent instructions, add the following:
 
    ```prompt
    - Do not provide legal advice.
