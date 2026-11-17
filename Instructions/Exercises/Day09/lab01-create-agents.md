@@ -68,7 +68,7 @@ Open the **Copilot Studio** home page: `https://copilotstudio.microsoft.com/`
 >
 > The image below shows the **Classic Experience** UI. If your interface looks like this, you're good to go. Continue to the next section. If it looks different, expand the section below and switch back to the **Classic Experience**.
 >
-> ![Copilot Studio Classic Experience interface.](../../media/olduserxp.png)
+> ![Copilot Studio Classic Experience interface.](../../media/olduserxp-v1.png)
 >
 > <details>
 > <summary>Does your interface look different? Click here</summary>
@@ -307,7 +307,7 @@ Your responsibilities include:
 
 1. In the **Test** pane, select the ellipses (**...**) next to the variables **{x}** icon, and toggle **Show activity map when testing** to **On** and **Track between topics** to **Off**.
 
-   ![Show activity map.](../../media/show-activity-map.png)
+   ![Show activity map.](../../media/show-activity-map-v1.png)
 
 1. At the top of the **Test** pane, select the **Start new test session** icon **+**.
 
@@ -319,7 +319,7 @@ Your responsibilities include:
 
    The **Activity map** should be displayed, showing that knowledge sources were used to generate the response.
 
-   ![Activity map.](../../media/activity-map.png)
+   ![Activity map.](../../media/activity-map-v1.png)
 
 1. Close the **Test** pane.
 
