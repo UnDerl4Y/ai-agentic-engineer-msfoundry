@@ -1,18 +1,18 @@
 ---
 lab:
-  title: Create, evaluate, and register an AI agent
-  description: Learn how to build, evaluate, and register an AI agent using Databricks, LangGraph, MLflow, and Unity Catalog.
+  title: Create and evaluate an AI agent
+  description: Learn to build and evaluate an AI agent using Databricks, LangGraph, MLflow, and Unity Catalog.
   level: 200
   duration: 60
   islab: true
   status: 'released'
 ---
 
-# Create, evaluate, and register an AI agent
+# Create and evaluate an AI agent
 
-In this exercise, you will use Databricks to build, evaluate, and register an AI agent that combines document retrieval and tool usage. You will work with a pre-chunked subset of Databricks documentation as your dataset.
+In this exercise, you will use Databricks to build and evaluate an AI agent that combines document retrieval and tool usage. You will work with a pre-chunked subset of Databricks documentation as your dataset.
 
-This exercise takes approximately **60 minutes**.
+This exercise takes approximately **60 minutes** to complete.
 
 ## Prerequisites
 
