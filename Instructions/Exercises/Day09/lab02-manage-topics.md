@@ -78,7 +78,7 @@ In this exercise, you will create a new agent to assist with reviewing insurance
 5. Leave **English (United States)** set as the primary language for the agent.
 6. In the **Solution** drop-down, select **Lab Exercises**.
 7. Enter `insuranceagent` for the *Schema name*.
-8. Select **Update**.
+8. Select **Create**.
 9. Wait until the agent finishes setting up and the message `This feature isn't available until your agent has finished setting up.` **disappears**.
 10. In the **Details** section, select **Edit**.
 11. Set the following values:
