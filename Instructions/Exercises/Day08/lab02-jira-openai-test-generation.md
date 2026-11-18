@@ -403,12 +403,54 @@ Before running the Jira connector, verify that:
 - `JIRA_API_TOKEN` contains the API token you generated.
 - `ISSUE_KEY` contains the key of the Story you created, such as `MDP-x`.
 
-## 5. Download and Run the Lab Notebook
+## 5. Open the Databricks Workspace
 
-1. Open the [Jira and Azure OpenAI Test Generation Notebook](https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab02-jira-openai-test-generation.ipynb).
-2. Click **Download raw file** to download the `.ipynb` notebook.
-3. Open the downloaded notebook in Jupyter Notebook or JupyterLab.
-4. Configure the required Jira credentials, Story key, and Azure OpenAI details.
-5. Execute the notebook cells in order and continue until all cells have completed successfully.
+1. Open [Azure Portal](https://portal.azure.com) in a new browser tab.
+2. If you are already signed in with another account, sign out first.
+3. When prompted to sign in, open the **Lab Credentials** sheet.
+4. Find the row assigned to your **Participant Name**.
+5. Copy your assigned **Databricks Account Username** and **Databricks Account Password**.
+6. Return to Azure Portal and sign in using the assigned credentials.
+7. Continue to your assigned Databricks workspace.
 
-**Tip:** You can download the notebook directly using the **Raw** option on GitHub.
+## 6. Access the Databricks Workspace
+
+1. In Azure Portal, use the search bar at the top and search for **Azure Databricks**.
+2. Select **Azure Databricks** from the search results.
+3. Locate the **AgenticAIEngineer** workspace in the list of available Databricks services.
+4. Click **AgenticAIEngineer** to open its overview page.
+5. Click **Launch Workspace** to open the Databricks workspace in a new browser tab.
+
+## 7. Import the Lab Notebook
+
+1. Once the Databricks workspace opens, click **New** in the left navigation panel.
+![Screenshot](../../media/newclick.png)
+
+2. Select **Notebook** to create a new notebook.
+![Screenshot](../../media/notebookclick.png)
+
+3. In the newly opened notebook, click **File** and select **Import**.
+![Screenshot](../../media/flieclick.png)
+
+4. Next to **Import from**, select **URL**.
+
+![Screenshot](../../media/urlclick.png)
+
+5. Copy the following GitHub notebook URL and paste it into the **URL** field:
+
+```
+https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab03-create%20and%20evaluate-AI-agent.ipynb
+```
+
+6. Click **Import** to import the notebook into your Databricks workspace.
+
+7. Once the import is complete, the lab notebook will open with the code and instructions ready to execute. **Stay in Databricks and complete all the notebook cells** by using **Run all** or executing them individually using **Execute Cell by Cell (Recommended)**.
+
+The notebook includes the implementation, instructions, and a summary to help you understand the concepts covered.
+
+**This completes the lab.**
+
+> [!NOTE]
+> You can also access the original lab notebook and its summary in the following GitHub repository:
+>
+> [Lab Notebook – Create and Evaluate an AI Agent](https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab02-create%20and%20evaluate-AI-agent.ipynb)
