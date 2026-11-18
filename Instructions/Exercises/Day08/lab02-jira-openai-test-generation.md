@@ -439,7 +439,7 @@ Before running the Jira connector, verify that:
 5. Copy the following GitHub notebook URL and paste it into the **URL** field:
 
 ```
-https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab03-create%20and%20evaluate-AI-agent.ipynb
+https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab02-databricks-jira-openai-test-generation.ipynb
 ```
 
 6. Click **Import** to import the notebook into your Databricks workspace.
@@ -453,4 +453,4 @@ The notebook includes the implementation, instructions, and a summary to help yo
 > [!NOTE]
 > You can also access the original lab notebook and its summary in the following GitHub repository:
 >
-> [Lab Notebook – Create and Evaluate an AI Agent](https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab02-create%20and%20evaluate-AI-agent.ipynb)
+> [Lab Notebook – Databricks Jira Test Case Generation Agent (Azure OpenAI)](https://github.com/Kiran-255666/ai-agentic-engineer-msfoundry/blob/main/labfiles/Day08/lab02-databricks-jira-openai-test-generation.ipynb)
