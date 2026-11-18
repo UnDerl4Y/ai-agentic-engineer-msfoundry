@@ -383,7 +383,7 @@ The notebook reads Jira configuration from environment variables or accepts valu
 
 | Variable | Description | Example |
 |---|---|---|
-| `JIRA_BASE_URL` | Jira Cloud workspace URL | `https://my-credit-lab.atlassian.net` |
+| `JIRA_BASE_URL` | Jira Cloud workspace URL | `https://<your-unique-name>.atlassian.net` |
 | `JIRA_EMAIL` | Email address associated with the Jira account | `user@example.com` |
 | `JIRA_API_TOKEN` | API token generated from the Atlassian account | Your generated API token |
 | `ISSUE_KEY` | Key of the Jira Story containing the requirements | `MDP-x` |
