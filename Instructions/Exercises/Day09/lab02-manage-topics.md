@@ -74,7 +74,7 @@ In this exercise, you will create a new agent to assist with reviewing insurance
 1. In the **Copilot Studio** home page `https://copilotstudio.microsoft.com/`, verify that you are working in the environment you created earlier and that you are using the **Classic Experience** UI.
 2. Select **Agents** in the left-hand navigation.
 3. Select **+ Create blank agent**.
-4. Enter **Insurance Claims Assistant** as the agent name, then click the **Optional** section.
+4. Enter **Insurance Claims Review Assistant** as the agent name, then click the **Optional** section.
 5. Leave **English (United States)** set as the primary language for the agent.
 6. In the **Solution** drop-down, select **Lab Exercises**.
 7. Enter `insuranceagent` for the *Schema name*.
