@@ -1,7 +1,7 @@
 ---
 lab:
   title: Generate Credit Risk Test Cases from Jira Stories using Azure OpenAI
-  description: Learn how to retrieve a Jira Story, extract its requirements, and use Azure OpenAI to generate structured test cases.
+  description: Learn how to retrieve a Jira Story, extract its requirements, and use Azure OpenAI to generate structured test cases within a Databricks notebook.
   level: 200
   duration: 60
   islab: true
@@ -16,7 +16,7 @@ In this lab, you will build an AI-powered test generation agent that retrieves a
 
 You will first create a Jira Cloud account using your personal Gmail or Microsoft Outlook email. Next, you will create a Jira workspace, generate an API token, and create a Story containing the credit-risk assessment requirements provided in this lab.
 
-After creating the Story, you will download the provided Jupyter notebook, configure your Jira credentials and the Azure OpenAI settings provided for the lab, and execute the notebook.
+After creating the Story, you will open the provided Databricks notebook in your Databricks workspace. You will configure your Jira credentials and the Azure OpenAI settings provided for the lab, then execute the notebook cells to build and run the test generation agent.
 
 The generated test cases will cover positive, negative, and edge scenarios and can be exported to Markdown, CSV, and JSON formats.
 
@@ -27,9 +27,10 @@ By the end of this lab, you will be able to:
 - Understand Jira projects, issues, Stories, and acceptance criteria.
 - Create a Jira Cloud workspace and generate an API token.
 - Create a Jira Story containing structured business requirements.
-- Connect to Jira using its REST API.
+- Connect to Jira using its REST API from a Databricks notebook.
 - Extract requirements from a Jira issue.
 - Use Azure OpenAI to generate structured test cases.
+- Execute an AI-powered test generation workflow in Databricks.
 - Export generated test cases into CSV and JSON formats.
 
 ## 1. Architecture Overview
@@ -38,38 +39,40 @@ By the end of this lab, you will be able to:
 
 The solution consists of six components:
 
-1. **Config and Secrets:** Configure the Jira URL, user email, API token, and Azure OpenAI settings. Keep credentials outside the source code whenever possible.
-2. **Jira Connector (Tool):** A Python function named `fetch_jira_issue(issue_key)` calls the Jira REST API to retrieve the requested Story.
+1. **Databricks Environment and Configuration:** Execute the lab in a Databricks notebook. Configure the Jira URL, user email, API token, and Azure OpenAI settings required by the workflow.
+2. **Jira Connector:** A Python function named `fetch_jira_issue(issue_key)` calls the Jira Cloud REST API to retrieve the requested Story.
 3. **Requirement Extractor:** Extracts the Story summary, description, and acceptance criteria from the Jira issue JSON.
-4. **Azure OpenAI Wrapper:** Sends the extracted requirements to the configured Azure OpenAI deployment.
-5. **Test Generation Agent:** Orchestrates the workflow by fetching the Story, extracting requirements, constructing a prompt, calling Azure OpenAI, and returning generated test cases in Markdown.
-6. **Export:** Converts the generated Markdown test-case table into CSV and JSON formats.
+4. **Azure OpenAI Integration:** Sends the extracted requirements to the configured Azure OpenAI deployment, `gpt-5.4-mini`, for requirement analysis and test-case generation.
+5. **Test Generation Agent:** Orchestrates the workflow by fetching the Story, extracting requirements, constructing prompts, calling Azure OpenAI, and returning generated test cases in Markdown.
+6. **Export:** Converts the generated Markdown test-case table into CSV and JSON formats and saves the output files from the Databricks notebook.
 
 ### Architecture diagram
 
 ```mermaid
 flowchart TD
     A["Jira Story<br/>Summary, Description, Acceptance Criteria"]
-    B["Config and Secrets<br/>Jira and Azure OpenAI Settings"]
-    C["Jira Connector<br/>fetch_jira_issue(issue_key)"]
-    D["Requirement Extractor<br/>Extract Story Requirements"]
-    E["Azure OpenAI Wrapper<br/>Configured Deployment"]
-    F["Test Generation Agent<br/>Orchestration and Prompt"]
-    G["Generated Test Cases<br/>Markdown"]
-    H["Export"]
-    I["CSV"]
-    J["JSON"]
+    B["Databricks Workspace<br/>Python Notebook"]
+    C["Configuration<br/>Jira and Azure OpenAI Settings"]
+    D["Jira Connector<br/>fetch_jira_issue(issue_key)"]
+    E["Requirement Extractor<br/>Extract Story Requirements"]
+    F["Azure OpenAI<br/>gpt-5.4-mini"]
+    G["Test Generation Agent<br/>Orchestration and Prompt"]
+    H["Generated Test Cases<br/>Markdown"]
+    I["Databricks Export<br/>Save Generated Results"]
+    J["CSV"]
+    K["JSON"]
 
-    A --> C
     B --> C
-    B --> E
+    A --> D
     C --> D
-    D --> F
-    E --> F
+    C --> F
+    D --> E
+    E --> G
     F --> G
     G --> H
     H --> I
-    H --> J
+    I --> J
+    I --> K
 ```
 
 ### Sample business workflow
