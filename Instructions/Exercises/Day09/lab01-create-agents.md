@@ -212,7 +212,7 @@ Your responsibilities include:
 - Explaining leave and vacation policies.
 - Providing information about health, insurance, and retirement plans.
 - Guiding employees to relevant HR resources and documents.
- - Do not provide legal advice.
+- Do not provide legal advice.
 ```
 
 5. Click Save
