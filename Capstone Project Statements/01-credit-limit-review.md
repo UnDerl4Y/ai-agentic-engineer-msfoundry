@@ -1,98 +1,123 @@
-# **Capstone Project: Existing Customer Credit Limit Review Assistant**
+# Capstone Project: Existing Customer Credit Limit Review Assistant
 
-## **1. Project Statement**
+## 1. Project Statement
 
 Create a multi-agent AI assistant that reviews existing customers' financial information and recommends appropriate credit limit actions: **Increase, Maintain, Reduce, or Suspend**.
 
-The assistant should analyze customer financial data, evaluate applicable credit policy rules, and generate recommendations with supporting explanations.
+The system must analyze customer financial data, check applicable credit policy rules, and generate recommendations with supporting explanations.
 
-## **2. Technical Requirements**
+## 2. Technical Requirements
 
-Use the **existing Microsoft Foundry project and its already-deployed models**. Create and configure the required agents, tools, and workflows within the same project.
+- Use the existing Microsoft Foundry project and its deployed models.
+- Create and configure the required agents, tools, and workflows in Microsoft Foundry.
+- Test the agents using the Foundry Playground.
+- Implement the complete application using Python, including a separate user interface.
+- Connect the Python application to the existing Foundry project using its endpoint and API key.
+- Test the application and capture screenshots of the Foundry portal and Python application.
 
-### **Agent 1: Financial Analysis Agent**
+### Agent 1: Financial Analysis Agent
 
 - Analyze two years of customer financial data.
 - Calculate the following financial ratios:
   - Current Ratio
   - Debt-to-Equity Ratio
   - Net Profit Margin
-- Identify financial trends, risks, and changes in the customer's financial position.
-- Provide a summary of the customer's financial health.
+- Identify financial trends and risks.
+- Summarize the customer's financial health.
 
-### **Agent 2: Credit Policy Agent**
+### Agent 2: Credit Policy Agent
 
-- Use the provided credit policy PDF as the knowledge source.
-- Implement Retrieval-Augmented Generation (RAG) to retrieve relevant credit policy rules.
-- Evaluate customer eligibility against the applicable policy criteria.
+- Use the provided credit policy document (`.md` or `.txt`) as the knowledge source.
+- Use RAG to retrieve relevant credit policy rules.
+- Check customer eligibility against the applicable policy criteria.
 - Provide relevant policy references and explanations.
 
-### **Multi-Agent Workflow**
+### Multi-Agent Workflow
 
-Create a multi-agent workflow that:
+Create a workflow that connects **Agent 1 (Financial Analysis Agent)** and **Agent 2 (Credit Policy Agent)**.
 
-1. Accepts existing customer financial information as input.
-2. Sends the financial data to the Financial Analysis Agent.
-3. Sends the relevant customer information to the Credit Policy Agent.
-4. Combines the outputs from both agents.
-5. Generates a consolidated credit limit review with:
-   - Financial analysis and key ratios.
-   - Identified financial risks and trends.
-   - Relevant credit policy rules and references.
-   - Recommended action: Increase, Maintain, Reduce, or Suspend.
-   - Proposed credit limit.
-   - Supporting explanation for the recommendation.
+1. Accept customer financial information.
+2. Send the data to Agent 1 for financial analysis.
+3. Send the relevant information to Agent 2 for credit policy checks.
+4. Combine the outputs from both agents.
+5. Generate one final credit review with financial analysis, policy findings, recommended action, proposed credit limit, and supporting explanation.
 
-## **3. Deliverables**
+**Note:** Create only two agents. The workflow must make both agents work together. A third agent is not required.
 
-**ZIP file:** A complete project package containing all the following:
+## 3. Deliverables and Submission
 
-- Complete source code (excluding the virtual environment and `.env` file).
-- Sample financial data.
-- Credit policy PDF.
-- README file with project setup instructions and usage details.
-- PowerPoint presentation covering:
-  - Project overview.
-  - System architecture.
-  - Agent responsibilities.
-  - Multi-agent workflow.
-- Screenshots of the working application showing:
-  - Customer input data.
-  - Financial analysis and calculated ratios.
-  - Retrieved credit policy rules.
-  - Final credit limit recommendations.
+Submit one ZIP file containing:
 
-## **4. ZIP Folder Structure and Naming Convention**
+- Complete Python source code and application UI.
+- Sample customer financial data.
+- Credit policy document.
+- README with setup and usage instructions.
+- PowerPoint presentation.
+- Screenshots of the Foundry configuration, agent testing, workflow execution, and Python application.
 
-Before creating the ZIP file, organize all deliverables inside a folder named `agenticuser99`. Replace `99` with your assigned number.
+### Required Folder Structure
 
-**Example folder structure:** follow https://github.com/UnDerl4Y/capstone-project-template
+Create a folder using your assigned name, such as `agenticuser99`.
 
-*The structure can be adapted to your actual implementation.*
+```text
+agenticuser99/
+├── src/
+├── data/
+├── screenshots/
+├── presentation/
+├── README.md
+└── .env.example
+```
 
-**Important instructions:**
+You can organize the folders and files according to your implementation.
+
+**Folder guidelines:**
+
+- `src/`: Complete codebase. Organize agents, tools, workflows, application files, and other source files as required.
+- `data/`: Sample customer data (`.csv`), credit policy documents (`.md` or `.txt`), and other required input files.
+- `screenshots/`: Screenshots (`.png`) of the Foundry portal, agent configurations, Playground testing, workflow execution, and application results.
+- `presentation/`: PowerPoint presentation (`.pptx`).
+- `README.md`: Project overview, architecture, prerequisites, setup instructions, configuration, and execution steps.
+- `.env.example`: Environment variable template with placeholder values only.
+
+### PowerPoint Presentation
+
+Your presentation should cover:
+
+1. Project overview and problem statement.
+2. System architecture.
+3. Responsibilities of both agents.
+4. Multi-agent workflow showing how both agents work together.
+5. Technology stack.
+6. Application demonstration and sample results.
+
+### **Environment Configuration**
+
+Include an `.env.example` file with the environment variables required by your application.
+
+Example:
+
+```env
+AZURE_AI_PROJECT_ENDPOINT=your_project_endpoint
+AZURE_AI_API_KEY=your_api_key
+AZURE_AI_MODEL=your_deployed_model
+AGENT_1_NAME=financial_analysis_agent
+AGENT_2_NAME=credit_policy_agent
+```
+
+The example shows common configuration values. You can add other environment variables based on your project requirements, such as agent names, model deployment names, API settings, or other configuration values.
+
+Use the variable names required by your application. Include placeholder values only. **Never include actual API keys, passwords, or other secrets.**
+
+### ZIP and Submission Instructions
 
 1. Exclude the virtual environment (`venv`, `.venv`) and actual `.env` file.
-2. Keep `.env.example` with placeholder values only. Do not include API keys, passwords, or other secrets.
-3. Ensure all required source files, data, presentation, and screenshots are inside the `agenticuser99` folder.
-4. Compress the entire `agenticuser99` folder into a ZIP file named `agenticuser99.zip`.
-5. Keep `agenticuser99` as the root folder inside the ZIP file.
-6. Upload the ZIP file to the designated SharePoint folder.
+2. Include all required source code, data, screenshots, documentation, and presentation files.
+3. Compress the entire project folder into a ZIP file.
+4. Keep your assigned project folder as the root folder inside the ZIP file.
+5. Name the ZIP file using your assigned folder name. For example, `agenticuser99.zip`.
+6. Upload the ZIP file to your designated SharePoint submission folder.
 
-**Example:** If your assigned username is `agenticuser5`, your folder must be named `agenticuser5` and your ZIP file must be `agenticuser5.zip`.
+**Important: Do not upload the project to GitHub. Submit the ZIP file through SharePoint only.**
 
-## **5. Submission Checklist**
-
-- Financial Analysis Agent implemented and tested.
-- Credit Policy Agent implemented with RAG.
-- Multi-agent workflow configured and tested.
-- Credit limit recommendations generated with supporting explanations.
-- Complete source code and sample data included.
-- Required PDF's/.md's included.
-- README included.
-- PowerPoint presentation included.
-- Required application screenshots included.
-- ZIP folder and filename follow the assigned username convention.
-- ZIP file uploaded to the designated SharePoint folder.
-
-**Note:** Video Demo is optional (Under 1-2 mins).
+**Optional Video Demonstration:** A video demonstration is optional. A duration of less than 90 seconds is ideal.
