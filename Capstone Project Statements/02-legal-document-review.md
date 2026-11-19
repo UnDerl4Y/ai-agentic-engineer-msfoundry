@@ -59,6 +59,9 @@ Submit one ZIP file containing:
 
 ### Required Folder Structure
 
+<details>
+<summary><strong>View required folder structure</strong></summary>
+
 Create a folder using your assigned name, such as `agenticuser99`.
 
 Follow the project template:
@@ -75,7 +78,12 @@ agenticuser99/
 
 You can organize the folders and files according to your implementation.
 
-**Folder guidelines:**
+</details>
+
+### Folder Guidelines
+
+<details>
+<summary><strong>View folder guidelines</strong></summary>
 
 - `src/`: Complete codebase. Organize agents, RAG, document processing, workflows, application files, and other source files as required.
 - `data/`: Sample legal documents, legal rules, and reference documents (`.pdf`, `.csv`, `.md`, or `.txt`).
@@ -84,7 +92,12 @@ You can organize the folders and files according to your implementation.
 - `README.md`: Project overview, architecture, prerequisites, setup instructions, configuration, and execution steps.
 - `.env.example`: Environment variable template with placeholder values only.
 
+</details>
+
 ### PowerPoint Presentation
+
+<details>
+<summary><strong>View presentation requirements</strong></summary>
 
 Your presentation should cover:
 
@@ -95,7 +108,12 @@ Your presentation should cover:
 5. Multi-agent workflow showing how both agents work together.
 6. Technology stack and application demonstration.
 
+</details>
+
 ### Environment Configuration
+
+<details>
+<summary><strong>View environment configuration instructions and example</strong></summary>
 
 Include an `.env.example` file with the environment variables required by your application.
 
@@ -113,6 +131,8 @@ The example shows common configuration values. You can add other environment var
 
 Use the variable names required by your application. Include placeholder values only. **Never include actual API keys, passwords, or other secrets.**
 
+</details>
+
 ### ZIP and Submission Instructions
 
 1. Exclude the virtual environment (`venv`, `.venv`) and actual `.env` file.
@@ -125,4 +145,11 @@ Use the variable names required by your application. Include placeholder values 
 
 **Important: Do not upload the project to GitHub. Submit through the designated Google Drive folder only.**
 
-**Optional Video Demonstration:** A video demonstration is optional. A duration of less than 90 seconds is ideal.
+### Optional Video Demonstration
+
+<details>
+<summary><strong>View video demonstration guidelines</strong></summary>
+
+A video demonstration is optional. A duration of less than 90 seconds is ideal.
+
+</details>
