@@ -29,9 +29,8 @@ The system must analyze customer financial data, check applicable credit policy 
 
 - Create a synthetic credit policy document (`.md` or `.txt`) with clear rules and multiple customer scenarios.
 - Use the document as the knowledge source and retrieve relevant rules using RAG.
-- Use RAG to retrieve relevant credit policy rules.
-- Check customer eligibility against the applicable policy criteria.
-- Provide relevant policy references and explanations.
+- Evaluate customer eligibility against applicable policy criteria.
+- Provide policy references and explanations.
 
 ### Multi-Agent Workflow
 
@@ -49,7 +48,7 @@ Create a workflow that connects **Agent 1 (Financial Analysis Agent)** and **Age
 
 Submit one ZIP file containing:
 
-- Complete Python source code and application UI.
+- Complete source code.
 - Sample customer financial data.
 - Credit policy document.
 - README with setup and usage instructions.
