@@ -175,7 +175,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Select **+ Create blank agent**
 
-1. Enter **Benefits Assistant** as the agent name, then click the **Optional** section.
+1. Enter **US Benefits Assistant** as the agent name, then click the **Optional** section.
 
 1. Leave **English (United States)** set as the primary language for the agent.
 
@@ -187,7 +187,9 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Wait until the agent finishes setting up and the message `This feature isn't available until your agent has finished setting up.` **disappears**.
 
-### Task 2.2 - Configure the Agent
+### Task 2.2 - Configure the Overview tab
+
+1. If the **Overview** tab is already selected, continue to the next step. If you are on another tab, select **Overview** from the top navigation bar to return to the Overview page.
 
 1. In the **Details** section, select **Edit**.
 
@@ -195,12 +197,12 @@ In this exercise, you will create a new agent using natural language to answer q
 
 | Setting | Value |
 |----------|----------|
-| Description | Assists employees with questions about company benefits, leave policies, insurance plans, and other HR-related information. |
+| Description | Helps users with questions related to US government benefit programs. |
 | Model | GPT Chat Latest(Oct 2026) |
 
 3. Click Save
 
-4. In the **Instructions** section click edit, enter:
+4. In the **Instructions** section click **edit**, enter:
 
 ```text
 You are a Benefits Assistant that helps employees understand company benefits and HR policies.
@@ -210,46 +212,22 @@ Your responsibilities include:
 - Explaining leave and vacation policies.
 - Providing information about health, insurance, and retirement plans.
 - Guiding employees to relevant HR resources and documents.
+ - Do not provide legal advice.
 ```
 
 5. Click Save
+> [!NOTE]
+> Agent instructions guide how the agent should behave, but they do not strictly enforce behavior. In later labs, you will learn how to change behavior by using topics, knowledge, and generative answers with restricted knowledge sources.
 
-### Task 2.3 – Configure the Overview tab
+5. Scroll down to the **Suggested prompts** section, then select **Add suggested prompts**.
 
-1. Select the **Overview** tab for the agent.
+6. For **Title**, enter `Health`.
 
-1. In the **Details** section, select **Edit**.
+7. For **Prompt**, enter `What health assistance programs are available for me?`.
 
-1. 1\. In the **Name** text box, replace the default name with **`US Benefits Assistant`**. If it is already displayed, leave it unchanged and continue to the next step.
+8. Select **Save**.
 
-1. In the **Description** text box, enter **`Helps users with questions related to US government benefit programs`**.
-
-1. Select **Save**.
-
-1. In the **Select your agent's model** section, select **GPT-5 Auto (Preview)**, if available. Otherwise, select the default recommended GPT model.
-
-1. In the **Instructions** section, select **Edit**.
-
-1. Under *Your Responsibilities Include* in the agent instructions, add the following:
-
-   ```prompt
-   - Do not provide legal advice.
-   ```
-
-1. Select **Save**.
-
-   > [!NOTE]
-   > Agent instructions guide how the agent should behave, but they do not strictly enforce behavior. In later labs, you will learn how to change behavior by using topics, knowledge, and generative answers with restricted knowledge sources.
-
-1. Scroll down to the **Suggested prompts** section, then select **Add suggested prompts**.
-
-1. For **Title**, enter `Health`.
-
-1. For **Prompt**, enter `What health assistance programs are available for me?`.
-
-1. Select **Save**.
-
-### Task 2.4 – Add a public website as a knowledge source
+### Task 2.3 – Add a public website as a knowledge source
 
 1. Select the **Knowledge** tab.
 
@@ -272,7 +250,7 @@ Your responsibilities include:
    > [!NOTE]
    > Public website indexing may take several minutes. If responses are incomplete, wait a few minutes and test the agent again.
 
-### Task 2.5 – Agent settings
+### Task 2.4 – Agent settings
 
 1. In the upper-right of the page, select the **Settings** button.
 
@@ -301,7 +279,7 @@ Your responsibilities include:
 
 1. In the upper-right of the **Settings** page, select **X** to close settings.
 
-### Task 2.6 – Test the agent
+### Task 2.5 – Test the agent
 
 1. If the **Test** pane is not visible, select the **Test** icon in the upper-right of the page.
 
@@ -321,7 +299,7 @@ Your responsibilities include:
 
 1. Close the **Test** pane.
 
-### Task 2.7 – Publish the agent to the Demo website
+### Task 2.6 – Publish the agent to the Demo website
 
 1. In the action bar of the agent, select the **Publish** button and select **Publish** again.
 
