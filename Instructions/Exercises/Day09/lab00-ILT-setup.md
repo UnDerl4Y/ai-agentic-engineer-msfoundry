@@ -15,10 +15,19 @@ lab:
 
 ### Task 1.1 - Power Platform Admin Center
 
-Before you start the lab exercises, you must create a development environment for you to work in.
+Before you start the lab exercises, you must create a development environment to work in.
 
-1. Open a web browser and navigate to the **Power Platform admin center** https://admin.powerplatform.microsoft.com/manage/environments. Sign in using the **credentials provided for this lab**.   
-1. If prompted, choose the option to stay signed in. Close any pop-up messages that are displayed.
+1. Open a web browser and copy the **Power Platform admin center URL** given below:
+
+   ```text
+   https://admin.powerplatform.microsoft.com/manage/environments
+   ```
+
+2. Paste the URL into the browser's address bar and press **Enter**.
+
+3. Sign in using the **credentials provided for this lab**.
+
+4. If prompted, select the option to **Stay signed in**. Close any pop-up messages that appear.
 
 ### Task 1.2 - Create a new environment
 
@@ -64,35 +73,41 @@ Before you start the lab exercises, you must create a development environment fo
 
 ### Task 1.3 - Access Copilot Studio
 
-1. In a new browser tab, open **Copilot Studio** https://copilotstudio.microsoft.com/ and sign in if prompted.
+1. Open a new browser tab. Copy the **Copilot Studio URL**:
 
-2. You will be redirected to the **new Copilot Studio UI**, which currently has fewer features than the **Classic Experience UI**. For consistency across all labs, we will use the **Classic Experience UI** throughout.
+   ```text
+   https://copilotstudio.microsoft.com/
+   ```
+
+2. Paste the URL into the browser's address bar and press **Enter**. If prompted, sign in using the **credentials provided for this lab**.
+
+3. You will be redirected to the **new Copilot Studio UI**, which currently has fewer features than the **Classic Experience UI**. For consistency across all labs, we will use the **Classic Experience UI** throughout.
 
    ![Copilot Studio interface.](../../media/newuserxp1-v1.png)
 
-3. Select **...** (More options) at the bottom of the page. Under **Explore**, select **Open Classic Experience**, then select **Skip feedback** and if any setup prompts appear, select Get started and follow the prompts until they are completed. .
+4. Select **...** (More options) at the bottom of the page. Under **Explore**, select **Open Classic Experience**, then select **Skip feedback** and if any setup prompts appear, select Get started and follow the prompts until they are completed. .
 
    ![Copilot Studio interface.](../../media/newuserxp2-v1.png)
 
-4. Now you are in the **Open Classic Experience**. In the **upper-right corner** of the page, just to the left of the **Settings** ⚙️ icon, locate the **Environment Selector** showing the current environment.
+5. Now you are in the **Open Classic Experience**. In the **upper-right corner** of the page, just to the left of the **Settings** ⚙️ icon, locate the **Environment Selector** showing the current environment.
 
-5. Select the **Environment Selector**.
+6. Select the **Environment Selector**.
 
    ![Environment Selector.](../../media/u111.png)
 
-6. The **Select environment** menu will open.
+7. The **Select environment** menu will open.
 
    ![Environment Selector.](../../media/u22.png)
 
-7. Under **Supported environments**, select your **named environment**.
+8. Under **Supported environments**, select your **named environment**.
 
    ![Environment Selector.](../../media/u33.png)
 
-8. Your **named environment** should now be displayed in the **Environment Selector**.
+9. Your **named environment** should now be displayed in the **Environment Selector**.
 
    ![Environment Selector.](../../media/u44.png)
 
-9. You are now in the correct **environment** and the **Classic Experience** UI is ready for the lab.
+10. You are now in the correct **environment** and the **Classic Experience** UI is ready for the lab.
 
 > [!TIP]
 >
