@@ -8,7 +8,7 @@ The system must use RAG to retrieve relevant legal rules and reference documents
 
 ## 2. Technical Requirements
 
-- Use the existing Microsoft Foundry project and its deployed models.
+- Use the existing Microsoft Foundry project and its deployed models to ensure consistent project tracking, management, and evaluation.
 - Create and configure the required agents, tools, and workflows in Microsoft Foundry.
 - Test the agents using the Foundry Playground.
 - Implement the complete application.
@@ -17,7 +17,7 @@ The system must use RAG to retrieve relevant legal rules and reference documents
 
 ### Agent 1: Document Analysis Agent
 
-- Accept legal documents in PDF or TXT format.
+- Accept legal documents in PDF or TXT or MD format.
 - Extract document text and identify the document type.
 - Extract important clauses, such as confidentiality, termination, liability, payment terms, and governing law.
 - Identify missing, unclear, or potentially problematic clauses.
