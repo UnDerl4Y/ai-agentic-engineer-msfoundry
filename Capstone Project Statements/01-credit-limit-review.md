@@ -88,7 +88,7 @@ Before creating the ZIP file, organize all deliverables inside a folder named `a
 - Multi-agent workflow configured and tested.
 - Credit limit recommendations generated with supporting explanations.
 - Complete source code and sample data included.
-- Credit policy PDF included.
+- Required PDF's/.md's included.
 - README included.
 - PowerPoint presentation included.
 - Required application screenshots included.
