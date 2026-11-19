@@ -66,7 +66,7 @@ Before you start the lab exercises, you must create a development environment fo
 
 1. In a new browser tab, open **Copilot Studio** https://copilotstudio.microsoft.com/ and sign in if prompted.
 
-2. You will be redirected to the **new Copilot Studio UI**. This UI has fewer features than the **Classic Experience UI**. We will use the **Classic Experience UI** throughout the labs.
+2. You will be redirected to the **new Copilot Studio UI**, which currently has fewer features than the **Classic Experience UI**. For consistency across all labs, we will use the **Classic Experience UI** throughout.
 
    ![Copilot Studio interface.](../../media/newuserxp1-v1.png)
 
