@@ -241,9 +241,13 @@ Your responsibilities include:
 
 1. Select **Add**.
 
-1. For **Name**, enter `Government benefits`.
+1. For **Name**, replace the default name with `Government benefits`.
 
-1. For **Description**, enter `This knowledge source contains information on government programs that may help you pay for food, housing, health care, and other basic living expenses`.
+1. For **Description**, replace the default description with:
+
+   ```text
+   This knowledge source contains information on government programs that may help you pay for food, housing, health care, and other basic living expenses.
+   ```
 
 1. Select **Add to agent**.
 
