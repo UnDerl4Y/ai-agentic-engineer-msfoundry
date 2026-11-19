@@ -58,7 +58,7 @@ Before you start the lab exercises, you must create a development environment fo
 7. Select **Save** and wait for the environment state to change from **Preparing** to **Ready**. After some time, use **Refresh** to update the status.
 
 > [!NOTE]
-> **Environment provisioning can take several minutes depending on tenant configuration**.
+> Environment provisioning can take several minutes, depending on your tenant configuration. The environment state will change from **Preparing** to **Ready** once provisioning is complete. You can also verify that the Dataverse status changes from **No** to **Yes**.
 
    ![Environment created in the Power Platform Admin center.](../../media/environment-created1.png)
 
