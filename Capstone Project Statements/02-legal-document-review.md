@@ -11,7 +11,7 @@ The system must use RAG to retrieve relevant legal rules and reference documents
 - Use the existing Microsoft Foundry project and its deployed models.
 - Create and configure the required agents, tools, and workflows in Microsoft Foundry.
 - Test the agents using the Foundry Playground.
-- Implement the complete application using Python, including a separate user interface.
+- Implement the complete application.
 - Connect the Python application to the existing Foundry project using its endpoint and API key.
 - Test the application and capture screenshots of the Foundry portal and Python application.
 
@@ -25,7 +25,7 @@ The system must use RAG to retrieve relevant legal rules and reference documents
 
 ### Agent 2: Legal Compliance Agent
 
-- Use sample legal rules and reference documents as the knowledge source.
+- Create high-quality synthetic legal rules, reference documents, and sample data. Use them as the knowledge sources for the assistant.
 - Use RAG to retrieve relevant legal information.
 - Compare extracted clauses against the retrieved references.
 - Identify potential compliance issues and risks.
@@ -49,8 +49,8 @@ Create a workflow that connects **Agent 1 (Document Analysis Agent)** and **Agen
 
 Submit one ZIP file containing:
 
-- Complete Python source code and application UI.
-- Sample legal documents (PDF or TXT).
+- Complete source code.
+- Sample legal documents (`.md` or `.txt`).
 - Sample legal rules and reference documents (`.md` or `.txt`).
 - RAG implementation and document retrieval functionality.
 - README with setup and usage instructions.
@@ -135,15 +135,12 @@ Use the variable names required by your application. Include placeholder values 
 
 ### ZIP and Submission Instructions
 
-1. Exclude the virtual environment (`venv`, `.venv`) and actual `.env` file.
-2. Include all required source code, data, screenshots, documentation, and presentation files.
-3. Compress the entire project folder into a ZIP file.
-4. Keep your assigned project folder as the root folder inside the ZIP file.
-5. Name the ZIP file using your assigned folder name, for example, `agenticuser99.zip`.
-6. Upload the ZIP file and PowerPoint presentation to your designated public Google Drive folder.
-7. Ensure the Google Drive folder has the required public access permissions.
-
-**Important: Do not upload the project to GitHub. Submit through the designated Google Drive folder only.**
+1. Replace all actual values in `.env` with placeholders and save them in `.env.example` if you haven't done.
+2. Delete the original `.env` file and virtual environment directories (`venv`, `.venv`).
+3. Ensure your entire working project folder contains all required source code, data, screenshots, documentation, and presentation files.
+4. Compress your entire working project folder into a ZIP file, keeping your assigned project folder (e.g., `agenticuser99`) as the root folder inside the ZIP.
+5. Name the ZIP file after your assigned folder (e.g., `agenticuser99.zip`).
+6. Upload the ZIP file to the provided submission link.
 
 ### Optional Video Demonstration
 
