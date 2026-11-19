@@ -1,4 +1,4 @@
-# Capstone Project: AI-Powered Legal Document Review System
+# Capstone Project 02: AI-Powered Legal Document Review System
 
 ## 1. Project Statement
 
