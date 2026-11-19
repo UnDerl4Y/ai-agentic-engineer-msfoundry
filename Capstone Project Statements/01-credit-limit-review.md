@@ -8,7 +8,7 @@ The system must analyze customer financial data, check applicable credit policy 
 
 ## 2. Technical Requirements
 
-- Use the existing Microsoft Foundry project and its deployed models.
+- Use the existing Microsoft Foundry project and its deployed models to ensure consistent project tracking, management, and evaluation.
 - Create and configure the required agents, tools, and workflows in Microsoft Foundry.
 - Test the agents using the Foundry Playground.
 - Implement the complete application.
