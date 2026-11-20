@@ -26,7 +26,7 @@ The system must use RAG to retrieve relevant legal rules and reference documents
 
 ### Agent 2: Legal Compliance Agent
 
-- Create synthetic legal rules, reference documents, and supporting sample data in `.md`, `.json`, or `.jsonl` format. Store them in the `data/` folder.
+- Create synthetic legal rules, reference documents, and supporting sample data in .md, .json, or .jsonl format. Store these files in the data/ folder.
 - Use these documents as knowledge sources and retrieve relevant legal information using RAG.
 - Compare extracted clauses against the retrieved references.
 - Identify potential compliance issues and risks.
