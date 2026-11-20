@@ -17,8 +17,8 @@ The system must analyze customer financial data, check applicable credit policy 
 
 ### Agent 1: Financial Analysis Agent
 
-- Create synthetic customer financial data covering two years in `.json` or `.jsonl` format and store it in the `data/` folder. Use realistic but fictional customer details and financial values. You can use Python scripts or AI tools to generate the sample data.
-- Ensure the dataset contains all required financial fields to calculate the specified ratios.
+- Create synthetic customer financial data covering two years in `.json` or `.jsonl` format and store it in the `data/` folder. Use Python scripts with the Microsoft Foundry API key and required endpoint to generate realistic but fictional customer details and financial values.
+- Ensure the dataset contains all required financial fields to calculate the specified ratios. **Note:** Synthetic data is fictional data created for testing and demonstration purposes. Do not use real customer financial information. Ensure the generated data contains consistent financial values for both years.
 - Accept and analyze the synthetic customer financial data.
 - Calculate the following financial ratios:
   - Current Ratio
@@ -27,11 +27,10 @@ The system must analyze customer financial data, check applicable credit policy 
 - Identify financial trends and risks.
 - Summarize the customer's financial health.
 
-**Note:** Synthetic data is fictional data created for testing and demonstration purposes. Do not use real customer financial information. Ensure the generated data contains consistent financial values for both years.
-
 ### Agent 2: Credit Policy Agent
 
-- Create a synthetic credit policy document in `.md` format containing clear credit assessment rules and multiple customer scenarios. Save the document in the `data/` folder.
+- Create a synthetic credit policy document in `.md` format containing clear credit assessment rules and multiple customer scenarios. Store the document in the `data/` folder. Use Python scripts with the Microsoft Foundry API key and required endpoint to generate the sample document.
+- Ensure the policy contains sufficient information to evaluate customer eligibility and provide policy-based recommendations. **Note:** Synthetic policies are fictional and intended only for testing and demonstration purposes. Do not present them as actual financial regulations or advice.
 - Use the document as the knowledge source and retrieve relevant rules using RAG.
 - Evaluate customer eligibility against the applicable credit policy criteria.
 - Provide policy references and explanations for each recommendation.
