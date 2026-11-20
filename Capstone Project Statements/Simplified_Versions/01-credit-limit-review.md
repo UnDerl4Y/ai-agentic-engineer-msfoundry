@@ -15,10 +15,9 @@ The system must analyze customer financial data, check applicable credit policy 
 - Connect the Python application to the existing Foundry project using its endpoint and API key.
 - Test the application and capture screenshots of the Foundry portal and Python application.
 
-### Agent 1: Financial Analysis Agent
-
 - Create synthetic customer financial data covering two years in `.json` or `.jsonl` format and store it in the `data/` folder.
-- Analyze the customer financial data.
+- Ensure the dataset contains all required financial fields to calculate the specified ratios.
+- Accept and analyze the synthetic customer financial data.
 - Calculate the following financial ratios:
   - Current Ratio
   - Debt-to-Equity Ratio
@@ -33,17 +32,15 @@ The system must analyze customer financial data, check applicable credit policy 
 - Evaluate customer eligibility against the applicable credit policy criteria.
 - Provide policy references and explanations for each recommendation.
 
-### Multi-Agent Workflow
-
 Create a workflow that connects **Agent 1 (Financial Analysis Agent)** and **Agent 2 (Credit Policy Agent)**.
 
-1. Accept customer financial information.
+1. Accept customer financial data as input through the Python application.
 2. Send the data to Agent 1 for financial analysis.
 3. Send the relevant information to Agent 2 for credit policy checks.
 4. Combine the outputs from both agents.
-5. Generate one final credit review with financial analysis, policy findings, recommended action, proposed credit limit, and supporting explanation.
+5. Generate one final credit review containing financial analysis, policy findings, recommended action, proposed credit limit, and supporting explanations.
 
-**Note:** Create only two agents. The workflow must make both agents work together. A third agent is not required.
+**Note:** The workflow must include both specified agents working together. Creating additional agents is optional and can be considered as an extension if time permits.
 
 ## 3. Deliverables and Submission
 
@@ -83,7 +80,8 @@ You can organize the folders and files according to your implementation.
 <summary><strong>View folder guidelines</strong></summary>
 
 - `src/`: Complete codebase. Organize agents, tools, workflows, application files, and other source files as required.
-- `data/`: Include synthetic customer financial data (`.json` or `.jsonl`) covering two years and a synthetic credit policy document (`.md`), along with any other required input files.- `screenshots/`: Screenshots (`.png`) of the Foundry portal, agent configurations, Playground testing, workflow execution, and application results.
+- `data/`: Include synthetic customer financial data (`.json` or `.jsonl`) covering two years and a synthetic credit policy document (`.md`), along with any other required input files.
+- `screenshots/`: Screenshots (`.png`) of the Foundry portal, agent configurations, Playground testing, workflow execution, and application results.
 - `presentation/`: PowerPoint presentation (`.pptx`).
 - `README.md`: Project overview, architecture, prerequisites, setup instructions, configuration, and execution steps.
 - `.env.example`: Environment variable template with placeholder values only.
