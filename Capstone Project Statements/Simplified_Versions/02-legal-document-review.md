@@ -51,9 +51,7 @@ Create a workflow that connects **Agent 1 (Document Analysis Agent)** and **Agen
 Submit one ZIP file containing:
 
 - Complete source code.
-- Synthetic sample legal documents (`.md`, `.json`, or `.jsonl`).
 - Synthetic legal rules and reference documents (`.md`, `.json`, or `.jsonl`).
-- RAG implementation and document retrieval functionality.
 - RAG implementation and document retrieval functionality.
 - README with setup and usage instructions.
 - PowerPoint presentation.
