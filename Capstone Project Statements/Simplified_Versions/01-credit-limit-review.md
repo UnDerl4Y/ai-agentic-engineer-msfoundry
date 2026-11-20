@@ -17,7 +17,8 @@ The system must analyze customer financial data, check applicable credit policy 
 
 ### Agent 1: Financial Analysis Agent
 
-- Analyze two years of customer financial data.
+- Create synthetic customer financial data covering two years and store it in a CSV file (`.csv`) inside the `data/` folder.
+- Analyze the customer financial data.
 - Calculate the following financial ratios:
   - Current Ratio
   - Debt-to-Equity Ratio
@@ -27,10 +28,10 @@ The system must analyze customer financial data, check applicable credit policy 
 
 ### Agent 2: Credit Policy Agent
 
-- Create a synthetic credit policy document (`.md` or `.txt`) with clear rules and multiple customer scenarios.
+- Create a synthetic credit policy document (`.md` or `.txt`) containing clear credit assessment rules and multiple customer scenarios. Save the document in the `data/` folder.
 - Use the document as the knowledge source and retrieve relevant rules using RAG.
-- Evaluate customer eligibility against applicable policy criteria.
-- Provide policy references and explanations.
+- Evaluate customer eligibility against the applicable credit policy criteria.
+- Provide policy references and explanations for each recommendation.
 
 ### Multi-Agent Workflow
 
@@ -82,7 +83,7 @@ You can organize the folders and files according to your implementation.
 <summary><strong>View folder guidelines</strong></summary>
 
 - `src/`: Complete codebase. Organize agents, tools, workflows, application files, and other source files as required.
-- `data/`: Sample customer data (`.csv`), credit policy documents (`.md` or `.txt`), and other required input files.
+- `data/`: Synthetic customer financial data (`.csv`) covering two years and a synthetic credit policy document (`.md` or `.txt`), along with any other required input files.
 - `screenshots/`: Screenshots (`.png`) of the Foundry portal, agent configurations, Playground testing, workflow execution, and application results.
 - `presentation/`: PowerPoint presentation (`.pptx`).
 - `README.md`: Project overview, architecture, prerequisites, setup instructions, configuration, and execution steps.
