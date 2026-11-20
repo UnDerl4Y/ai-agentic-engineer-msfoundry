@@ -17,16 +17,16 @@ The system must use RAG to retrieve relevant legal rules and reference documents
 
 ### Agent 1: Document Analysis Agent
 
-- Create synthetic sample legal documents in .md format and store them in the `data/` folder.
-- Accept legal documents as input and extract their text.
-- Identify the document type.
+- Create synthetic sample legal documents in `.md` format and store them in the `data/` folder.
+- Accept legal documents in `.md`, `.json`, or `.jsonl` format as input.
+- Extract document text and identify the document type.
 - Extract important clauses, such as confidentiality, termination, liability, payment terms, and governing law.
 - Identify missing, unclear, or potentially problematic clauses.
 - Generate a structured document summary.
 
 ### Agent 2: Legal Compliance Agent
 
-- Create synthetic legal rules, reference documents, and supporting sample data in .md format. Store them in the `data/` folder.
+- Create synthetic legal rules, reference documents, and supporting sample data in `.md`, `.json`, or `.jsonl` format. Store them in the `data/` folder.
 - Use these documents as knowledge sources and retrieve relevant legal information using RAG.
 - Compare extracted clauses against the retrieved references.
 - Identify potential compliance issues and risks.
@@ -51,8 +51,9 @@ Create a workflow that connects **Agent 1 (Document Analysis Agent)** and **Agen
 Submit one ZIP file containing:
 
 - Complete source code.
-- Sample legal documents (`.md` or `.txt`).
-- Sample legal rules and reference documents (`.md` or `.txt`).
+- Synthetic sample legal documents (`.md`, `.json`, or `.jsonl`).
+- Synthetic legal rules and reference documents (`.md`, `.json`, or `.jsonl`).
+- RAG implementation and document retrieval functionality.
 - RAG implementation and document retrieval functionality.
 - README with setup and usage instructions.
 - PowerPoint presentation.
@@ -87,7 +88,7 @@ You can organize the folders and files according to your implementation.
 <summary><strong>View folder guidelines</strong></summary>
 
 - `src/`: Complete codebase. Organize agents, RAG, document processing, workflows, application files, and other source files as required.
-- `data/`: Include synthetic sample legal documents (`.pdf`, `.txt`, or `.md`), synthetic legal rules and reference documents (`.pdf`, `.csv`, `.md`, or `.txt`), and any other required input files.
+- `data/`: Include synthetic sample legal documents (`.md`, `.json`, or `.jsonl`), synthetic legal rules and reference documents (`.md`, `.json`, or `.jsonl`), and any other required input files.
 - `screenshots/`: Screenshots (`.png`) of the Foundry portal, agent configurations, Playground testing, workflow execution, and application results.
 - `presentation/`: PowerPoint presentation (`.pptx`).
 - `README.md`: Project overview, architecture, prerequisites, setup instructions, configuration, and execution steps.
