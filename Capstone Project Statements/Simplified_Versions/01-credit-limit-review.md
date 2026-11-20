@@ -17,7 +17,7 @@ The system must analyze customer financial data, check applicable credit policy 
 
 ### Agent 1: Financial Analysis Agent
 
-- Create synthetic customer financial data covering two years and store it in a CSV file (`.csv`) inside the `data/` folder.
+- Create synthetic customer financial data covering two years in `.json` or `.jsonl` format and store it in the `data/` folder.
 - Analyze the customer financial data.
 - Calculate the following financial ratios:
   - Current Ratio
@@ -28,7 +28,7 @@ The system must analyze customer financial data, check applicable credit policy 
 
 ### Agent 2: Credit Policy Agent
 
-- Create a synthetic credit policy document (`.md` or `.txt`) containing clear credit assessment rules and multiple customer scenarios. Save the document in the `data/` folder.
+- Create a synthetic credit policy document in `.md` format containing clear credit assessment rules and multiple customer scenarios. Save the document in the `data/` folder.
 - Use the document as the knowledge source and retrieve relevant rules using RAG.
 - Evaluate customer eligibility against the applicable credit policy criteria.
 - Provide policy references and explanations for each recommendation.
@@ -50,8 +50,8 @@ Create a workflow that connects **Agent 1 (Financial Analysis Agent)** and **Age
 Submit one ZIP file containing:
 
 - Complete source code.
-- Sample customer financial data.
-- Credit policy document.
+- Synthetic customer financial data (`.json` or `.jsonl`) covering two years.
+- Synthetic credit policy document (`.md`).
 - README with setup and usage instructions.
 - PowerPoint presentation.
 - Screenshots of the Foundry configuration, agent testing, workflow execution, and Python application.
@@ -83,8 +83,7 @@ You can organize the folders and files according to your implementation.
 <summary><strong>View folder guidelines</strong></summary>
 
 - `src/`: Complete codebase. Organize agents, tools, workflows, application files, and other source files as required.
-- `data/`: Synthetic customer financial data (`.csv`) covering two years and a synthetic credit policy document (`.md` or `.txt`), along with any other required input files.
-- `screenshots/`: Screenshots (`.png`) of the Foundry portal, agent configurations, Playground testing, workflow execution, and application results.
+- `data/`: Include synthetic customer financial data (`.json` or `.jsonl`) covering two years and a synthetic credit policy document (`.md`), along with any other required input files.- `screenshots/`: Screenshots (`.png`) of the Foundry portal, agent configurations, Playground testing, workflow execution, and application results.
 - `presentation/`: PowerPoint presentation (`.pptx`).
 - `README.md`: Project overview, architecture, prerequisites, setup instructions, configuration, and execution steps.
 - `.env.example`: Environment variable template with placeholder values only.
