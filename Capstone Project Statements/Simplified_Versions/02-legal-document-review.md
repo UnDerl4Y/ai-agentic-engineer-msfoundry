@@ -17,7 +17,8 @@ The system must use RAG to retrieve relevant legal rules and reference documents
 
 ### Agent 1: Document Analysis Agent
 
-- Create synthetic sample legal documents in `.md` format and store them in the `data/` folder.
+- Create synthetic sample legal documents in `.md` format and store them in the `data/` folder. Use Python scripts with the Microsoft Foundry API key and required endpoint to generate realistic but fictional legal documents.
+- Ensure the documents contain sufficient information to identify document types, extract important clauses, and identify missing or unclear clauses. **Note:** Synthetic documents are fictional documents created for testing and demonstration purposes. Do not use real or confidential legal documents.
 - Accept legal documents in `.md`, `.json`, or `.jsonl` format as input.
 - Extract document text and identify the document type.
 - Extract important clauses, such as confidentiality, termination, liability, payment terms, and governing law.
@@ -26,7 +27,8 @@ The system must use RAG to retrieve relevant legal rules and reference documents
 
 ### Agent 2: Legal Compliance Agent
 
-- Create synthetic legal rules, reference documents, and supporting sample data in .md, .json, or .jsonl format. Store these files in the data/ folder.
+- Create synthetic legal rules and reference documents in `.md`, `.json`, or `.jsonl` format and store them in the `data/` folder. Use Python scripts with the Microsoft Foundry API key and required endpoint to generate the sample data.
+- Ensure the reference data contains sufficient information to check legal clauses and identify potential compliance issues. **Note:** Synthetic data is fictional and intended only for testing and demonstration purposes. Do not present it as actual legal advice.
 - Use these documents as knowledge sources and retrieve relevant legal information using RAG.
 - Compare extracted clauses against the retrieved references.
 - Identify potential compliance issues and risks.
